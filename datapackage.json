@@ -1,0 +1,2145 @@
+{
+  "name": "violencia-contra-mulher",
+  "title": "Violência contra Mulher",
+  "description": "Contém os registros estatísticos sobre Violência Doméstica e Familiar contra a Mulher e de Vítimas de Feminicídio no estado de Minas Gerais. Esses dados têm como fonte a [Polícia Civil de Minas Gerais](http://www.seguranca.mg.gov.br/component/gmg/page/3118-violencia-contra-a-mulher).",
+  "owner_org": "policia-civil-pcmg",
+  "source": "http://www.seguranca.mg.gov.br/component/gmg/page/3118-violencia-contra-a-mulher",
+  "homepage": "https://github.com/transparencia-mg/violencia-contra-mulher",
+  "frequência de atualização": "mensal",
+  "version": "0.1.0",
+  "contributors": [
+    {
+      "title": "Diretoria de Estatística da Polícia Civil",
+      "role": "publisher",
+      "email": "estatistica.siip@pcivil.mg.gov.br"
+    },
+    {
+      "title": "Diretoria Central de Transparência Ativa da Controladoria-Central do Estado",
+      "role": "maintainer",
+      "email": "transparencia@cge.mg.gov.br"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "keywords": [
+    "feminicídio",
+    "violência contra mulher",
+    "crimes",
+    "segurança"
+  ],
+  "scheme": "file",
+  "resources": [
+    {
+      "path": "data/feminicidio_2018.csv",
+      "name": "feminicidio-2018",
+      "title": "Feminicidio 2018",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8-sig",
+      "dialect": {
+        "delimiter": ";",
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "skipInitialSpace": false
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "municipio_cod",
+            "type": "integer",
+            "title": "Código do município",
+            "description": "Código do município do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "municipio_fato",
+            "type": "string",
+            "title": "Munícipio do fato",
+            "description": "Munícipio de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "data_fato",
+            "type": "date",
+            "title": "Data do fato",
+            "description": "Data de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "mes",
+            "type": "integer",
+            "title": "Mês do fato",
+            "description": "Mês de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "ano",
+            "type": "integer",
+            "title": "Ano do fato",
+            "description": "Ano de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "risp",
+            "type": "string",
+            "title": "Região Integrada de Segurança Pública",
+            "description": "Descrição da região integrada de segurança pública",
+            "format": "default"
+          },
+          {
+            "name": "rmbh",
+            "type": "string",
+            "title": "Região Metropolitana de Belo Horizonte",
+            "description": "Indica se o município pertence a região metropolitana de Belo Horizonte",
+            "format": "default"
+          },
+          {
+            "name": "tentado_consumado",
+            "type": "string",
+            "title": "tipo do crime",
+            "description": "tipo de ocorrência do evento (consumado ou tentado)",
+            "format": "default"
+          },
+          {
+            "name": "qtde_vitimas",
+            "type": "integer",
+            "title": "Quantidade de vítimas",
+            "description": "Quantitativo de vítimas de feminicídio",
+            "format": "default",
+            "bareNumber": true
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "data/feminicidio_2019.csv",
+      "name": "feminicidio-2019",
+      "title": "Feminicidio 2019",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8-sig",
+      "dialect": {
+        "delimiter": ";",
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "skipInitialSpace": false
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "municipio_cod",
+            "type": "integer",
+            "title": "Código do município",
+            "description": "Código do município do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "municipio_fato",
+            "type": "string",
+            "title": "Munícipio do fato",
+            "description": "Munícipio de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "data_fato",
+            "type": "date",
+            "title": "Data do fato",
+            "description": "Data de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "mes",
+            "type": "integer",
+            "title": "Mês do fato",
+            "description": "Mês de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "ano",
+            "type": "integer",
+            "title": "Ano do fato",
+            "description": "Ano de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "risp",
+            "type": "string",
+            "title": "Região Integrada de Segurança Pública",
+            "description": "Descrição da região integrada de segurança pública",
+            "format": "default"
+          },
+          {
+            "name": "rmbh",
+            "type": "string",
+            "title": "Região Metropolitana de Belo Horizonte",
+            "description": "Indica se o município pertence a região metropolitana de Belo Horizonte",
+            "format": "default"
+          },
+          {
+            "name": "tentado_consumado",
+            "type": "string",
+            "title": "tipo do crime",
+            "description": "tipo de ocorrência do evento (consumado ou tentado)",
+            "format": "default"
+          },
+          {
+            "name": "qtde_vitimas",
+            "type": "integer",
+            "title": "Quantidade de vítimas",
+            "description": "Quantitativo de vítimas de feminicídio",
+            "format": "default",
+            "bareNumber": true
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "data/feminicidio_2020.csv",
+      "name": "feminicidio-2020",
+      "title": "Feminicidio 2020",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8-sig",
+      "dialect": {
+        "delimiter": ";",
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "skipInitialSpace": false
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "municipio_cod",
+            "type": "integer",
+            "title": "Código do município",
+            "description": "Código do município do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "municipio_fato",
+            "type": "string",
+            "title": "Munícipio do fato",
+            "description": "Munícipio de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "data_fato",
+            "type": "date",
+            "title": "Data do fato",
+            "description": "Data de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "mes",
+            "type": "integer",
+            "title": "Mês do fato",
+            "description": "Mês de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "ano",
+            "type": "integer",
+            "title": "Ano do fato",
+            "description": "Ano de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "risp",
+            "type": "string",
+            "title": "Região Integrada de Segurança Pública",
+            "description": "Descrição da região integrada de segurança pública",
+            "format": "default"
+          },
+          {
+            "name": "rmbh",
+            "type": "string",
+            "title": "Região Metropolitana de Belo Horizonte",
+            "description": "Indica se o município pertence a região metropolitana de Belo Horizonte",
+            "format": "default"
+          },
+          {
+            "name": "tentado_consumado",
+            "type": "string",
+            "title": "tipo do crime",
+            "description": "tipo de ocorrência do evento (consumado ou tentado)",
+            "format": "default"
+          },
+          {
+            "name": "qtde_vitimas",
+            "type": "integer",
+            "title": "Quantidade de vítimas",
+            "description": "Quantitativo de vítimas de feminicídio",
+            "format": "default",
+            "bareNumber": true
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "data/feminicidio_2021.csv",
+      "name": "feminicidio-2021",
+      "title": "Feminicidio 2021",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8-sig",
+      "dialect": {
+        "delimiter": ";",
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "skipInitialSpace": false
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "municipio_cod",
+            "type": "integer",
+            "title": "Código do município",
+            "description": "Código do município do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "municipio_fato",
+            "type": "string",
+            "title": "Munícipio do fato",
+            "description": "Munícipio de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "data_fato",
+            "type": "date",
+            "title": "Data do fato",
+            "description": "Data de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "mes",
+            "type": "integer",
+            "title": "Mês do fato",
+            "description": "Mês de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "ano",
+            "type": "integer",
+            "title": "Ano do fato",
+            "description": "Ano de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "risp",
+            "type": "string",
+            "title": "Região Integrada de Segurança Pública",
+            "description": "Descrição da região integrada de segurança pública",
+            "format": "default"
+          },
+          {
+            "name": "rmbh",
+            "type": "string",
+            "title": "Região Metropolitana de Belo Horizonte",
+            "description": "Indica se o município pertence a região metropolitana de Belo Horizonte",
+            "format": "default"
+          },
+          {
+            "name": "tentado_consumado",
+            "type": "string",
+            "title": "tipo do crime",
+            "description": "tipo de ocorrência do evento (consumado ou tentado)",
+            "format": "default"
+          },
+          {
+            "name": "qtde_vitimas",
+            "type": "integer",
+            "title": "Quantidade de vítimas",
+            "description": "Quantitativo de vítimas de feminicídio",
+            "format": "default",
+            "bareNumber": true
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "data/feminicidio_2022.csv",
+      "name": "feminicidio-2022",
+      "title": "Feminicidio 2022",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8-sig",
+      "dialect": {
+        "delimiter": ";",
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "skipInitialSpace": false
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "municipio_cod",
+            "type": "integer",
+            "title": "Código do município",
+            "description": "Código do município do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "municipio_fato",
+            "type": "string",
+            "title": "Munícipio do fato",
+            "description": "Munícipio de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "data_fato",
+            "type": "date",
+            "title": "Data do fato",
+            "description": "Data de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "mes",
+            "type": "integer",
+            "title": "Mês do fato",
+            "description": "Mês de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "ano",
+            "type": "integer",
+            "title": "Ano do fato",
+            "description": "Ano de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "risp",
+            "type": "string",
+            "title": "Região Integrada de Segurança Pública",
+            "description": "Descrição da região integrada de segurança pública",
+            "format": "default"
+          },
+          {
+            "name": "rmbh",
+            "type": "string",
+            "title": "Região Metropolitana de Belo Horizonte",
+            "description": "Indica se o município pertence a região metropolitana de Belo Horizonte",
+            "format": "default"
+          },
+          {
+            "name": "tentado_consumado",
+            "type": "string",
+            "title": "tipo do crime",
+            "description": "tipo de ocorrência do evento (consumado ou tentado)",
+            "format": "default"
+          },
+          {
+            "name": "qtde_vitimas",
+            "type": "integer",
+            "title": "Quantidade de vítimas",
+            "description": "Quantitativo de vítimas de feminicídio",
+            "format": "default",
+            "bareNumber": true
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "data/feminicidio_2023.csv",
+      "name": "feminicidio-2023",
+      "title": "Feminicidio 2023",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8-sig",
+      "dialect": {
+        "delimiter": ";",
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "skipInitialSpace": false
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "municipio_cod",
+            "type": "integer",
+            "title": "Código do município",
+            "description": "Código do município do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "municipio_fato",
+            "type": "string",
+            "title": "Munícipio do fato",
+            "description": "Munícipio de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "data_fato",
+            "type": "date",
+            "title": "Data do fato",
+            "description": "Data de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "mes",
+            "type": "integer",
+            "title": "Mês do fato",
+            "description": "Mês de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "ano",
+            "type": "integer",
+            "title": "Ano do fato",
+            "description": "Ano de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "risp",
+            "type": "string",
+            "title": "Região Integrada de Segurança Pública",
+            "description": "Descrição da região integrada de segurança pública",
+            "format": "default"
+          },
+          {
+            "name": "rmbh",
+            "type": "string",
+            "title": "Região Metropolitana de Belo Horizonte",
+            "description": "Indica se o município pertence a região metropolitana de Belo Horizonte",
+            "format": "default"
+          },
+          {
+            "name": "tentado_consumado",
+            "type": "string",
+            "title": "tipo do crime",
+            "description": "tipo de ocorrência do evento (consumado ou tentado)",
+            "format": "default"
+          },
+          {
+            "name": "qtde_vitimas",
+            "type": "integer",
+            "title": "Quantidade de vítimas",
+            "description": "Quantitativo de vítimas de feminicídio",
+            "format": "default",
+            "bareNumber": true
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "data/feminicidio_2024.csv",
+      "name": "feminicidio-2024",
+      "title": "Feminicidio 2024",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8-sig",
+      "dialect": {
+        "delimiter": ";",
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "skipInitialSpace": false
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "municipio_cod",
+            "type": "integer",
+            "title": "Código do município",
+            "description": "Código do município do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "municipio_fato",
+            "type": "string",
+            "title": "Munícipio do fato",
+            "description": "Munícipio de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "data_fato",
+            "type": "date",
+            "title": "Data do fato",
+            "description": "Data de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "mes",
+            "type": "integer",
+            "title": "Mês do fato",
+            "description": "Mês de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "ano",
+            "type": "integer",
+            "title": "Ano do fato",
+            "description": "Ano de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "risp",
+            "type": "string",
+            "title": "Região Integrada de Segurança Pública",
+            "description": "Descrição da região integrada de segurança pública",
+            "format": "default"
+          },
+          {
+            "name": "rmbh",
+            "type": "string",
+            "title": "Região Metropolitana de Belo Horizonte",
+            "description": "Indica se o município pertence a região metropolitana de Belo Horizonte",
+            "format": "default"
+          },
+          {
+            "name": "tentado_consumado",
+            "type": "string",
+            "title": "tipo do crime",
+            "description": "tipo de ocorrência do evento (consumado ou tentado)",
+            "format": "default"
+          },
+          {
+            "name": "qtde_vitimas",
+            "type": "integer",
+            "title": "Quantidade de vítimas",
+            "description": "Quantitativo de vítimas de feminicídio",
+            "format": "default",
+            "bareNumber": true
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "data/feminicidio_2025.csv",
+      "name": "feminicidio-2025",
+      "title": "Feminicidio 2025",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8-sig",
+      "dialect": {
+        "delimiter": ";",
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "skipInitialSpace": false
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "municipio_cod",
+            "type": "integer",
+            "title": "Código do município",
+            "description": "Código do município do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "municipio_fato",
+            "type": "string",
+            "title": "Munícipio do fato",
+            "description": "Munícipio de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "data_fato",
+            "type": "date",
+            "title": "Data do fato",
+            "description": "Data de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "mes",
+            "type": "integer",
+            "title": "Mês do fato",
+            "description": "Mês de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "ano",
+            "type": "integer",
+            "title": "Ano do fato",
+            "description": "Ano de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "risp",
+            "type": "string",
+            "title": "Região Integrada de Segurança Pública",
+            "description": "Descrição da região integrada de segurança pública",
+            "format": "default"
+          },
+          {
+            "name": "rmbh",
+            "type": "string",
+            "title": "Região Metropolitana de Belo Horizonte",
+            "description": "Indica se o município pertence a região metropolitana de Belo Horizonte",
+            "format": "default"
+          },
+          {
+            "name": "tentado_consumado",
+            "type": "string",
+            "title": "tipo do crime",
+            "description": "tipo de ocorrência do evento (consumado ou tentado)",
+            "format": "default"
+          },
+          {
+            "name": "qtde_vitimas",
+            "type": "integer",
+            "title": "Quantidade de vítimas",
+            "description": "Quantitativo de vítimas de feminicídio",
+            "format": "default",
+            "bareNumber": true
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "data/feminicidio_2026.csv",
+      "name": "feminicidio-2026",
+      "title": "Feminicidio 2026",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8-sig",
+      "dialect": {
+        "delimiter": ";",
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "skipInitialSpace": false
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "municipio_cod",
+            "type": "integer",
+            "title": "Código do município",
+            "description": "Código do município do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "municipio_fato",
+            "type": "string",
+            "title": "Munícipio do fato",
+            "description": "Munícipio de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "data_fato",
+            "type": "date",
+            "title": "Data do fato",
+            "description": "Data de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "mes",
+            "type": "integer",
+            "title": "Mês do fato",
+            "description": "Mês de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "ano",
+            "type": "integer",
+            "title": "Ano do fato",
+            "description": "Ano de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "risp",
+            "type": "string",
+            "title": "Região Integrada de Segurança Pública",
+            "description": "Descrição da região integrada de segurança pública",
+            "format": "default"
+          },
+          {
+            "name": "rmbh",
+            "type": "string",
+            "title": "Região Metropolitana de Belo Horizonte",
+            "description": "Indica se o município pertence a região metropolitana de Belo Horizonte",
+            "format": "default"
+          },
+          {
+            "name": "tentado_consumado",
+            "type": "string",
+            "title": "tipo do crime",
+            "description": "tipo de ocorrência do evento (consumado ou tentado)",
+            "format": "default"
+          },
+          {
+            "name": "qtde_vitimas",
+            "type": "integer",
+            "title": "Quantidade de vítimas",
+            "description": "Quantitativo de vítimas de feminicídio",
+            "format": "default",
+            "bareNumber": true
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "data/violencia_domestica_2014.csv",
+      "name": "violencia-contra-mulher-2014",
+      "title": "Violencia Contra Mulher 2014",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8-sig",
+      "dialect": {
+        "delimiter": ";",
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "skipInitialSpace": false
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "municipio_cod",
+            "type": "integer",
+            "title": "Código do Município",
+            "description": "Código do Município do Evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "municipio_fato",
+            "type": "string",
+            "title": "Nome do Município",
+            "description": "Nome do Município do Evento",
+            "format": "default"
+          },
+          {
+            "name": "data_fato",
+            "type": "date",
+            "title": "Data do fato",
+            "description": "data de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "mes",
+            "type": "integer",
+            "title": "Mês do fato",
+            "description": "mês de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "ano",
+            "type": "integer",
+            "title": "ano do fato",
+            "description": "ano de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "risp",
+            "type": "string",
+            "title": "Região Integrada de Segurança Pública",
+            "description": "Região Integrada de Segurança Pública",
+            "format": "default"
+          },
+          {
+            "name": "rmbh",
+            "type": "string",
+            "title": "Região Metropolitana de Belo Horizonte",
+            "description": "Indica se o município pertence a região metropolitana de Belo Horizonte",
+            "format": "default"
+          },
+          {
+            "name": "natureza_delito",
+            "type": "string",
+            "title": "Natureza do Delito",
+            "description": "Natureza do Delito",
+            "format": "default"
+          },
+          {
+            "name": "tentado_consumado",
+            "type": "string",
+            "title": "Tentado ou consumado",
+            "description": "Tentado ou consumado",
+            "format": "default"
+          },
+          {
+            "name": "qtde_vitimas",
+            "type": "integer",
+            "title": "Quantidade de vítimas",
+            "description": "quantitativo de vítimas de violência doméstica",
+            "format": "default",
+            "bareNumber": true
+          }
+        ],
+        "scheme": "file",
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "data/violencia_domestica_2015.csv",
+      "name": "violencia-contra-mulher-2015",
+      "title": "Violencia Contra Mulher 2015",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8-sig",
+      "dialect": {
+        "delimiter": ";",
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "skipInitialSpace": false
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "municipio_cod",
+            "type": "integer",
+            "title": "Código do Município",
+            "description": "Código do Município do Evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "municipio_fato",
+            "type": "string",
+            "title": "Nome do Município",
+            "description": "Nome do Município do Evento",
+            "format": "default"
+          },
+          {
+            "name": "data_fato",
+            "type": "date",
+            "title": "Data do fato",
+            "description": "data de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "mes",
+            "type": "integer",
+            "title": "Mês do fato",
+            "description": "mês de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "ano",
+            "type": "integer",
+            "title": "ano do fato",
+            "description": "ano de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "risp",
+            "type": "string",
+            "title": "Região Integrada de Segurança Pública",
+            "description": "Região Integrada de Segurança Pública",
+            "format": "default"
+          },
+          {
+            "name": "rmbh",
+            "type": "string",
+            "title": "Região Metropolitana de Belo Horizonte",
+            "description": "Indica se o município pertence a região metropolitana de Belo Horizonte",
+            "format": "default"
+          },
+          {
+            "name": "natureza_delito",
+            "type": "string",
+            "title": "Natureza do Delito",
+            "description": "Natureza do Delito",
+            "format": "default"
+          },
+          {
+            "name": "tentado_consumado",
+            "type": "string",
+            "title": "Tentado ou consumado",
+            "description": "Tentado ou consumado",
+            "format": "default"
+          },
+          {
+            "name": "qtde_vitimas",
+            "type": "integer",
+            "title": "Quantidade de vítimas",
+            "description": "quantitativo de vítimas de violência doméstica",
+            "format": "default",
+            "bareNumber": true
+          }
+        ],
+        "scheme": "file",
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "data/violencia_domestica_2016.csv",
+      "name": "violencia-contra-mulher-2016",
+      "title": "Violencia Contra Mulher 2016",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8-sig",
+      "dialect": {
+        "delimiter": ";",
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "skipInitialSpace": false
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "municipio_cod",
+            "type": "integer",
+            "title": "Código do Município",
+            "description": "Código do Município do Evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "municipio_fato",
+            "type": "string",
+            "title": "Nome do Município",
+            "description": "Nome do Município do Evento",
+            "format": "default"
+          },
+          {
+            "name": "data_fato",
+            "type": "date",
+            "title": "Data do fato",
+            "description": "data de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "mes",
+            "type": "integer",
+            "title": "Mês do fato",
+            "description": "mês de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "ano",
+            "type": "integer",
+            "title": "ano do fato",
+            "description": "ano de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "risp",
+            "type": "string",
+            "title": "Região Integrada de Segurança Pública",
+            "description": "Região Integrada de Segurança Pública",
+            "format": "default"
+          },
+          {
+            "name": "rmbh",
+            "type": "string",
+            "title": "Região Metropolitana de Belo Horizonte",
+            "description": "Indica se o município pertence a região metropolitana de Belo Horizonte",
+            "format": "default"
+          },
+          {
+            "name": "natureza_delito",
+            "type": "string",
+            "title": "Natureza do Delito",
+            "description": "Natureza do Delito",
+            "format": "default"
+          },
+          {
+            "name": "tentado_consumado",
+            "type": "string",
+            "title": "Tentado ou consumado",
+            "description": "Tentado ou consumado",
+            "format": "default"
+          },
+          {
+            "name": "qtde_vitimas",
+            "type": "integer",
+            "title": "Quantidade de vítimas",
+            "description": "quantitativo de vítimas de violência doméstica",
+            "format": "default",
+            "bareNumber": true
+          }
+        ],
+        "scheme": "file",
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "data/violencia_domestica_2017.csv",
+      "name": "violencia-contra-mulher-2017",
+      "title": "Violencia Contra Mulher 2017",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8-sig",
+      "dialect": {
+        "delimiter": ";",
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "skipInitialSpace": false
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "municipio_cod",
+            "type": "integer",
+            "title": "Código do Município",
+            "description": "Código do Município do Evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "municipio_fato",
+            "type": "string",
+            "title": "Nome do Município",
+            "description": "Nome do Município do Evento",
+            "format": "default"
+          },
+          {
+            "name": "data_fato",
+            "type": "date",
+            "title": "Data do fato",
+            "description": "data de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "mes",
+            "type": "integer",
+            "title": "Mês do fato",
+            "description": "mês de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "ano",
+            "type": "integer",
+            "title": "ano do fato",
+            "description": "ano de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "risp",
+            "type": "string",
+            "title": "Região Integrada de Segurança Pública",
+            "description": "Região Integrada de Segurança Pública",
+            "format": "default"
+          },
+          {
+            "name": "rmbh",
+            "type": "string",
+            "title": "Região Metropolitana de Belo Horizonte",
+            "description": "Indica se o município pertence a região metropolitana de Belo Horizonte",
+            "format": "default"
+          },
+          {
+            "name": "natureza_delito",
+            "type": "string",
+            "title": "Natureza do Delito",
+            "description": "Natureza do Delito",
+            "format": "default"
+          },
+          {
+            "name": "tentado_consumado",
+            "type": "string",
+            "title": "Tentado ou consumado",
+            "description": "Tentado ou consumado",
+            "format": "default"
+          },
+          {
+            "name": "qtde_vitimas",
+            "type": "integer",
+            "title": "Quantidade de vítimas",
+            "description": "quantitativo de vítimas de violência doméstica",
+            "format": "default",
+            "bareNumber": true
+          }
+        ],
+        "scheme": "file",
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "data/violencia_domestica_2018.csv",
+      "name": "violencia-contra-mulher-2018",
+      "title": "Violencia Contra Mulher 2018",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8-sig",
+      "dialect": {
+        "delimiter": ";",
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "skipInitialSpace": false
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "municipio_cod",
+            "type": "integer",
+            "title": "Código do Município",
+            "description": "Código do Município do Evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "municipio_fato",
+            "type": "string",
+            "title": "Nome do Município",
+            "description": "Nome do Município do Evento",
+            "format": "default"
+          },
+          {
+            "name": "data_fato",
+            "type": "date",
+            "title": "Data do fato",
+            "description": "data de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "mes",
+            "type": "integer",
+            "title": "Mês do fato",
+            "description": "mês de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "ano",
+            "type": "integer",
+            "title": "ano do fato",
+            "description": "ano de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "risp",
+            "type": "string",
+            "title": "Região Integrada de Segurança Pública",
+            "description": "Região Integrada de Segurança Pública",
+            "format": "default"
+          },
+          {
+            "name": "rmbh",
+            "type": "string",
+            "title": "Região Metropolitana de Belo Horizonte",
+            "description": "Indica se o município pertence a região metropolitana de Belo Horizonte",
+            "format": "default"
+          },
+          {
+            "name": "natureza_delito",
+            "type": "string",
+            "title": "Natureza do Delito",
+            "description": "Natureza do Delito",
+            "format": "default"
+          },
+          {
+            "name": "tentado_consumado",
+            "type": "string",
+            "title": "Tentado ou consumado",
+            "description": "Tentado ou consumado",
+            "format": "default"
+          },
+          {
+            "name": "qtde_vitimas",
+            "type": "integer",
+            "title": "Quantidade de vítimas",
+            "description": "quantitativo de vítimas de violência doméstica",
+            "format": "default",
+            "bareNumber": true
+          }
+        ],
+        "scheme": "file",
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "data/violencia_domestica_2019.csv",
+      "name": "violencia-contra-mulher-2019",
+      "title": "Violencia Contra Mulher 2019",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8-sig",
+      "dialect": {
+        "delimiter": ";",
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "skipInitialSpace": false
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "municipio_cod",
+            "type": "integer",
+            "title": "Código do Município",
+            "description": "Código do Município do Evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "municipio_fato",
+            "type": "string",
+            "title": "Nome do Município",
+            "description": "Nome do Município do Evento",
+            "format": "default"
+          },
+          {
+            "name": "data_fato",
+            "type": "date",
+            "title": "Data do fato",
+            "description": "data de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "mes",
+            "type": "integer",
+            "title": "Mês do fato",
+            "description": "mês de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "ano",
+            "type": "integer",
+            "title": "ano do fato",
+            "description": "ano de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "risp",
+            "type": "string",
+            "title": "Região Integrada de Segurança Pública",
+            "description": "Região Integrada de Segurança Pública",
+            "format": "default"
+          },
+          {
+            "name": "rmbh",
+            "type": "string",
+            "title": "Região Metropolitana de Belo Horizonte",
+            "description": "Indica se o município pertence a região metropolitana de Belo Horizonte",
+            "format": "default"
+          },
+          {
+            "name": "natureza_delito",
+            "type": "string",
+            "title": "Natureza do Delito",
+            "description": "Natureza do Delito",
+            "format": "default"
+          },
+          {
+            "name": "tentado_consumado",
+            "type": "string",
+            "title": "Tentado ou consumado",
+            "description": "Tentado ou consumado",
+            "format": "default"
+          },
+          {
+            "name": "qtde_vitimas",
+            "type": "integer",
+            "title": "Quantidade de vítimas",
+            "description": "quantitativo de vítimas de violência doméstica",
+            "format": "default",
+            "bareNumber": true
+          }
+        ],
+        "scheme": "file",
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "data/violencia_domestica_2020.csv",
+      "name": "violencia-contra-mulher-2020",
+      "title": "Violencia Contra Mulher 2020",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8-sig",
+      "dialect": {
+        "delimiter": ";",
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "skipInitialSpace": false
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "municipio_cod",
+            "type": "integer",
+            "title": "Código do Município",
+            "description": "Código do Município do Evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "municipio_fato",
+            "type": "string",
+            "title": "Nome do Município",
+            "description": "Nome do Município do Evento",
+            "format": "default"
+          },
+          {
+            "name": "data_fato",
+            "type": "date",
+            "title": "Data do fato",
+            "description": "data de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "mes",
+            "type": "integer",
+            "title": "Mês do fato",
+            "description": "mês de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "ano",
+            "type": "integer",
+            "title": "ano do fato",
+            "description": "ano de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "risp",
+            "type": "string",
+            "title": "Região Integrada de Segurança Pública",
+            "description": "Região Integrada de Segurança Pública",
+            "format": "default"
+          },
+          {
+            "name": "rmbh",
+            "type": "string",
+            "title": "Região Metropolitana de Belo Horizonte",
+            "description": "Indica se o município pertence a região metropolitana de Belo Horizonte",
+            "format": "default"
+          },
+          {
+            "name": "natureza_delito",
+            "type": "string",
+            "title": "Natureza do Delito",
+            "description": "Natureza do Delito",
+            "format": "default"
+          },
+          {
+            "name": "tentado_consumado",
+            "type": "string",
+            "title": "Tentado ou consumado",
+            "description": "Tentado ou consumado",
+            "format": "default"
+          },
+          {
+            "name": "qtde_vitimas",
+            "type": "integer",
+            "title": "Quantidade de vítimas",
+            "description": "quantitativo de vítimas de violência doméstica",
+            "format": "default",
+            "bareNumber": true
+          }
+        ],
+        "scheme": "file",
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "data/violencia_domestica_2021.csv",
+      "name": "violencia-contra-mulher-2021",
+      "title": "Violencia Contra Mulher 2021",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8-sig",
+      "dialect": {
+        "delimiter": ";",
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "skipInitialSpace": false
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "municipio_cod",
+            "type": "integer",
+            "title": "Código do Município",
+            "description": "Código do Município do Evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "municipio_fato",
+            "type": "string",
+            "title": "Nome do Município",
+            "description": "Nome do Município do Evento",
+            "format": "default"
+          },
+          {
+            "name": "data_fato",
+            "type": "date",
+            "title": "Data do fato",
+            "description": "data de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "mes",
+            "type": "integer",
+            "title": "Mês do fato",
+            "description": "mês de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "ano",
+            "type": "integer",
+            "title": "ano do fato",
+            "description": "ano de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "risp",
+            "type": "string",
+            "title": "Região Integrada de Segurança Pública",
+            "description": "Região Integrada de Segurança Pública",
+            "format": "default"
+          },
+          {
+            "name": "rmbh",
+            "type": "string",
+            "title": "Região Metropolitana de Belo Horizonte",
+            "description": "Indica se o município pertence a região metropolitana de Belo Horizonte",
+            "format": "default"
+          },
+          {
+            "name": "natureza_delito",
+            "type": "string",
+            "title": "Natureza do Delito",
+            "description": "Natureza do Delito",
+            "format": "default"
+          },
+          {
+            "name": "tentado_consumado",
+            "type": "string",
+            "title": "Tentado ou consumado",
+            "description": "Tentado ou consumado",
+            "format": "default"
+          },
+          {
+            "name": "qtde_vitimas",
+            "type": "integer",
+            "title": "Quantidade de vítimas",
+            "description": "quantitativo de vítimas de violência doméstica",
+            "format": "default",
+            "bareNumber": true
+          }
+        ],
+        "scheme": "file",
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "data/violencia_domestica_2022.csv",
+      "name": "violencia-contra-mulher-2022",
+      "title": "Violencia Contra Mulher 2022",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8-sig",
+      "dialect": {
+        "delimiter": ";",
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "skipInitialSpace": false
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "municipio_cod",
+            "type": "integer",
+            "title": "Código do Município",
+            "description": "Código do Município do Evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "municipio_fato",
+            "type": "string",
+            "title": "Nome do Município",
+            "description": "Nome do Município do Evento",
+            "format": "default"
+          },
+          {
+            "name": "data_fato",
+            "type": "date",
+            "title": "Data do fato",
+            "description": "data de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "mes",
+            "type": "integer",
+            "title": "Mês do fato",
+            "description": "mês de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "ano",
+            "type": "integer",
+            "title": "ano do fato",
+            "description": "ano de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "risp",
+            "type": "string",
+            "title": "Região Integrada de Segurança Pública",
+            "description": "Região Integrada de Segurança Pública",
+            "format": "default"
+          },
+          {
+            "name": "rmbh",
+            "type": "string",
+            "title": "Região Metropolitana de Belo Horizonte",
+            "description": "Indica se o município pertence a região metropolitana de Belo Horizonte",
+            "format": "default"
+          },
+          {
+            "name": "natureza_delito",
+            "type": "string",
+            "title": "Natureza do Delito",
+            "description": "Natureza do Delito",
+            "format": "default"
+          },
+          {
+            "name": "tentado_consumado",
+            "type": "string",
+            "title": "Tentado ou consumado",
+            "description": "Tentado ou consumado",
+            "format": "default"
+          },
+          {
+            "name": "qtde_vitimas",
+            "type": "integer",
+            "title": "Quantidade de vítimas",
+            "description": "quantitativo de vítimas de violência doméstica",
+            "format": "default",
+            "bareNumber": true
+          }
+        ],
+        "scheme": "file",
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "data/violencia_domestica_2023.csv",
+      "name": "violencia-contra-mulher-2023",
+      "title": "Violencia Contra Mulher 2023",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8-sig",
+      "dialect": {
+        "delimiter": ";",
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "skipInitialSpace": false
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "municipio_cod",
+            "type": "integer",
+            "title": "Código do Município",
+            "description": "Código do Município do Evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "municipio_fato",
+            "type": "string",
+            "title": "Nome do Município",
+            "description": "Nome do Município do Evento",
+            "format": "default"
+          },
+          {
+            "name": "data_fato",
+            "type": "date",
+            "title": "Data do fato",
+            "description": "data de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "mes",
+            "type": "integer",
+            "title": "Mês do fato",
+            "description": "mês de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "ano",
+            "type": "integer",
+            "title": "ano do fato",
+            "description": "ano de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "risp",
+            "type": "string",
+            "title": "Região Integrada de Segurança Pública",
+            "description": "Região Integrada de Segurança Pública",
+            "format": "default"
+          },
+          {
+            "name": "rmbh",
+            "type": "string",
+            "title": "Região Metropolitana de Belo Horizonte",
+            "description": "Indica se o município pertence a região metropolitana de Belo Horizonte",
+            "format": "default"
+          },
+          {
+            "name": "natureza_delito",
+            "type": "string",
+            "title": "Natureza do Delito",
+            "description": "Natureza do Delito",
+            "format": "default"
+          },
+          {
+            "name": "tentado_consumado",
+            "type": "string",
+            "title": "Tentado ou consumado",
+            "description": "Tentado ou consumado",
+            "format": "default"
+          },
+          {
+            "name": "qtde_vitimas",
+            "type": "integer",
+            "title": "Quantidade de vítimas",
+            "description": "quantitativo de vítimas de violência doméstica",
+            "format": "default",
+            "bareNumber": true
+          }
+        ],
+        "scheme": "file",
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "data/violencia_domestica_2024.csv",
+      "name": "violencia-contra-mulher-2024",
+      "title": "Violencia Contra Mulher 2024",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8-sig",
+      "dialect": {
+        "delimiter": ";",
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "skipInitialSpace": false
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "municipio_cod",
+            "type": "integer",
+            "title": "Código do Município",
+            "description": "Código do Município do Evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "municipio_fato",
+            "type": "string",
+            "title": "Nome do Município",
+            "description": "Nome do Município do Evento",
+            "format": "default"
+          },
+          {
+            "name": "data_fato",
+            "type": "date",
+            "title": "Data do fato",
+            "description": "data de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "mes",
+            "type": "integer",
+            "title": "Mês do fato",
+            "description": "mês de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "ano",
+            "type": "integer",
+            "title": "ano do fato",
+            "description": "ano de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "risp",
+            "type": "string",
+            "title": "Região Integrada de Segurança Pública",
+            "description": "Região Integrada de Segurança Pública",
+            "format": "default"
+          },
+          {
+            "name": "rmbh",
+            "type": "string",
+            "title": "Região Metropolitana de Belo Horizonte",
+            "description": "Indica se o município pertence a região metropolitana de Belo Horizonte",
+            "format": "default"
+          },
+          {
+            "name": "natureza_delito",
+            "type": "string",
+            "title": "Natureza do Delito",
+            "description": "Natureza do Delito",
+            "format": "default"
+          },
+          {
+            "name": "tentado_consumado",
+            "type": "string",
+            "title": "Tentado ou consumado",
+            "description": "Tentado ou consumado",
+            "format": "default"
+          },
+          {
+            "name": "qtde_vitimas",
+            "type": "integer",
+            "title": "Quantidade de vítimas",
+            "description": "quantitativo de vítimas de violência doméstica",
+            "format": "default",
+            "bareNumber": true
+          }
+        ],
+        "scheme": "file",
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "data/violencia_domestica_2025.csv",
+      "name": "violencia-contra-mulher-2025",
+      "title": "Violencia Contra Mulher 2025",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8-sig",
+      "dialect": {
+        "delimiter": ";",
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "skipInitialSpace": false
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "municipio_cod",
+            "type": "integer",
+            "title": "Código do Município",
+            "description": "Código do Município do Evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "municipio_fato",
+            "type": "string",
+            "title": "Nome do Município",
+            "description": "Nome do Município do Evento",
+            "format": "default"
+          },
+          {
+            "name": "data_fato",
+            "type": "date",
+            "title": "Data do fato",
+            "description": "data de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "mes",
+            "type": "integer",
+            "title": "Mês do fato",
+            "description": "mês de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "ano",
+            "type": "integer",
+            "title": "ano do fato",
+            "description": "ano de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "risp",
+            "type": "string",
+            "title": "Região Integrada de Segurança Pública",
+            "description": "Região Integrada de Segurança Pública",
+            "format": "default"
+          },
+          {
+            "name": "rmbh",
+            "type": "string",
+            "title": "Região Metropolitana de Belo Horizonte",
+            "description": "Indica se o município pertence a região metropolitana de Belo Horizonte",
+            "format": "default"
+          },
+          {
+            "name": "natureza_delito",
+            "type": "string",
+            "title": "Natureza do Delito",
+            "description": "Natureza do Delito",
+            "format": "default"
+          },
+          {
+            "name": "tentado_consumado",
+            "type": "string",
+            "title": "Tentado ou consumado",
+            "description": "Tentado ou consumado",
+            "format": "default"
+          },
+          {
+            "name": "qtde_vitimas",
+            "type": "integer",
+            "title": "Quantidade de vítimas",
+            "description": "quantitativo de vítimas de violência doméstica",
+            "format": "default",
+            "bareNumber": true
+          }
+        ],
+        "scheme": "file",
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "data/violencia_domestica_2026.csv",
+      "name": "violencia-contra-mulher-2026",
+      "title": "Violencia Contra Mulher 2026",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8-sig",
+      "dialect": {
+        "delimiter": ";",
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "skipInitialSpace": false
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "municipio_cod",
+            "type": "integer",
+            "title": "Código do Município",
+            "description": "Código do Município do Evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "municipio_fato",
+            "type": "string",
+            "title": "Nome do Município",
+            "description": "Nome do Município do Evento",
+            "format": "default"
+          },
+          {
+            "name": "data_fato",
+            "type": "date",
+            "title": "Data do fato",
+            "description": "data de ocorrência do evento",
+            "format": "default"
+          },
+          {
+            "name": "mes",
+            "type": "integer",
+            "title": "Mês do fato",
+            "description": "mês de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "ano",
+            "type": "integer",
+            "title": "ano do fato",
+            "description": "ano de ocorrência do evento",
+            "format": "default",
+            "bareNumber": true
+          },
+          {
+            "name": "risp",
+            "type": "string",
+            "title": "Região Integrada de Segurança Pública",
+            "description": "Região Integrada de Segurança Pública",
+            "format": "default"
+          },
+          {
+            "name": "rmbh",
+            "type": "string",
+            "title": "Região Metropolitana de Belo Horizonte",
+            "description": "Indica se o município pertence a região metropolitana de Belo Horizonte",
+            "format": "default"
+          },
+          {
+            "name": "natureza_delito",
+            "type": "string",
+            "title": "Natureza do Delito",
+            "description": "Natureza do Delito",
+            "format": "default"
+          },
+          {
+            "name": "tentado_consumado",
+            "type": "string",
+            "title": "Tentado ou consumado",
+            "description": "Tentado ou consumado",
+            "format": "default"
+          },
+          {
+            "name": "qtde_vitimas",
+            "type": "integer",
+            "title": "Quantidade de vítimas",
+            "description": "quantitativo de vítimas de violência doméstica",
+            "format": "default",
+            "bareNumber": true
+          }
+        ],
+        "scheme": "file",
+        "missingValues": [
+          ""
+        ]
+      }
+    }
+  ],
+  "profile": "tabular-data-package"
+}
