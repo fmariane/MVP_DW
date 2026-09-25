@@ -4,8 +4,7 @@ Foi construído um pipeline no Databricks Free Edition para análise de duas bas
 
 ## Índice de navegação
 
-Os pesos da especificação são apresentados para orientar a conferência. Não foi atribuída nota ao trabalho.
-
+Ordem apresentada foi sugerida na especificação da construção do MVP. Índice adicionado para praticidade na avaliação
 1. [Contexto de Negócios e Perguntas](#contexto)
 2. [Carga dos Dados](#carga)
 3. [Modelagem e Catálogo de Dados](#modelagem)
