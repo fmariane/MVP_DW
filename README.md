@@ -207,7 +207,7 @@ Foram preservados os arquivos fornecidos pelo autor com código e saídas export
 2. [Execução Gold em HTML](https://fmariane.github.io/MVP_DW/evidencias/06_gold.html).
 3. [Consultas analíticas em HTML](https://fmariane.github.io/MVP_DW/evidencias/07_consultas%20analiticas.html).
 
-Foi preparada a publicação pelo GitHub Pages para abertura das evidências como páginas no navegador. A ativação deverá ser realizada em Settings → Pages, com publicação pela branch main e pasta raiz. Até a conclusão da primeira publicação, os endereços do site poderão retornar página não encontrada. As exportações originais foram preservadas na pasta evidencias. As exportações foram distinguidas das capturas do console, e os gráficos foram identificados como renderizações locais dos resultados remotos.
+Foi preparada a publicação pelo GitHub Pages para abertura das evidências como páginas no navegador. As exportações originais foram preservadas na pasta evidencias. As exportações foram distinguidas das capturas do console, e os gráficos foram identificados como renderizações locais dos resultados remotos.
 
 ### Índice de evidências e implementação
 
