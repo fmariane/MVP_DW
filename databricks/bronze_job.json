@@ -1,0 +1,15 @@
+{
+  "name": "MVP_DW - Bronze PCMG 2025",
+  "max_concurrent_runs": 1,
+  "tasks": [
+    {
+      "task_key": "bronze",
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/f_mariane@hotmail.com/MVP_DW/01_bronze",
+        "source": "WORKSPACE"
+      },
+      "timeout_seconds": 1800,
+      "max_retries": 0
+    }
+  ]
+}

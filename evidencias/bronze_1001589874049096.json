@@ -1,0 +1,48 @@
+{
+  "job_id": 699928499146328,
+  "run_id": 1001589874049096,
+  "task_run_id": 564190635701252,
+  "run_page_url": "https://dbc-0a2b6ff1-9976.cloud.databricks.com/?o=7474657037018547#job/699928499146328/run/1001589874049096",
+  "state": {
+    "life_cycle_state": "TERMINATED",
+    "result_state": "SUCCESS",
+    "state_message": "",
+    "user_cancelled_or_timedout": false
+  },
+  "start_time": 1790298708383,
+  "end_time": 1790298743309,
+  "report": {
+    "etapa": "bronze",
+    "executado_em_utc": "2026-09-25T01:12:18.529953+00:00",
+    "status": "APROVADO",
+    "fontes": [
+      {
+        "tabela": "workspace.mvp_bronze.violencia_domestica_2025",
+        "acao": "snapshot_existente_validado",
+        "arquivo_original": "/Volumes/workspace/mvp_bronze/arquivos/violencia_domestica_2025.csv",
+        "arquivo_snapshot": "/Volumes/workspace/mvp_bronze/arquivos/snapshots/0d6e677ab65e7d04834904080ec0296eccf8dabd6013fe45910c9d754f94b4fe/violencia_domestica_2025.csv",
+        "arquivo_sha256": "0d6e677ab65e7d04834904080ec0296eccf8dabd6013fe45910c9d754f94b4fe",
+        "linhas": 117169,
+        "soma_vitimas": 162032,
+        "quantidades_invalidas": 0,
+        "formato": "delta",
+        "delta_id": "3400ffaa-d53a-45b2-8835-d613a6abc534",
+        "conteudo_original_preservado": true
+      },
+      {
+        "tabela": "workspace.mvp_bronze.feminicidio_2025",
+        "acao": "snapshot_existente_validado",
+        "arquivo_original": "/Volumes/workspace/mvp_bronze/arquivos/feminicidio_2025.csv",
+        "arquivo_snapshot": "/Volumes/workspace/mvp_bronze/arquivos/snapshots/364dec0197c1d9c40a050883573ce22efd280a43114680fc1491e40db6e89630/feminicidio_2025.csv",
+        "arquivo_sha256": "364dec0197c1d9c40a050883573ce22efd280a43114680fc1491e40db6e89630",
+        "linhas": 381,
+        "soma_vitimas": 391,
+        "quantidades_invalidas": 0,
+        "formato": "delta",
+        "delta_id": "a028738e-6536-4e4d-8bdf-b3080837908e",
+        "conteudo_original_preservado": true
+      }
+    ],
+    "observacao": "COUNT mede linhas; SUM mede quantitativos publicados. Fontes não somadas."
+  }
+}

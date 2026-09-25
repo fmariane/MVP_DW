@@ -1,0 +1,251 @@
+{
+  "job_id": 465875515640680,
+  "run_id": 700142655207447,
+  "task_run_id": 930188652780837,
+  "run_page_url": "https://dbc-0a2b6ff1-9976.cloud.databricks.com/?o=7474657037018547#job/465875515640680/run/700142655207447",
+  "state": {
+    "life_cycle_state": "TERMINATED",
+    "result_state": "SUCCESS",
+    "state_message": "",
+    "user_cancelled_or_timedout": false
+  },
+  "start_time": 1790301134789,
+  "end_time": 1790301322842,
+  "report": {
+    "etapa": "gold",
+    "status": "APROVADO",
+    "executado_em_utc": "2026-09-25T01:55:18.775822+00:00",
+    "testes_sinteticos": "APROVADOS",
+    "fontes_silver": [
+      {
+        "tabela": "workspace.mvp_silver.violencia_domestica_2025",
+        "versao_delta": 0,
+        "arquivo_sha256": "0d6e677ab65e7d04834904080ec0296eccf8dabd6013fe45910c9d754f94b4fe"
+      },
+      {
+        "tabela": "workspace.mvp_silver.feminicidio_2025",
+        "versao_delta": 0,
+        "arquivo_sha256": "364dec0197c1d9c40a050883573ce22efd280a43114680fc1491e40db6e89630"
+      }
+    ],
+    "tabelas": [
+      {
+        "tabela": "workspace.mvp_gold.dim_tempo",
+        "acao": "criada",
+        "linhas": 365,
+        "delta_id": "11bb8645-196a-422e-bee7-b1ae2b7f0cdd",
+        "formato": "delta",
+        "tipos": {
+          "data_key": "int",
+          "data": "date",
+          "ano": "int",
+          "mes": "int",
+          "dia": "int",
+          "trimestre": "int"
+        }
+      },
+      {
+        "tabela": "workspace.mvp_gold.dim_municipio",
+        "acao": "criada",
+        "linhas": 853,
+        "delta_id": "72e46daa-7392-4fc0-8d95-f447b643df35",
+        "formato": "delta",
+        "tipos": {
+          "municipio_cod": "string",
+          "municipio_nome": "string",
+          "uf": "string",
+          "risp_cod": "string",
+          "recorte_metropolitano": "string"
+        }
+      },
+      {
+        "tabela": "workspace.mvp_gold.dim_natureza_delito",
+        "acao": "criada",
+        "linhas": 174,
+        "delta_id": "adb883b2-a544-4ceb-9c63-dfb48a345085",
+        "formato": "delta",
+        "tipos": {
+          "natureza_key": "string",
+          "natureza_nome": "string"
+        }
+      },
+      {
+        "tabela": "workspace.mvp_gold.fato_violencia_domestica",
+        "acao": "criada",
+        "linhas": 117169,
+        "delta_id": "40153d22-7c83-45ab-a1f0-ca7e99558063",
+        "formato": "delta",
+        "tipos": {
+          "data_key": "int",
+          "municipio_cod": "string",
+          "natureza_key": "string",
+          "codigo_tentado_consumado": "string",
+          "qtde_vitimas": "bigint",
+          "arquivo_origem": "string",
+          "arquivo_sha256": "string",
+          "ingerido_em": "timestamp"
+        },
+        "soma_vitimas": 162032,
+        "juncoes": [
+          {
+            "juncao": "tempo",
+            "antes": {
+              "linhas": 117169,
+              "soma_vitimas": 162032
+            },
+            "depois": {
+              "linhas": 117169,
+              "soma_vitimas": 162032
+            },
+            "chaves_orfas": 0
+          },
+          {
+            "juncao": "municipio",
+            "antes": {
+              "linhas": 117169,
+              "soma_vitimas": 162032
+            },
+            "depois": {
+              "linhas": 117169,
+              "soma_vitimas": 162032
+            },
+            "chaves_orfas": 0
+          },
+          {
+            "juncao": "natureza",
+            "antes": {
+              "linhas": 117169,
+              "soma_vitimas": 162032
+            },
+            "depois": {
+              "linhas": 117169,
+              "soma_vitimas": 162032
+            },
+            "chaves_orfas": 0
+          }
+        ]
+      },
+      {
+        "tabela": "workspace.mvp_gold.fato_feminicidio",
+        "acao": "criada",
+        "linhas": 381,
+        "delta_id": "68b61910-190f-419f-90f5-68c81261437b",
+        "formato": "delta",
+        "tipos": {
+          "data_key": "int",
+          "municipio_cod": "string",
+          "situacao": "string",
+          "qtde_vitimas": "bigint",
+          "arquivo_origem": "string",
+          "arquivo_sha256": "string",
+          "ingerido_em": "timestamp"
+        },
+        "soma_vitimas": 391,
+        "juncoes": [
+          {
+            "juncao": "tempo",
+            "antes": {
+              "linhas": 381,
+              "soma_vitimas": 391
+            },
+            "depois": {
+              "linhas": 381,
+              "soma_vitimas": 391
+            },
+            "chaves_orfas": 0
+          },
+          {
+            "juncao": "municipio",
+            "antes": {
+              "linhas": 381,
+              "soma_vitimas": 391
+            },
+            "depois": {
+              "linhas": 381,
+              "soma_vitimas": 391
+            },
+            "chaves_orfas": 0
+          }
+        ]
+      }
+    ],
+    "validacoes_persistidas": [
+      {
+        "fato": "fato_violencia_domestica",
+        "juncao": "dim_tempo",
+        "antes": {
+          "linhas": 117169,
+          "soma_vitimas": 162032
+        },
+        "depois": {
+          "linhas": 117169,
+          "soma_vitimas": 162032
+        },
+        "chaves_orfas": 0
+      },
+      {
+        "fato": "fato_violencia_domestica",
+        "juncao": "dim_municipio",
+        "antes": {
+          "linhas": 117169,
+          "soma_vitimas": 162032
+        },
+        "depois": {
+          "linhas": 117169,
+          "soma_vitimas": 162032
+        },
+        "chaves_orfas": 0
+      },
+      {
+        "fato": "fato_violencia_domestica",
+        "juncao": "dim_natureza_delito",
+        "antes": {
+          "linhas": 117169,
+          "soma_vitimas": 162032
+        },
+        "depois": {
+          "linhas": 117169,
+          "soma_vitimas": 162032
+        },
+        "chaves_orfas": 0
+      },
+      {
+        "fato": "fato_feminicidio",
+        "juncao": "dim_tempo",
+        "antes": {
+          "linhas": 381,
+          "soma_vitimas": 391
+        },
+        "depois": {
+          "linhas": 381,
+          "soma_vitimas": 391
+        },
+        "chaves_orfas": 0
+      },
+      {
+        "fato": "fato_feminicidio",
+        "juncao": "dim_municipio",
+        "antes": {
+          "linhas": 381,
+          "soma_vitimas": 391
+        },
+        "depois": {
+          "linhas": 381,
+          "soma_vitimas": 391
+        },
+        "chaves_orfas": 0
+      }
+    ],
+    "comparativo": {
+      "view": "workspace.mvp_gold.comparativo_municipio_mes",
+      "linhas": 9296,
+      "medidas_separadas": true,
+      "ausencia_permanece_nula": true
+    },
+    "ressalvas": [
+      "S/N não traduzido.",
+      "Sem contagem de pessoas únicas nem soma entre fontes.",
+      "Integridade verificada pelo pipeline; PK/FK não declaradas como constraints no catálogo."
+    ]
+  }
+}

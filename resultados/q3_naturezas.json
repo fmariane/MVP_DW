@@ -1,0 +1,1046 @@
+[
+  {
+    "natureza_nome": "AMEACA",
+    "vitimas": 50198,
+    "posicao": 1,
+    "pct_fonte": 30.98030018761726
+  },
+  {
+    "natureza_nome": "VIAS DE FATO / AGRESSAO",
+    "vitimas": 31933,
+    "posicao": 2,
+    "pct_fonte": 19.70783548928607
+  },
+  {
+    "natureza_nome": "LESAO CORPORAL",
+    "vitimas": 24886,
+    "posicao": 3,
+    "pct_fonte": 15.35869457884862
+  },
+  {
+    "natureza_nome": "DESCUMPRIMENTO DE MEDIDA PROTETIVA DE URGENCIA",
+    "vitimas": 12745,
+    "posicao": 4,
+    "pct_fonte": 7.86573022612817
+  },
+  {
+    "natureza_nome": "PERSEGUICAO",
+    "vitimas": 4482,
+    "posicao": 5,
+    "pct_fonte": 2.76612027253876
+  },
+  {
+    "natureza_nome": "ATEND. DENUNCIA INFRACOES CONTRA MULHER(VIOLENCIA DOMESTICA)",
+    "vitimas": 4282,
+    "posicao": 6,
+    "pct_fonte": 2.6426878641256
+  },
+  {
+    "natureza_nome": "VIOLENCIA PSICOLOGICA",
+    "vitimas": 3788,
+    "posicao": 7,
+    "pct_fonte": 2.33780981534512
+  },
+  {
+    "natureza_nome": "DANO",
+    "vitimas": 3507,
+    "posicao": 8,
+    "pct_fonte": 2.16438728152464
+  },
+  {
+    "natureza_nome": "INJURIA",
+    "vitimas": 2787,
+    "posicao": 9,
+    "pct_fonte": 1.72003061123729
+  },
+  {
+    "natureza_nome": "ATRITO VERBAL",
+    "vitimas": 2592,
+    "posicao": 10,
+    "pct_fonte": 1.59968401303446
+  },
+  {
+    "natureza_nome": "OUTROS INFRACOES C/ A PESSOA",
+    "vitimas": 2371,
+    "posicao": 11,
+    "pct_fonte": 1.46329120173793
+  },
+  {
+    "natureza_nome": "OUTRAS ACOES DEFESA SOCIAL",
+    "vitimas": 2260,
+    "posicao": 12,
+    "pct_fonte": 1.39478621506863
+  },
+  {
+    "natureza_nome": "FURTO",
+    "vitimas": 2111,
+    "posicao": 13,
+    "pct_fonte": 1.30282907080083
+  },
+  {
+    "natureza_nome": "ESTUPRO DE VULNERAVEL",
+    "vitimas": 1457,
+    "posicao": 14,
+    "pct_fonte": 0.89920509528982
+  },
+  {
+    "natureza_nome": "DIFAMACAO",
+    "vitimas": 1324,
+    "posicao": 15,
+    "pct_fonte": 0.81712254369507
+  },
+  {
+    "natureza_nome": "MAUS TRATOS",
+    "vitimas": 1251,
+    "posicao": 16,
+    "pct_fonte": 0.77206971462427
+  },
+  {
+    "natureza_nome": "ABANDONO DE INCAPAZ",
+    "vitimas": 916,
+    "posicao": 17,
+    "pct_fonte": 0.56532043053224
+  },
+  {
+    "natureza_nome": "VIOLACAO DE DOMICILIO",
+    "vitimas": 874,
+    "posicao": 18,
+    "pct_fonte": 0.53939962476548
+  },
+  {
+    "natureza_nome": "PERTURBACAO DO TRABALHO OU DO SOSSEGO ALHEIOS",
+    "vitimas": 766,
+    "posicao": 19,
+    "pct_fonte": 0.47274612422238
+  },
+  {
+    "natureza_nome": "CALUNIA",
+    "vitimas": 671,
+    "posicao": 20,
+    "pct_fonte": 0.41411573022613
+  },
+  {
+    "natureza_nome": "ESTELIONATO",
+    "vitimas": 657,
+    "posicao": 21,
+    "pct_fonte": 0.40547546163721
+  },
+  {
+    "natureza_nome": "APROPRIACAO INDEBITA DE COISA ALHEIA MOVEL",
+    "vitimas": 591,
+    "posicao": 22,
+    "pct_fonte": 0.36474276686087
+  },
+  {
+    "natureza_nome": "OUTRAS INFRACOES CONTRA DIGNIDADE SEXUAL E A FAMILIA",
+    "vitimas": 526,
+    "posicao": 23,
+    "pct_fonte": 0.32462723412659
+  },
+  {
+    "natureza_nome": "ESTUPRO",
+    "vitimas": 518,
+    "posicao": 24,
+    "pct_fonte": 0.31968993779007
+  },
+  {
+    "natureza_nome": "IMPORTUNACAO SEXUAL",
+    "vitimas": 348,
+    "posicao": 25,
+    "pct_fonte": 0.21477239063889
+  },
+  {
+    "natureza_nome": "DESOBEDECE ORDEM JUDICIAL (PERDA/SUS DIREITO)",
+    "vitimas": 267,
+    "posicao": 26,
+    "pct_fonte": 0.16478226523156
+  },
+  {
+    "natureza_nome": "FEMINICIDIO",
+    "vitimas": 261,
+    "posicao": 27,
+    "pct_fonte": 0.16107929297916
+  },
+  {
+    "natureza_nome": "DIVULGACAO CENA ESTUPRO E IMAGEM NUDEZ, SEXO OU PORNOGRAFIA",
+    "vitimas": 224,
+    "posicao": 28,
+    "pct_fonte": 0.13824429742273
+  },
+  {
+    "natureza_nome": "SEQUESTRO E CARCERE PRIVADO",
+    "vitimas": 210,
+    "posicao": 29,
+    "pct_fonte": 0.12960402883381
+  },
+  {
+    "natureza_nome": "OUTRAS INFRACOES CONTRA O PATRIMONIO",
+    "vitimas": 209,
+    "posicao": 30,
+    "pct_fonte": 0.12898686679174
+  },
+  {
+    "natureza_nome": "APROPRIA/DESV/BEM/PROVENTO/PENSAO/REND.IDOSO",
+    "vitimas": 182,
+    "posicao": 31,
+    "pct_fonte": 0.11232349165597
+  },
+  {
+    "natureza_nome": "INCENDIO",
+    "vitimas": 167,
+    "posicao": 32,
+    "pct_fonte": 0.10306606102498
+  },
+  {
+    "natureza_nome": "HOMICIDIO",
+    "vitimas": 157,
+    "posicao": 33,
+    "pct_fonte": 0.09689444060433
+  },
+  {
+    "natureza_nome": "ATENDIMENTO DE DENUNCIA DE INFRACOES CONTRA OS IDOSOS",
+    "vitimas": 155,
+    "posicao": 34,
+    "pct_fonte": 0.09566011652019
+  },
+  {
+    "natureza_nome": "OUTRAS INFRACOES DEMAIS LEIS ESPECIAIS",
+    "vitimas": 140,
+    "posicao": 35,
+    "pct_fonte": 0.08640268588921
+  },
+  {
+    "natureza_nome": "INVASAO DE DISPOSITIVO INFORMATICO",
+    "vitimas": 122,
+    "posicao": 36,
+    "pct_fonte": 0.07529376913202
+  },
+  {
+    "natureza_nome": "OUTRAS DENUNCIA RECLAMACOES SOLICITACOES DEF SOCIAL",
+    "vitimas": 109,
+    "posicao": 37,
+    "pct_fonte": 0.06727066258517
+  },
+  {
+    "natureza_nome": "DESOBEDIENCIA A DECISAO JUDICIAL",
+    "vitimas": 85,
+    "posicao": 38,
+    "pct_fonte": 0.05245877357559
+  },
+  {
+    "natureza_nome": "ABANDONO MATERIAL",
+    "vitimas": 81,
+    "posicao": 39,
+    "pct_fonte": 0.04999012540733
+  },
+  {
+    "natureza_nome": "POSSE ILEGAL ARMA DE FOGO/ACESSÓRIO/MUNIÇÃO DE USO PERMITIDO",
+    "vitimas": 67,
+    "posicao": 40,
+    "pct_fonte": 0.04134985681841
+  },
+  {
+    "natureza_nome": "EXPOE A PERIGO/ PRIVA DE COMIDA/CUIDADO IDOSO",
+    "vitimas": 64,
+    "posicao": 41,
+    "pct_fonte": 0.03949837069221
+  },
+  {
+    "natureza_nome": "AVERIGUA PESSOA / VEICULO EM ATITUDE SUSPEITA",
+    "vitimas": 62,
+    "posicao": 42,
+    "pct_fonte": 0.03826404660808
+  },
+  {
+    "natureza_nome": "INJURIA RACIAL",
+    "vitimas": 62,
+    "posicao": 42,
+    "pct_fonte": 0.03826404660808
+  },
+  {
+    "natureza_nome": "ATENDIMENTO DE DENUNCIA DE INFRACOES CONTRA A VIDA",
+    "vitimas": 60,
+    "posicao": 43,
+    "pct_fonte": 0.03702972252395
+  },
+  {
+    "natureza_nome": "TRAFICO ILICITO DE DROGAS",
+    "vitimas": 60,
+    "posicao": 43,
+    "pct_fonte": 0.03702972252395
+  },
+  {
+    "natureza_nome": "CONSTRANGIMENTO ILEGAL",
+    "vitimas": 57,
+    "posicao": 44,
+    "pct_fonte": 0.03517823639775
+  },
+  {
+    "natureza_nome": "ASSEDIO SEXUAL",
+    "vitimas": 56,
+    "posicao": 45,
+    "pct_fonte": 0.03456107435568
+  },
+  {
+    "natureza_nome": "EXERCICIO ARBITRARIO DAS PROPRIAS RAZOES",
+    "vitimas": 54,
+    "posicao": 46,
+    "pct_fonte": 0.03332675027155
+  },
+  {
+    "natureza_nome": "ROUBO",
+    "vitimas": 51,
+    "posicao": 47,
+    "pct_fonte": 0.03147526414535
+  },
+  {
+    "natureza_nome": "ATENDIMENTO DE DENUNCIA DE INFRACOES CONTRA OS COSTUMES",
+    "vitimas": 50,
+    "posicao": 48,
+    "pct_fonte": 0.03085810210329
+  },
+  {
+    "natureza_nome": "ESBULHO POSSESSORIO",
+    "vitimas": 46,
+    "posicao": 49,
+    "pct_fonte": 0.02838945393503
+  },
+  {
+    "natureza_nome": "EXTORSAO",
+    "vitimas": 44,
+    "posicao": 50,
+    "pct_fonte": 0.02715512985089
+  },
+  {
+    "natureza_nome": "SUBTRACAO DE INCAPAZES",
+    "vitimas": 43,
+    "posicao": 51,
+    "pct_fonte": 0.02653796780883
+  },
+  {
+    "natureza_nome": "CUMPRIMENTO DE BUSCA E APREENSAO DE OBJETOS, PES ..",
+    "vitimas": 42,
+    "posicao": 52,
+    "pct_fonte": 0.02592080576676
+  },
+  {
+    "natureza_nome": "RECUSA/DIFICULTA/NAO ASSISTE IDOSO",
+    "vitimas": 42,
+    "posicao": 52,
+    "pct_fonte": 0.02592080576676
+  },
+  {
+    "natureza_nome": "PERIGO PARA A VIDA OU SAUDE DE OUTREM",
+    "vitimas": 40,
+    "posicao": 53,
+    "pct_fonte": 0.02468648168263
+  },
+  {
+    "natureza_nome": "DESOBEDIENCIA",
+    "vitimas": 39,
+    "posicao": 54,
+    "pct_fonte": 0.02406931964056
+  },
+  {
+    "natureza_nome": "ABUSO DE INCAPAZES",
+    "vitimas": 36,
+    "posicao": 55,
+    "pct_fonte": 0.02221783351437
+  },
+  {
+    "natureza_nome": "REGISTRO NAO AUTORIZADO DA INTIMIDADE SEXUAL",
+    "vitimas": 36,
+    "posicao": 55,
+    "pct_fonte": 0.02221783351437
+  },
+  {
+    "natureza_nome": "DISPARO DE ARMA DE FOGO/ACIONAM DE MUNICAO",
+    "vitimas": 34,
+    "posicao": 56,
+    "pct_fonte": 0.02098350943024
+  },
+  {
+    "natureza_nome": "ABANDONO INTELECTUAL",
+    "vitimas": 32,
+    "posicao": 57,
+    "pct_fonte": 0.0197491853461
+  },
+  {
+    "natureza_nome": "DENUNCIACAO CALUNIOSA",
+    "vitimas": 32,
+    "posicao": 57,
+    "pct_fonte": 0.0197491853461
+  },
+  {
+    "natureza_nome": "FALSIDADE IDEOLOGICA",
+    "vitimas": 31,
+    "posicao": 58,
+    "pct_fonte": 0.01913202330404
+  },
+  {
+    "natureza_nome": "SUBTRAIR MENOR DE IDADE DE QUEM O TEM GUARDA",
+    "vitimas": 30,
+    "posicao": 59,
+    "pct_fonte": 0.01851486126197
+  },
+  {
+    "natureza_nome": "CONSTRANGE/VEXAME MENOR DE IDADE SOB GUARDA",
+    "vitimas": 29,
+    "posicao": 60,
+    "pct_fonte": 0.01789769921991
+  },
+  {
+    "natureza_nome": "ABANDONO INTELECTUAL (INSTRUCAO FUNDAMENTAL)",
+    "vitimas": 25,
+    "posicao": 61,
+    "pct_fonte": 0.01542905105164
+  },
+  {
+    "natureza_nome": "ENCONTRO DE CADAVER",
+    "vitimas": 25,
+    "posicao": 61,
+    "pct_fonte": 0.01542905105164
+  },
+  {
+    "natureza_nome": "DIVULGA MEIO INF/TV/FOTO CENA SEXO CRIANCA/ADOLESCENTE",
+    "vitimas": 22,
+    "posicao": 62,
+    "pct_fonte": 0.01357756492545
+  },
+  {
+    "natureza_nome": "PORTE ILEGAL ARMA DE FOGO/ACESSÓRIO/MUNIÇÃO DE USO PERMITIDO",
+    "vitimas": 22,
+    "posicao": 62,
+    "pct_fonte": 0.01357756492545
+  },
+  {
+    "natureza_nome": "COACAO NO CURSO DO PROCESSO",
+    "vitimas": 21,
+    "posicao": 63,
+    "pct_fonte": 0.01296040288338
+  },
+  {
+    "natureza_nome": "CONSTRANGE  MEIO COM. CRIANCA P/ PRATICA ATO LIBIDINOSO",
+    "vitimas": 16,
+    "posicao": 64,
+    "pct_fonte": 0.00987459267305
+  },
+  {
+    "natureza_nome": "PRATICAR DANO",
+    "vitimas": 16,
+    "posicao": 64,
+    "pct_fonte": 0.00987459267305
+  },
+  {
+    "natureza_nome": "CORRUPCAO DE MENORES PARA PRATICA DE CRIME",
+    "vitimas": 15,
+    "posicao": 65,
+    "pct_fonte": 0.00925743063099
+  },
+  {
+    "natureza_nome": "FURTO DE COISA COMUM",
+    "vitimas": 15,
+    "posicao": 65,
+    "pct_fonte": 0.00925743063099
+  },
+  {
+    "natureza_nome": "COMUNICACAO FALSA DE CRIME/CONTRAVENCAO",
+    "vitimas": 14,
+    "posicao": 66,
+    "pct_fonte": 0.00864026858892
+  },
+  {
+    "natureza_nome": "PROSTITUICAO/EXPLORA SEXU. DE MENOR DE IDADE",
+    "vitimas": 14,
+    "posicao": 66,
+    "pct_fonte": 0.00864026858892
+  },
+  {
+    "natureza_nome": "TORTURA",
+    "vitimas": 14,
+    "posicao": 66,
+    "pct_fonte": 0.00864026858892
+  },
+  {
+    "natureza_nome": "CORRUPCAO DE MENORES",
+    "vitimas": 13,
+    "posicao": 67,
+    "pct_fonte": 0.00802310654685
+  },
+  {
+    "natureza_nome": "SERVIR BEBIDA ALCOOLICA MENOR/INCAPAZ/OUTRO",
+    "vitimas": 13,
+    "posicao": 67,
+    "pct_fonte": 0.00802310654685
+  },
+  {
+    "natureza_nome": "ALTERACAO DE LIMITES",
+    "vitimas": 12,
+    "posicao": 68,
+    "pct_fonte": 0.00740594450479
+  },
+  {
+    "natureza_nome": "FALSA IDENTIDADE",
+    "vitimas": 12,
+    "posicao": 68,
+    "pct_fonte": 0.00740594450479
+  },
+  {
+    "natureza_nome": "IMPEDE/RECUSA/NAO ASSISTE A SAUDE DO IDOSO",
+    "vitimas": 12,
+    "posicao": 68,
+    "pct_fonte": 0.00740594450479
+  },
+  {
+    "natureza_nome": "POSSE/PORTE ILEGAL ARMA FOGO/MUNIC/ACESSO USO PROIB/RESTRITO",
+    "vitimas": 12,
+    "posicao": 68,
+    "pct_fonte": 0.00740594450479
+  },
+  {
+    "natureza_nome": "SATISFACAO  LASCIVIA  PRESENCA DE CRIANCA E ADOLESCENTE",
+    "vitimas": 11,
+    "posicao": 69,
+    "pct_fonte": 0.00678878246272
+  },
+  {
+    "natureza_nome": "VEICULO LOCALIZADO / RECUPERADO",
+    "vitimas": 11,
+    "posicao": 69,
+    "pct_fonte": 0.00678878246272
+  },
+  {
+    "natureza_nome": "VIOLACAO SEXUAL MEDIANTE FRAUDE",
+    "vitimas": 9,
+    "posicao": 70,
+    "pct_fonte": 0.00555445837859
+  },
+  {
+    "natureza_nome": "DIRECAO PERIGOSA DE VEICULO/EMBARCAC NA VIA/AGUA PUBL",
+    "vitimas": 8,
+    "posicao": 71,
+    "pct_fonte": 0.00493729633653
+  },
+  {
+    "natureza_nome": "FALSIFICA DOCUMENTO PARTICULAR",
+    "vitimas": 8,
+    "posicao": 71,
+    "pct_fonte": 0.00493729633653
+  },
+  {
+    "natureza_nome": "FOTOG./PUBLICA CENA DE SEXO/PORNO C/MENOR ID.",
+    "vitimas": 8,
+    "posicao": 71,
+    "pct_fonte": 0.00493729633653
+  },
+  {
+    "natureza_nome": "INDUZ / INSTIGA / AUXILIA SUICIDIO",
+    "vitimas": 8,
+    "posicao": 71,
+    "pct_fonte": 0.00493729633653
+  },
+  {
+    "natureza_nome": "RACISMO - PRATICA/INDUZ/INCITA/PRECONCEITO COR/DIVERSO",
+    "vitimas": 8,
+    "posicao": 71,
+    "pct_fonte": 0.00493729633653
+  },
+  {
+    "natureza_nome": "RESISTENCIA",
+    "vitimas": 8,
+    "posicao": 71,
+    "pct_fonte": 0.00493729633653
+  },
+  {
+    "natureza_nome": "ACIDENTE DE TRANSITO COM VITIMA",
+    "vitimas": 7,
+    "posicao": 72,
+    "pct_fonte": 0.00432013429446
+  },
+  {
+    "natureza_nome": "ATO OBSCENO",
+    "vitimas": 7,
+    "posicao": 72,
+    "pct_fonte": 0.00432013429446
+  },
+  {
+    "natureza_nome": "COAGIR IDOSO A DOAR/CONTRAT/TEST/OUTORGAR",
+    "vitimas": 7,
+    "posicao": 72,
+    "pct_fonte": 0.00432013429446
+  },
+  {
+    "natureza_nome": "FORAGIDO DA JUSTICA",
+    "vitimas": 7,
+    "posicao": 72,
+    "pct_fonte": 0.00432013429446
+  },
+  {
+    "natureza_nome": "INDUZ FUGA/ENTREGA ARBITRARI/SONEGA INCAPAZES",
+    "vitimas": 7,
+    "posicao": 72,
+    "pct_fonte": 0.00432013429446
+  },
+  {
+    "natureza_nome": "OMISSAO DE SOCORRO",
+    "vitimas": 7,
+    "posicao": 72,
+    "pct_fonte": 0.00432013429446
+  },
+  {
+    "natureza_nome": "OUTROS TIPOS DE COMUNICACAO A OUTROS ORGAOS",
+    "vitimas": 7,
+    "posicao": 72,
+    "pct_fonte": 0.00432013429446
+  },
+  {
+    "natureza_nome": "REQUISICAO DE FORCA POR AUTORIDADE JUDICIARIA",
+    "vitimas": 7,
+    "posicao": 72,
+    "pct_fonte": 0.00432013429446
+  },
+  {
+    "natureza_nome": "RIXA",
+    "vitimas": 7,
+    "posicao": 72,
+    "pct_fonte": 0.00432013429446
+  },
+  {
+    "natureza_nome": "AMEACA/COAGE/P/ EXPOR AO RIDICULO P/QUITAR",
+    "vitimas": 6,
+    "posicao": 73,
+    "pct_fonte": 0.00370297225239
+  },
+  {
+    "natureza_nome": "ENVENENA DE AGUA POTAVEL/SUBST. ALIMENT/MEDIC",
+    "vitimas": 6,
+    "posicao": 73,
+    "pct_fonte": 0.00370297225239
+  },
+  {
+    "natureza_nome": "FORNECE PRODUTO CAUSA DEPENDE/FISICA MENOR I.",
+    "vitimas": 6,
+    "posicao": 73,
+    "pct_fonte": 0.00370297225239
+  },
+  {
+    "natureza_nome": "NAO PROVE/ABANDONA IDOSO EM INST.HOSPITALAR",
+    "vitimas": 6,
+    "posicao": 73,
+    "pct_fonte": 0.00370297225239
+  },
+  {
+    "natureza_nome": "OMISSAO DE CAUTELA NA GUARDA/CONDUZ DE ANIMAL",
+    "vitimas": 6,
+    "posicao": 73,
+    "pct_fonte": 0.00370297225239
+  },
+  {
+    "natureza_nome": "OUTRAS OCORRENCIA DE TRANSITO",
+    "vitimas": 6,
+    "posicao": 73,
+    "pct_fonte": 0.00370297225239
+  },
+  {
+    "natureza_nome": "ABORTO PROVOCADO POR TERCEIRO",
+    "vitimas": 5,
+    "posicao": 74,
+    "pct_fonte": 0.00308581021033
+  },
+  {
+    "natureza_nome": "CUMPRIMENTO DE PRISAO",
+    "vitimas": 5,
+    "posicao": 74,
+    "pct_fonte": 0.00308581021033
+  },
+  {
+    "natureza_nome": "EMBRIAGUEZ (ESCANDALO/PERIGO)",
+    "vitimas": 5,
+    "posicao": 74,
+    "pct_fonte": 0.00308581021033
+  },
+  {
+    "natureza_nome": "FAVORECE PROSTITUICAO/EXPLORACAO SEXUAL VULNERAVEL.",
+    "vitimas": 5,
+    "posicao": 74,
+    "pct_fonte": 0.00308581021033
+  },
+  {
+    "natureza_nome": "NEGAR SALDAR DESPESA",
+    "vitimas": 5,
+    "posicao": 74,
+    "pct_fonte": 0.00308581021033
+  },
+  {
+    "natureza_nome": "RETER CARTAO M/DOC.DE BENEF/PROVENTO/PENSAO",
+    "vitimas": 5,
+    "posicao": 74,
+    "pct_fonte": 0.00308581021033
+  },
+  {
+    "natureza_nome": "SUPRESSAO DE DOCUMENTO",
+    "vitimas": 5,
+    "posicao": 74,
+    "pct_fonte": 0.00308581021033
+  },
+  {
+    "natureza_nome": "APROPRIACAO DE COISA HAVIDA POR ERRO (COISA ACHADA)",
+    "vitimas": 4,
+    "posicao": 75,
+    "pct_fonte": 0.00246864816826
+  },
+  {
+    "natureza_nome": "INDUZ IDOSO S/ DISCERN OUTORGAR PROCURC P/BEM",
+    "vitimas": 4,
+    "posicao": 75,
+    "pct_fonte": 0.00246864816826
+  },
+  {
+    "natureza_nome": "NAO CUMPRE/FRUSTA EXECUC/ORDEM JUDICIAL/IDOSO",
+    "vitimas": 4,
+    "posicao": 75,
+    "pct_fonte": 0.00246864816826
+  },
+  {
+    "natureza_nome": "OUTRAS INFRACOES CONTRA A ADM/FE PUBLICA",
+    "vitimas": 4,
+    "posicao": 75,
+    "pct_fonte": 0.00246864816826
+  },
+  {
+    "natureza_nome": "PESSOA LOCALIZADA",
+    "vitimas": 4,
+    "posicao": 75,
+    "pct_fonte": 0.00246864816826
+  },
+  {
+    "natureza_nome": "RECEPTACAO",
+    "vitimas": 4,
+    "posicao": 75,
+    "pct_fonte": 0.00246864816826
+  },
+  {
+    "natureza_nome": "TEATRO/TV/FILME-MENOR DE IDADE EM SEXO/PORNO",
+    "vitimas": 4,
+    "posicao": 75,
+    "pct_fonte": 0.00246864816826
+  },
+  {
+    "natureza_nome": "ADQUIRIR FOTO/VIDEO C/ SEXO/PORNO CRIANCA/ ADOLESCENTE",
+    "vitimas": 3,
+    "posicao": 76,
+    "pct_fonte": 0.0018514861262
+  },
+  {
+    "natureza_nome": "DENUNCIA DE POSSIVEL LOCALIZACAO DE PESSOA",
+    "vitimas": 3,
+    "posicao": 76,
+    "pct_fonte": 0.0018514861262
+  },
+  {
+    "natureza_nome": "DIRIGE VEIC. S/PERMISSAO/CNH/CASSADA PERIGO/DANO",
+    "vitimas": 3,
+    "posicao": 76,
+    "pct_fonte": 0.0018514861262
+  },
+  {
+    "natureza_nome": "DISCRIMINA/IMPEDE O ACESSO DO IDOSO A BANCO/T",
+    "vitimas": 3,
+    "posicao": 76,
+    "pct_fonte": 0.0018514861262
+  },
+  {
+    "natureza_nome": "FALSIFICA DOCUMENTO PUBLICO",
+    "vitimas": 3,
+    "posicao": 76,
+    "pct_fonte": 0.0018514861262
+  },
+  {
+    "natureza_nome": "FRAUDE PROCESSUAL",
+    "vitimas": 3,
+    "posicao": 76,
+    "pct_fonte": 0.0018514861262
+  },
+  {
+    "natureza_nome": "INCENTIVO AO USO OU CONSUMO DE DROGAS",
+    "vitimas": 3,
+    "posicao": 76,
+    "pct_fonte": 0.0018514861262
+  },
+  {
+    "natureza_nome": "INTRODUZ/ABANDONO DE ANIMAL EM PROPR. ALHEIA",
+    "vitimas": 3,
+    "posicao": 76,
+    "pct_fonte": 0.0018514861262
+  },
+  {
+    "natureza_nome": "OMISSAO DE CAUTELA",
+    "vitimas": 3,
+    "posicao": 76,
+    "pct_fonte": 0.0018514861262
+  },
+  {
+    "natureza_nome": "PERIGO DE CONTAGIO VENEREO",
+    "vitimas": 3,
+    "posicao": 76,
+    "pct_fonte": 0.0018514861262
+  },
+  {
+    "natureza_nome": "PRIVA MENOR DE IDADE DA LIBERDADE DE LOCOMOC.",
+    "vitimas": 3,
+    "posicao": 76,
+    "pct_fonte": 0.0018514861262
+  },
+  {
+    "natureza_nome": "CHANTAGEM",
+    "vitimas": 2,
+    "posicao": 77,
+    "pct_fonte": 0.00123432408413
+  },
+  {
+    "natureza_nome": "CRUELDADE CONTRA ANIMAIS",
+    "vitimas": 2,
+    "posicao": 77,
+    "pct_fonte": 0.00123432408413
+  },
+  {
+    "natureza_nome": "CUMPRIMENTO DE INTIMACAO",
+    "vitimas": 2,
+    "posicao": 77,
+    "pct_fonte": 0.00123432408413
+  },
+  {
+    "natureza_nome": "DIVULGUAR  RECEBER OU UTILIZAR CONTEUDO DE TERCEIRO",
+    "vitimas": 2,
+    "posicao": 77,
+    "pct_fonte": 0.00123432408413
+  },
+  {
+    "natureza_nome": "FALSIDADE DE ATESTADO MEDICO",
+    "vitimas": 2,
+    "posicao": 77,
+    "pct_fonte": 0.00123432408413
+  },
+  {
+    "natureza_nome": "FAVORECIMENTO DA PROSTITUICAO",
+    "vitimas": 2,
+    "posicao": 77,
+    "pct_fonte": 0.00123432408413
+  },
+  {
+    "natureza_nome": "IMPEDE/EMBARACA ACAO DA AUTORIDADE COMPETENTE",
+    "vitimas": 2,
+    "posicao": 77,
+    "pct_fonte": 0.00123432408413
+  },
+  {
+    "natureza_nome": "INFANTICIDIO",
+    "vitimas": 2,
+    "posicao": 77,
+    "pct_fonte": 0.00123432408413
+  },
+  {
+    "natureza_nome": "MEDIACAO PARA SERVIR A LASCIVIA DE OUTREM",
+    "vitimas": 2,
+    "posicao": 77,
+    "pct_fonte": 0.00123432408413
+  },
+  {
+    "natureza_nome": "PORTE ILEGAL DE ARMA BRANCA",
+    "vitimas": 2,
+    "posicao": 77,
+    "pct_fonte": 0.00123432408413
+  },
+  {
+    "natureza_nome": "PROVOCACAO DE TUMULTO/CONDUTA INCONVENIENTE",
+    "vitimas": 2,
+    "posicao": 77,
+    "pct_fonte": 0.00123432408413
+  },
+  {
+    "natureza_nome": "RECLAMACAO POR MAU ATENDIMENTO DEMAIS ORG PUBLICOS",
+    "vitimas": 2,
+    "posicao": 77,
+    "pct_fonte": 0.00123432408413
+  },
+  {
+    "natureza_nome": "VIOLACAO DE LUGAR/OBJETO (CHAVEIRO S/AUTORIZ)",
+    "vitimas": 2,
+    "posicao": 77,
+    "pct_fonte": 0.00123432408413
+  },
+  {
+    "natureza_nome": "ZOMBA/PERTUBA CERIMONIA/SIMILAR INDIGENA",
+    "vitimas": 2,
+    "posicao": 77,
+    "pct_fonte": 0.00123432408413
+  },
+  {
+    "natureza_nome": "ABORTO PROVOCADO PELA GESTANTE OU COM SEU CONSENTIMENTO",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "ACIDENTE DE TRANSITO SEM VITIMA",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "ACOES DE DEFESA SOCIAL",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "ALTERA S/AUTORIZ EM SISTEMA DE INFORMACAO",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "ANUNCIO DE MEIO ABORTIVO",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "ATENDIMENTO DE DENUNCIA DE INFRACOES ENVOLVENDO ARMAS",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "BEM E/OU VALOR ENCONTRADO / LOCALIZADO",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "CRIME CONTRA A CORRESPONDENCIA / COMUNICACAO",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "CRIMES LAVAGEM OU OCULTACAO DE BENS, DIREITOS E VALORES",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "DESTRUICAO, SUBTRACAO OU OCULTACAO DE CADAVER",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "DIVULGACAO DE SEGREDO",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "ESCRITO OU OBJETO OBSCENO",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "EXIBE/VEIC INFOR/IMAGEM DEPREC/INJURI. IDOSO",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "EXPOSICAO OU ABANDONO DE RECEM-NASCIDO",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "FRAUDE/ABUSO EM SOCIEDADE / FUNDACAO",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "FURTO DE VEICULO",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "LAVRA ATO NOTARIAL, ENVOLVE IDOSO S/DISCERN",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "OUTRAS INFRACAO C/ SENT. RELIG/RESPEITO MORTO",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "PERTURBA/PARALISA TRABALHO SEGUIDA DE VIOLENCIA",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "PROMETER/EFETIVAR ENTREGA DE FILHO A TERCEIRO",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "REDUCAO A CONDICAO ANALOGA A DE ESCRAVO",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "RESPONSAVEL APROPRIA/DESVIA BEM MOVEL",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "RETENCAO INDEVIDA",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "RUFIANISMO",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "USO DE GAS TOXICO OU ASFIXIANTE",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "USO E CONSUMO DE DROGAS",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "VENDE/ENTREGA ARMA/MUNICAO EXPLO. A CRIANCA/ADOLESCENTE",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  },
+  {
+    "natureza_nome": "VITIMA DE AGRESSAO FISICA SEM USO DE ARMA",
+    "vitimas": 1,
+    "posicao": 78,
+    "pct_fonte": 0.00061716204207
+  }
+]

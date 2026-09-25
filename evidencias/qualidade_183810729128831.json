@@ -1,0 +1,1451 @@
+{
+  "job_id": 1005669937621880,
+  "run_id": 183810729128831,
+  "task_run_id": 66854634334120,
+  "run_page_url": "https://dbc-0a2b6ff1-9976.cloud.databricks.com/?o=7474657037018547#job/1005669937621880/run/183810729128831",
+  "state": {
+    "life_cycle_state": "TERMINATED",
+    "result_state": "SUCCESS",
+    "state_message": "",
+    "user_cancelled_or_timedout": false
+  },
+  "start_time": 1790299190336,
+  "end_time": 1790299246288,
+  "report": {
+    "etapa": "qualidade",
+    "status": "CONCLUIDO",
+    "executado_em_utc": "2026-09-25T01:20:39.114775+00:00",
+    "testes_sinteticos": "APROVADOS",
+    "fontes": [
+      {
+        "tabela": "workspace.mvp_bronze.violencia_domestica_2025",
+        "versao_delta": 0,
+        "arquivo_sha256": "0d6e677ab65e7d04834904080ec0296eccf8dabd6013fe45910c9d754f94b4fe",
+        "linhas": 117169,
+        "soma_vitimas": 162032,
+        "quantidade_minima": 1,
+        "quantidade_maxima": 31,
+        "data_minima": "2025-01-01",
+        "data_maxima": "2025-12-31",
+        "municipios": 853,
+        "erros_por_regra": {
+          "ausente__municipio_cod": 0,
+          "ausente__municipio_fato": 0,
+          "ausente__data_fato": 0,
+          "ausente__mes": 0,
+          "ausente__ano": 0,
+          "ausente__risp": 0,
+          "ausente__rmbh": 0,
+          "ausente__natureza_delito": 0,
+          "ausente__tentado_consumado": 0,
+          "ausente__qtde_vitimas": 0,
+          "data_invalida": 0,
+          "data_fora_2025": 0,
+          "mes_invalido": 0,
+          "ano_invalido": 0,
+          "data_mes_ano_incoerentes": 0,
+          "municipio_formato_invalido": 0,
+          "risp_invalida": 0,
+          "rmbh_fora_dominio": 0,
+          "categoria_fora_dominio": 0,
+          "quantidade_invalida": 0,
+          "metadados_invalidos": 0
+        },
+        "linhas_com_erro": 0,
+        "exemplos_invalidos": [],
+        "espacos_externos_por_campo": {
+          "municipio_cod": 0,
+          "municipio_fato": 0,
+          "data_fato": 0,
+          "mes": 0,
+          "ano": 0,
+          "risp": 0,
+          "rmbh": 0,
+          "natureza_delito": 0,
+          "tentado_consumado": 0,
+          "qtde_vitimas": 0
+        },
+        "cobertura_mensal": [
+          {
+            "mes": 1,
+            "linhas": 9875,
+            "soma_vitimas": 13853
+          },
+          {
+            "mes": 2,
+            "linhas": 9435,
+            "soma_vitimas": 13104
+          },
+          {
+            "mes": 3,
+            "linhas": 10453,
+            "soma_vitimas": 14648
+          },
+          {
+            "mes": 4,
+            "linhas": 9571,
+            "soma_vitimas": 13224
+          },
+          {
+            "mes": 5,
+            "linhas": 9214,
+            "soma_vitimas": 12487
+          },
+          {
+            "mes": 6,
+            "linhas": 9000,
+            "soma_vitimas": 12311
+          },
+          {
+            "mes": 7,
+            "linhas": 9237,
+            "soma_vitimas": 12481
+          },
+          {
+            "mes": 8,
+            "linhas": 9806,
+            "soma_vitimas": 13713
+          },
+          {
+            "mes": 9,
+            "linhas": 9955,
+            "soma_vitimas": 13705
+          },
+          {
+            "mes": 10,
+            "linhas": 10079,
+            "soma_vitimas": 13759
+          },
+          {
+            "mes": 11,
+            "linhas": 10059,
+            "soma_vitimas": 13976
+          },
+          {
+            "mes": 12,
+            "linhas": 10485,
+            "soma_vitimas": 14771
+          }
+        ],
+        "categorias": {
+          "tentado_consumado": [
+            {
+              "tentado_consumado": "N",
+              "linhas": 988,
+              "soma_vitimas": 1028
+            },
+            {
+              "tentado_consumado": "S",
+              "linhas": 116181,
+              "soma_vitimas": 161004
+            }
+          ],
+          "rmbh": [
+            {
+              "rmbh": "Belo Horizonte",
+              "linhas": 5029,
+              "soma_vitimas": 19150
+            },
+            {
+              "rmbh": "Interior de MG",
+              "linhas": 95856,
+              "soma_vitimas": 117694
+            },
+            {
+              "rmbh": "RMBH (Sem BH)",
+              "linhas": 16284,
+              "soma_vitimas": 25188
+            }
+          ],
+          "risp": [
+            {
+              "risp": "1",
+              "linhas": 5029,
+              "soma_vitimas": 19150
+            },
+            {
+              "risp": "10",
+              "linhas": 3713,
+              "soma_vitimas": 4490
+            },
+            {
+              "risp": "11",
+              "linhas": 8253,
+              "soma_vitimas": 10579
+            },
+            {
+              "risp": "12",
+              "linhas": 10978,
+              "soma_vitimas": 12879
+            },
+            {
+              "risp": "13",
+              "linhas": 5194,
+              "soma_vitimas": 6016
+            },
+            {
+              "risp": "14",
+              "linhas": 5183,
+              "soma_vitimas": 5853
+            },
+            {
+              "risp": "15",
+              "linhas": 5085,
+              "soma_vitimas": 5646
+            },
+            {
+              "risp": "16",
+              "linhas": 2624,
+              "soma_vitimas": 3004
+            },
+            {
+              "risp": "17",
+              "linhas": 6175,
+              "soma_vitimas": 7072
+            },
+            {
+              "risp": "18",
+              "linhas": 7678,
+              "soma_vitimas": 9041
+            },
+            {
+              "risp": "19",
+              "linhas": 2775,
+              "soma_vitimas": 3688
+            },
+            {
+              "risp": "2",
+              "linhas": 9654,
+              "soma_vitimas": 16405
+            },
+            {
+              "risp": "3",
+              "linhas": 7346,
+              "soma_vitimas": 9689
+            },
+            {
+              "risp": "4",
+              "linhas": 8285,
+              "soma_vitimas": 10807
+            },
+            {
+              "risp": "5",
+              "linhas": 6007,
+              "soma_vitimas": 8189
+            },
+            {
+              "risp": "6",
+              "linhas": 6277,
+              "soma_vitimas": 7351
+            },
+            {
+              "risp": "7",
+              "linhas": 8123,
+              "soma_vitimas": 9902
+            },
+            {
+              "risp": "8",
+              "linhas": 4538,
+              "soma_vitimas": 5564
+            },
+            {
+              "risp": "9",
+              "linhas": 4252,
+              "soma_vitimas": 6707
+            }
+          ],
+          "natureza_delito": [
+            {
+              "natureza_delito": "ABANDONO DE INCAPAZ",
+              "linhas": 703,
+              "soma_vitimas": 916
+            },
+            {
+              "natureza_delito": "ABANDONO INTELECTUAL",
+              "linhas": 29,
+              "soma_vitimas": 32
+            },
+            {
+              "natureza_delito": "ABANDONO INTELECTUAL (INSTRUCAO FUNDAMENTAL)",
+              "linhas": 19,
+              "soma_vitimas": 25
+            },
+            {
+              "natureza_delito": "ABANDONO MATERIAL",
+              "linhas": 75,
+              "soma_vitimas": 81
+            },
+            {
+              "natureza_delito": "ABORTO PROVOCADO PELA GESTANTE OU COM SEU CONSENTIMENTO",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "ABORTO PROVOCADO POR TERCEIRO",
+              "linhas": 5,
+              "soma_vitimas": 5
+            },
+            {
+              "natureza_delito": "ABUSO DE INCAPAZES",
+              "linhas": 34,
+              "soma_vitimas": 36
+            },
+            {
+              "natureza_delito": "ACIDENTE DE TRANSITO COM VITIMA",
+              "linhas": 7,
+              "soma_vitimas": 7
+            },
+            {
+              "natureza_delito": "ACIDENTE DE TRANSITO SEM VITIMA",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "ACOES DE DEFESA SOCIAL",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "ADQUIRIR FOTO/VIDEO C/ SEXO/PORNO CRIANCA/ ADOLESCENTE",
+              "linhas": 3,
+              "soma_vitimas": 3
+            },
+            {
+              "natureza_delito": "ALTERA S/AUTORIZ EM SISTEMA DE INFORMACAO",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "ALTERACAO DE LIMITES",
+              "linhas": 6,
+              "soma_vitimas": 12
+            },
+            {
+              "natureza_delito": "AMEACA",
+              "linhas": 30991,
+              "soma_vitimas": 50198
+            },
+            {
+              "natureza_delito": "AMEACA/COAGE/P/ EXPOR AO RIDICULO P/QUITAR",
+              "linhas": 6,
+              "soma_vitimas": 6
+            },
+            {
+              "natureza_delito": "ANUNCIO DE MEIO ABORTIVO",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "APROPRIA/DESV/BEM/PROVENTO/PENSAO/REND.IDOSO",
+              "linhas": 174,
+              "soma_vitimas": 182
+            },
+            {
+              "natureza_delito": "APROPRIACAO DE COISA HAVIDA POR ERRO (COISA ACHADA)",
+              "linhas": 4,
+              "soma_vitimas": 4
+            },
+            {
+              "natureza_delito": "APROPRIACAO INDEBITA DE COISA ALHEIA MOVEL",
+              "linhas": 573,
+              "soma_vitimas": 591
+            },
+            {
+              "natureza_delito": "ASSEDIO SEXUAL",
+              "linhas": 55,
+              "soma_vitimas": 56
+            },
+            {
+              "natureza_delito": "ATEND. DENUNCIA INFRACOES CONTRA MULHER(VIOLENCIA DOMESTICA)",
+              "linhas": 3675,
+              "soma_vitimas": 4282
+            },
+            {
+              "natureza_delito": "ATENDIMENTO DE DENUNCIA DE INFRACOES CONTRA A VIDA",
+              "linhas": 47,
+              "soma_vitimas": 60
+            },
+            {
+              "natureza_delito": "ATENDIMENTO DE DENUNCIA DE INFRACOES CONTRA OS COSTUMES",
+              "linhas": 45,
+              "soma_vitimas": 50
+            },
+            {
+              "natureza_delito": "ATENDIMENTO DE DENUNCIA DE INFRACOES CONTRA OS IDOSOS",
+              "linhas": 149,
+              "soma_vitimas": 155
+            },
+            {
+              "natureza_delito": "ATENDIMENTO DE DENUNCIA DE INFRACOES ENVOLVENDO ARMAS",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "ATO OBSCENO",
+              "linhas": 6,
+              "soma_vitimas": 7
+            },
+            {
+              "natureza_delito": "ATRITO VERBAL",
+              "linhas": 2327,
+              "soma_vitimas": 2592
+            },
+            {
+              "natureza_delito": "AVERIGUA PESSOA / VEICULO EM ATITUDE SUSPEITA",
+              "linhas": 61,
+              "soma_vitimas": 62
+            },
+            {
+              "natureza_delito": "BEM E/OU VALOR ENCONTRADO / LOCALIZADO",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "CALUNIA",
+              "linhas": 634,
+              "soma_vitimas": 671
+            },
+            {
+              "natureza_delito": "CHANTAGEM",
+              "linhas": 2,
+              "soma_vitimas": 2
+            },
+            {
+              "natureza_delito": "COACAO NO CURSO DO PROCESSO",
+              "linhas": 19,
+              "soma_vitimas": 21
+            },
+            {
+              "natureza_delito": "COAGIR IDOSO A DOAR/CONTRAT/TEST/OUTORGAR",
+              "linhas": 7,
+              "soma_vitimas": 7
+            },
+            {
+              "natureza_delito": "COMUNICACAO FALSA DE CRIME/CONTRAVENCAO",
+              "linhas": 13,
+              "soma_vitimas": 14
+            },
+            {
+              "natureza_delito": "CONSTRANGE  MEIO COM. CRIANCA P/ PRATICA ATO LIBIDINOSO",
+              "linhas": 15,
+              "soma_vitimas": 16
+            },
+            {
+              "natureza_delito": "CONSTRANGE/VEXAME MENOR DE IDADE SOB GUARDA",
+              "linhas": 27,
+              "soma_vitimas": 29
+            },
+            {
+              "natureza_delito": "CONSTRANGIMENTO ILEGAL",
+              "linhas": 57,
+              "soma_vitimas": 57
+            },
+            {
+              "natureza_delito": "CORRUPCAO DE MENORES",
+              "linhas": 13,
+              "soma_vitimas": 13
+            },
+            {
+              "natureza_delito": "CORRUPCAO DE MENORES PARA PRATICA DE CRIME",
+              "linhas": 15,
+              "soma_vitimas": 15
+            },
+            {
+              "natureza_delito": "CRIME CONTRA A CORRESPONDENCIA / COMUNICACAO",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "CRIMES LAVAGEM OU OCULTACAO DE BENS, DIREITOS E VALORES",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "CRUELDADE CONTRA ANIMAIS",
+              "linhas": 2,
+              "soma_vitimas": 2
+            },
+            {
+              "natureza_delito": "CUMPRIMENTO DE BUSCA E APREENSAO DE OBJETOS, PES ..",
+              "linhas": 37,
+              "soma_vitimas": 42
+            },
+            {
+              "natureza_delito": "CUMPRIMENTO DE INTIMACAO",
+              "linhas": 2,
+              "soma_vitimas": 2
+            },
+            {
+              "natureza_delito": "CUMPRIMENTO DE PRISAO",
+              "linhas": 5,
+              "soma_vitimas": 5
+            },
+            {
+              "natureza_delito": "DANO",
+              "linhas": 3289,
+              "soma_vitimas": 3507
+            },
+            {
+              "natureza_delito": "DENUNCIA DE POSSIVEL LOCALIZACAO DE PESSOA",
+              "linhas": 3,
+              "soma_vitimas": 3
+            },
+            {
+              "natureza_delito": "DENUNCIACAO CALUNIOSA",
+              "linhas": 31,
+              "soma_vitimas": 32
+            },
+            {
+              "natureza_delito": "DESCUMPRIMENTO DE MEDIDA PROTETIVA DE URGENCIA",
+              "linhas": 9373,
+              "soma_vitimas": 12745
+            },
+            {
+              "natureza_delito": "DESOBEDECE ORDEM JUDICIAL (PERDA/SUS DIREITO)",
+              "linhas": 261,
+              "soma_vitimas": 267
+            },
+            {
+              "natureza_delito": "DESOBEDIENCIA",
+              "linhas": 39,
+              "soma_vitimas": 39
+            },
+            {
+              "natureza_delito": "DESOBEDIENCIA A DECISAO JUDICIAL",
+              "linhas": 85,
+              "soma_vitimas": 85
+            },
+            {
+              "natureza_delito": "DESTRUICAO, SUBTRACAO OU OCULTACAO DE CADAVER",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "DIFAMACAO",
+              "linhas": 1272,
+              "soma_vitimas": 1324
+            },
+            {
+              "natureza_delito": "DIRECAO PERIGOSA DE VEICULO/EMBARCAC NA VIA/AGUA PUBL",
+              "linhas": 8,
+              "soma_vitimas": 8
+            },
+            {
+              "natureza_delito": "DIRIGE VEIC. S/PERMISSAO/CNH/CASSADA PERIGO/DANO",
+              "linhas": 3,
+              "soma_vitimas": 3
+            },
+            {
+              "natureza_delito": "DISCRIMINA/IMPEDE O ACESSO DO IDOSO A BANCO/T",
+              "linhas": 3,
+              "soma_vitimas": 3
+            },
+            {
+              "natureza_delito": "DISPARO DE ARMA DE FOGO/ACIONAM DE MUNICAO",
+              "linhas": 34,
+              "soma_vitimas": 34
+            },
+            {
+              "natureza_delito": "DIVULGA MEIO INF/TV/FOTO CENA SEXO CRIANCA/ADOLESCENTE",
+              "linhas": 22,
+              "soma_vitimas": 22
+            },
+            {
+              "natureza_delito": "DIVULGACAO CENA ESTUPRO E IMAGEM NUDEZ, SEXO OU PORNOGRAFIA",
+              "linhas": 222,
+              "soma_vitimas": 224
+            },
+            {
+              "natureza_delito": "DIVULGACAO DE SEGREDO",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "DIVULGUAR  RECEBER OU UTILIZAR CONTEUDO DE TERCEIRO",
+              "linhas": 2,
+              "soma_vitimas": 2
+            },
+            {
+              "natureza_delito": "EMBRIAGUEZ (ESCANDALO/PERIGO)",
+              "linhas": 4,
+              "soma_vitimas": 5
+            },
+            {
+              "natureza_delito": "ENCONTRO DE CADAVER",
+              "linhas": 25,
+              "soma_vitimas": 25
+            },
+            {
+              "natureza_delito": "ENVENENA DE AGUA POTAVEL/SUBST. ALIMENT/MEDIC",
+              "linhas": 6,
+              "soma_vitimas": 6
+            },
+            {
+              "natureza_delito": "ESBULHO POSSESSORIO",
+              "linhas": 45,
+              "soma_vitimas": 46
+            },
+            {
+              "natureza_delito": "ESCRITO OU OBJETO OBSCENO",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "ESTELIONATO",
+              "linhas": 628,
+              "soma_vitimas": 657
+            },
+            {
+              "natureza_delito": "ESTUPRO",
+              "linhas": 499,
+              "soma_vitimas": 518
+            },
+            {
+              "natureza_delito": "ESTUPRO DE VULNERAVEL",
+              "linhas": 1329,
+              "soma_vitimas": 1457
+            },
+            {
+              "natureza_delito": "EXERCICIO ARBITRARIO DAS PROPRIAS RAZOES",
+              "linhas": 53,
+              "soma_vitimas": 54
+            },
+            {
+              "natureza_delito": "EXIBE/VEIC INFOR/IMAGEM DEPREC/INJURI. IDOSO",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "EXPOE A PERIGO/ PRIVA DE COMIDA/CUIDADO IDOSO",
+              "linhas": 55,
+              "soma_vitimas": 64
+            },
+            {
+              "natureza_delito": "EXPOSICAO OU ABANDONO DE RECEM-NASCIDO",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "EXTORSAO",
+              "linhas": 42,
+              "soma_vitimas": 44
+            },
+            {
+              "natureza_delito": "FALSA IDENTIDADE",
+              "linhas": 12,
+              "soma_vitimas": 12
+            },
+            {
+              "natureza_delito": "FALSIDADE DE ATESTADO MEDICO",
+              "linhas": 2,
+              "soma_vitimas": 2
+            },
+            {
+              "natureza_delito": "FALSIDADE IDEOLOGICA",
+              "linhas": 30,
+              "soma_vitimas": 31
+            },
+            {
+              "natureza_delito": "FALSIFICA DOCUMENTO PARTICULAR",
+              "linhas": 8,
+              "soma_vitimas": 8
+            },
+            {
+              "natureza_delito": "FALSIFICA DOCUMENTO PUBLICO",
+              "linhas": 3,
+              "soma_vitimas": 3
+            },
+            {
+              "natureza_delito": "FAVORECE PROSTITUICAO/EXPLORACAO SEXUAL VULNERAVEL.",
+              "linhas": 5,
+              "soma_vitimas": 5
+            },
+            {
+              "natureza_delito": "FAVORECIMENTO DA PROSTITUICAO",
+              "linhas": 2,
+              "soma_vitimas": 2
+            },
+            {
+              "natureza_delito": "FEMINICIDIO",
+              "linhas": 252,
+              "soma_vitimas": 261
+            },
+            {
+              "natureza_delito": "FORAGIDO DA JUSTICA",
+              "linhas": 7,
+              "soma_vitimas": 7
+            },
+            {
+              "natureza_delito": "FORNECE PRODUTO CAUSA DEPENDE/FISICA MENOR I.",
+              "linhas": 6,
+              "soma_vitimas": 6
+            },
+            {
+              "natureza_delito": "FOTOG./PUBLICA CENA DE SEXO/PORNO C/MENOR ID.",
+              "linhas": 8,
+              "soma_vitimas": 8
+            },
+            {
+              "natureza_delito": "FRAUDE PROCESSUAL",
+              "linhas": 3,
+              "soma_vitimas": 3
+            },
+            {
+              "natureza_delito": "FRAUDE/ABUSO EM SOCIEDADE / FUNDACAO",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "FURTO",
+              "linhas": 1970,
+              "soma_vitimas": 2111
+            },
+            {
+              "natureza_delito": "FURTO DE COISA COMUM",
+              "linhas": 14,
+              "soma_vitimas": 15
+            },
+            {
+              "natureza_delito": "FURTO DE VEICULO",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "HOMICIDIO",
+              "linhas": 153,
+              "soma_vitimas": 157
+            },
+            {
+              "natureza_delito": "IMPEDE/EMBARACA ACAO DA AUTORIDADE COMPETENTE",
+              "linhas": 2,
+              "soma_vitimas": 2
+            },
+            {
+              "natureza_delito": "IMPEDE/RECUSA/NAO ASSISTE A SAUDE DO IDOSO",
+              "linhas": 12,
+              "soma_vitimas": 12
+            },
+            {
+              "natureza_delito": "IMPORTUNACAO SEXUAL",
+              "linhas": 336,
+              "soma_vitimas": 348
+            },
+            {
+              "natureza_delito": "INCENDIO",
+              "linhas": 157,
+              "soma_vitimas": 167
+            },
+            {
+              "natureza_delito": "INCENTIVO AO USO OU CONSUMO DE DROGAS",
+              "linhas": 3,
+              "soma_vitimas": 3
+            },
+            {
+              "natureza_delito": "INDUZ / INSTIGA / AUXILIA SUICIDIO",
+              "linhas": 8,
+              "soma_vitimas": 8
+            },
+            {
+              "natureza_delito": "INDUZ FUGA/ENTREGA ARBITRARI/SONEGA INCAPAZES",
+              "linhas": 7,
+              "soma_vitimas": 7
+            },
+            {
+              "natureza_delito": "INDUZ IDOSO S/ DISCERN OUTORGAR PROCURC P/BEM",
+              "linhas": 3,
+              "soma_vitimas": 4
+            },
+            {
+              "natureza_delito": "INFANTICIDIO",
+              "linhas": 2,
+              "soma_vitimas": 2
+            },
+            {
+              "natureza_delito": "INJURIA",
+              "linhas": 2418,
+              "soma_vitimas": 2787
+            },
+            {
+              "natureza_delito": "INJURIA RACIAL",
+              "linhas": 60,
+              "soma_vitimas": 62
+            },
+            {
+              "natureza_delito": "INTRODUZ/ABANDONO DE ANIMAL EM PROPR. ALHEIA",
+              "linhas": 3,
+              "soma_vitimas": 3
+            },
+            {
+              "natureza_delito": "INVASAO DE DISPOSITIVO INFORMATICO",
+              "linhas": 118,
+              "soma_vitimas": 122
+            },
+            {
+              "natureza_delito": "LAVRA ATO NOTARIAL, ENVOLVE IDOSO S/DISCERN",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "LESAO CORPORAL",
+              "linhas": 18021,
+              "soma_vitimas": 24886
+            },
+            {
+              "natureza_delito": "MAUS TRATOS",
+              "linhas": 1045,
+              "soma_vitimas": 1251
+            },
+            {
+              "natureza_delito": "MEDIACAO PARA SERVIR A LASCIVIA DE OUTREM",
+              "linhas": 2,
+              "soma_vitimas": 2
+            },
+            {
+              "natureza_delito": "NAO CUMPRE/FRUSTA EXECUC/ORDEM JUDICIAL/IDOSO",
+              "linhas": 4,
+              "soma_vitimas": 4
+            },
+            {
+              "natureza_delito": "NAO PROVE/ABANDONA IDOSO EM INST.HOSPITALAR",
+              "linhas": 6,
+              "soma_vitimas": 6
+            },
+            {
+              "natureza_delito": "NEGAR SALDAR DESPESA",
+              "linhas": 5,
+              "soma_vitimas": 5
+            },
+            {
+              "natureza_delito": "OMISSAO DE CAUTELA",
+              "linhas": 3,
+              "soma_vitimas": 3
+            },
+            {
+              "natureza_delito": "OMISSAO DE CAUTELA NA GUARDA/CONDUZ DE ANIMAL",
+              "linhas": 6,
+              "soma_vitimas": 6
+            },
+            {
+              "natureza_delito": "OMISSAO DE SOCORRO",
+              "linhas": 7,
+              "soma_vitimas": 7
+            },
+            {
+              "natureza_delito": "OUTRAS ACOES DEFESA SOCIAL",
+              "linhas": 1991,
+              "soma_vitimas": 2260
+            },
+            {
+              "natureza_delito": "OUTRAS DENUNCIA RECLAMACOES SOLICITACOES DEF SOCIAL",
+              "linhas": 106,
+              "soma_vitimas": 109
+            },
+            {
+              "natureza_delito": "OUTRAS INFRACAO C/ SENT. RELIG/RESPEITO MORTO",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "OUTRAS INFRACOES CONTRA A ADM/FE PUBLICA",
+              "linhas": 4,
+              "soma_vitimas": 4
+            },
+            {
+              "natureza_delito": "OUTRAS INFRACOES CONTRA DIGNIDADE SEXUAL E A FAMILIA",
+              "linhas": 485,
+              "soma_vitimas": 526
+            },
+            {
+              "natureza_delito": "OUTRAS INFRACOES CONTRA O PATRIMONIO",
+              "linhas": 203,
+              "soma_vitimas": 209
+            },
+            {
+              "natureza_delito": "OUTRAS INFRACOES DEMAIS LEIS ESPECIAIS",
+              "linhas": 133,
+              "soma_vitimas": 140
+            },
+            {
+              "natureza_delito": "OUTRAS OCORRENCIA DE TRANSITO",
+              "linhas": 5,
+              "soma_vitimas": 6
+            },
+            {
+              "natureza_delito": "OUTROS INFRACOES C/ A PESSOA",
+              "linhas": 2016,
+              "soma_vitimas": 2371
+            },
+            {
+              "natureza_delito": "OUTROS TIPOS DE COMUNICACAO A OUTROS ORGAOS",
+              "linhas": 7,
+              "soma_vitimas": 7
+            },
+            {
+              "natureza_delito": "PERIGO DE CONTAGIO VENEREO",
+              "linhas": 3,
+              "soma_vitimas": 3
+            },
+            {
+              "natureza_delito": "PERIGO PARA A VIDA OU SAUDE DE OUTREM",
+              "linhas": 36,
+              "soma_vitimas": 40
+            },
+            {
+              "natureza_delito": "PERSEGUICAO",
+              "linhas": 4073,
+              "soma_vitimas": 4482
+            },
+            {
+              "natureza_delito": "PERTURBA/PARALISA TRABALHO SEGUIDA DE VIOLENCIA",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "PERTURBACAO DO TRABALHO OU DO SOSSEGO ALHEIOS",
+              "linhas": 737,
+              "soma_vitimas": 766
+            },
+            {
+              "natureza_delito": "PESSOA LOCALIZADA",
+              "linhas": 4,
+              "soma_vitimas": 4
+            },
+            {
+              "natureza_delito": "PORTE ILEGAL ARMA DE FOGO/ACESSÓRIO/MUNIÇÃO DE USO PERMITIDO",
+              "linhas": 21,
+              "soma_vitimas": 22
+            },
+            {
+              "natureza_delito": "PORTE ILEGAL DE ARMA BRANCA",
+              "linhas": 2,
+              "soma_vitimas": 2
+            },
+            {
+              "natureza_delito": "POSSE ILEGAL ARMA DE FOGO/ACESSÓRIO/MUNIÇÃO DE USO PERMITIDO",
+              "linhas": 65,
+              "soma_vitimas": 67
+            },
+            {
+              "natureza_delito": "POSSE/PORTE ILEGAL ARMA FOGO/MUNIC/ACESSO USO PROIB/RESTRITO",
+              "linhas": 12,
+              "soma_vitimas": 12
+            },
+            {
+              "natureza_delito": "PRATICAR DANO",
+              "linhas": 16,
+              "soma_vitimas": 16
+            },
+            {
+              "natureza_delito": "PRIVA MENOR DE IDADE DA LIBERDADE DE LOCOMOC.",
+              "linhas": 3,
+              "soma_vitimas": 3
+            },
+            {
+              "natureza_delito": "PROMETER/EFETIVAR ENTREGA DE FILHO A TERCEIRO",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "PROSTITUICAO/EXPLORA SEXU. DE MENOR DE IDADE",
+              "linhas": 11,
+              "soma_vitimas": 14
+            },
+            {
+              "natureza_delito": "PROVOCACAO DE TUMULTO/CONDUTA INCONVENIENTE",
+              "linhas": 2,
+              "soma_vitimas": 2
+            },
+            {
+              "natureza_delito": "RACISMO - PRATICA/INDUZ/INCITA/PRECONCEITO COR/DIVERSO",
+              "linhas": 7,
+              "soma_vitimas": 8
+            },
+            {
+              "natureza_delito": "RECEPTACAO",
+              "linhas": 4,
+              "soma_vitimas": 4
+            },
+            {
+              "natureza_delito": "RECLAMACAO POR MAU ATENDIMENTO DEMAIS ORG PUBLICOS",
+              "linhas": 2,
+              "soma_vitimas": 2
+            },
+            {
+              "natureza_delito": "RECUSA/DIFICULTA/NAO ASSISTE IDOSO",
+              "linhas": 40,
+              "soma_vitimas": 42
+            },
+            {
+              "natureza_delito": "REDUCAO A CONDICAO ANALOGA A DE ESCRAVO",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "REGISTRO NAO AUTORIZADO DA INTIMIDADE SEXUAL",
+              "linhas": 34,
+              "soma_vitimas": 36
+            },
+            {
+              "natureza_delito": "REQUISICAO DE FORCA POR AUTORIDADE JUDICIARIA",
+              "linhas": 7,
+              "soma_vitimas": 7
+            },
+            {
+              "natureza_delito": "RESISTENCIA",
+              "linhas": 8,
+              "soma_vitimas": 8
+            },
+            {
+              "natureza_delito": "RESPONSAVEL APROPRIA/DESVIA BEM MOVEL",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "RETENCAO INDEVIDA",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "RETER CARTAO M/DOC.DE BENEF/PROVENTO/PENSAO",
+              "linhas": 5,
+              "soma_vitimas": 5
+            },
+            {
+              "natureza_delito": "RIXA",
+              "linhas": 7,
+              "soma_vitimas": 7
+            },
+            {
+              "natureza_delito": "ROUBO",
+              "linhas": 50,
+              "soma_vitimas": 51
+            },
+            {
+              "natureza_delito": "RUFIANISMO",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "SATISFACAO  LASCIVIA  PRESENCA DE CRIANCA E ADOLESCENTE",
+              "linhas": 11,
+              "soma_vitimas": 11
+            },
+            {
+              "natureza_delito": "SEQUESTRO E CARCERE PRIVADO",
+              "linhas": 193,
+              "soma_vitimas": 210
+            },
+            {
+              "natureza_delito": "SERVIR BEBIDA ALCOOLICA MENOR/INCAPAZ/OUTRO",
+              "linhas": 13,
+              "soma_vitimas": 13
+            },
+            {
+              "natureza_delito": "SUBTRACAO DE INCAPAZES",
+              "linhas": 39,
+              "soma_vitimas": 43
+            },
+            {
+              "natureza_delito": "SUBTRAIR MENOR DE IDADE DE QUEM O TEM GUARDA",
+              "linhas": 28,
+              "soma_vitimas": 30
+            },
+            {
+              "natureza_delito": "SUPRESSAO DE DOCUMENTO",
+              "linhas": 5,
+              "soma_vitimas": 5
+            },
+            {
+              "natureza_delito": "TEATRO/TV/FILME-MENOR DE IDADE EM SEXO/PORNO",
+              "linhas": 4,
+              "soma_vitimas": 4
+            },
+            {
+              "natureza_delito": "TORTURA",
+              "linhas": 14,
+              "soma_vitimas": 14
+            },
+            {
+              "natureza_delito": "TRAFICO ILICITO DE DROGAS",
+              "linhas": 55,
+              "soma_vitimas": 60
+            },
+            {
+              "natureza_delito": "USO DE GAS TOXICO OU ASFIXIANTE",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "USO E CONSUMO DE DROGAS",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "VEICULO LOCALIZADO / RECUPERADO",
+              "linhas": 11,
+              "soma_vitimas": 11
+            },
+            {
+              "natureza_delito": "VENDE/ENTREGA ARMA/MUNICAO EXPLO. A CRIANCA/ADOLESCENTE",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "VIAS DE FATO / AGRESSAO",
+              "linhas": 20705,
+              "soma_vitimas": 31933
+            },
+            {
+              "natureza_delito": "VIOLACAO DE DOMICILIO",
+              "linhas": 849,
+              "soma_vitimas": 874
+            },
+            {
+              "natureza_delito": "VIOLACAO DE LUGAR/OBJETO (CHAVEIRO S/AUTORIZ)",
+              "linhas": 2,
+              "soma_vitimas": 2
+            },
+            {
+              "natureza_delito": "VIOLACAO SEXUAL MEDIANTE FRAUDE",
+              "linhas": 9,
+              "soma_vitimas": 9
+            },
+            {
+              "natureza_delito": "VIOLENCIA PSICOLOGICA",
+              "linhas": 3224,
+              "soma_vitimas": 3788
+            },
+            {
+              "natureza_delito": "VITIMA DE AGRESSAO FISICA SEM USO DE ARMA",
+              "linhas": 1,
+              "soma_vitimas": 1
+            },
+            {
+              "natureza_delito": "ZOMBA/PERTUBA CERIMONIA/SIMILAR INDIGENA",
+              "linhas": 2,
+              "soma_vitimas": 2
+            }
+          ]
+        },
+        "duplicatas_integrais": {
+          "grupos": 0,
+          "linhas_envolvidas": 0,
+          "linhas_excedentes": 0,
+          "exemplos": []
+        },
+        "duplicatas_chave_bruta": {
+          "grupos": 0,
+          "linhas_envolvidas": 0,
+          "linhas_excedentes": 0,
+          "exemplos": []
+        },
+        "duplicatas_chave_normalizada": {
+          "grupos": 0,
+          "linhas_envolvidas": 0,
+          "linhas_excedentes": 0,
+          "exemplos": []
+        },
+        "conflitos_geograficos_internos": {
+          "codigos": 0,
+          "exemplos": []
+        },
+        "baseline_confere": true,
+        "cobertura_12_meses": true
+      },
+      {
+        "tabela": "workspace.mvp_bronze.feminicidio_2025",
+        "versao_delta": 0,
+        "arquivo_sha256": "364dec0197c1d9c40a050883573ce22efd280a43114680fc1491e40db6e89630",
+        "linhas": 381,
+        "soma_vitimas": 391,
+        "quantidade_minima": 1,
+        "quantidade_maxima": 2,
+        "data_minima": "2025-01-01",
+        "data_maxima": "2025-12-31",
+        "municipios": 183,
+        "erros_por_regra": {
+          "ausente__municipio_cod": 0,
+          "ausente__municipio_fato": 0,
+          "ausente__data_fato": 0,
+          "ausente__mes": 0,
+          "ausente__ano": 0,
+          "ausente__risp": 0,
+          "ausente__rmbh": 0,
+          "ausente__tentado_consumado": 0,
+          "ausente__qtde_vitimas": 0,
+          "data_invalida": 0,
+          "data_fora_2025": 0,
+          "mes_invalido": 0,
+          "ano_invalido": 0,
+          "data_mes_ano_incoerentes": 0,
+          "municipio_formato_invalido": 0,
+          "risp_invalida": 0,
+          "rmbh_fora_dominio": 0,
+          "categoria_fora_dominio": 0,
+          "quantidade_invalida": 0,
+          "metadados_invalidos": 0
+        },
+        "linhas_com_erro": 0,
+        "exemplos_invalidos": [],
+        "espacos_externos_por_campo": {
+          "municipio_cod": 0,
+          "municipio_fato": 0,
+          "data_fato": 0,
+          "mes": 0,
+          "ano": 0,
+          "risp": 0,
+          "rmbh": 0,
+          "tentado_consumado": 0,
+          "qtde_vitimas": 0
+        },
+        "cobertura_mensal": [
+          {
+            "mes": 1,
+            "linhas": 27,
+            "soma_vitimas": 31
+          },
+          {
+            "mes": 2,
+            "linhas": 35,
+            "soma_vitimas": 35
+          },
+          {
+            "mes": 3,
+            "linhas": 32,
+            "soma_vitimas": 33
+          },
+          {
+            "mes": 4,
+            "linhas": 25,
+            "soma_vitimas": 26
+          },
+          {
+            "mes": 5,
+            "linhas": 27,
+            "soma_vitimas": 27
+          },
+          {
+            "mes": 6,
+            "linhas": 24,
+            "soma_vitimas": 24
+          },
+          {
+            "mes": 7,
+            "linhas": 29,
+            "soma_vitimas": 29
+          },
+          {
+            "mes": 8,
+            "linhas": 41,
+            "soma_vitimas": 41
+          },
+          {
+            "mes": 9,
+            "linhas": 26,
+            "soma_vitimas": 26
+          },
+          {
+            "mes": 10,
+            "linhas": 33,
+            "soma_vitimas": 34
+          },
+          {
+            "mes": 11,
+            "linhas": 27,
+            "soma_vitimas": 28
+          },
+          {
+            "mes": 12,
+            "linhas": 55,
+            "soma_vitimas": 57
+          }
+        ],
+        "categorias": {
+          "tentado_consumado": [
+            {
+              "tentado_consumado": "CONSUMADO",
+              "linhas": 175,
+              "soma_vitimas": 178
+            },
+            {
+              "tentado_consumado": "TENTADO",
+              "linhas": 206,
+              "soma_vitimas": 213
+            }
+          ],
+          "rmbh": [
+            {
+              "rmbh": "Belo Horizonte",
+              "linhas": 50,
+              "soma_vitimas": 51
+            },
+            {
+              "rmbh": "Interior de MG",
+              "linhas": 267,
+              "soma_vitimas": 274
+            },
+            {
+              "rmbh": "RMBH (Sem BH)",
+              "linhas": 64,
+              "soma_vitimas": 66
+            }
+          ],
+          "risp": [
+            {
+              "risp": "1",
+              "linhas": 50,
+              "soma_vitimas": 51
+            },
+            {
+              "risp": "10",
+              "linhas": 9,
+              "soma_vitimas": 9
+            },
+            {
+              "risp": "11",
+              "linhas": 23,
+              "soma_vitimas": 24
+            },
+            {
+              "risp": "12",
+              "linhas": 31,
+              "soma_vitimas": 32
+            },
+            {
+              "risp": "13",
+              "linhas": 5,
+              "soma_vitimas": 5
+            },
+            {
+              "risp": "14",
+              "linhas": 15,
+              "soma_vitimas": 16
+            },
+            {
+              "risp": "15",
+              "linhas": 22,
+              "soma_vitimas": 23
+            },
+            {
+              "risp": "16",
+              "linhas": 11,
+              "soma_vitimas": 12
+            },
+            {
+              "risp": "17",
+              "linhas": 14,
+              "soma_vitimas": 14
+            },
+            {
+              "risp": "18",
+              "linhas": 20,
+              "soma_vitimas": 21
+            },
+            {
+              "risp": "19",
+              "linhas": 13,
+              "soma_vitimas": 13
+            },
+            {
+              "risp": "2",
+              "linhas": 43,
+              "soma_vitimas": 45
+            },
+            {
+              "risp": "3",
+              "linhas": 21,
+              "soma_vitimas": 21
+            },
+            {
+              "risp": "4",
+              "linhas": 20,
+              "soma_vitimas": 21
+            },
+            {
+              "risp": "5",
+              "linhas": 17,
+              "soma_vitimas": 17
+            },
+            {
+              "risp": "6",
+              "linhas": 11,
+              "soma_vitimas": 11
+            },
+            {
+              "risp": "7",
+              "linhas": 22,
+              "soma_vitimas": 22
+            },
+            {
+              "risp": "8",
+              "linhas": 18,
+              "soma_vitimas": 18
+            },
+            {
+              "risp": "9",
+              "linhas": 16,
+              "soma_vitimas": 16
+            }
+          ]
+        },
+        "duplicatas_integrais": {
+          "grupos": 0,
+          "linhas_envolvidas": 0,
+          "linhas_excedentes": 0,
+          "exemplos": []
+        },
+        "duplicatas_chave_bruta": {
+          "grupos": 0,
+          "linhas_envolvidas": 0,
+          "linhas_excedentes": 0,
+          "exemplos": []
+        },
+        "duplicatas_chave_normalizada": {
+          "grupos": 0,
+          "linhas_envolvidas": 0,
+          "linhas_excedentes": 0,
+          "exemplos": []
+        },
+        "conflitos_geograficos_internos": {
+          "codigos": 0,
+          "exemplos": []
+        },
+        "baseline_confere": true,
+        "cobertura_12_meses": true
+      }
+    ],
+    "geografia_compartilhada": {
+      "municipios": 853,
+      "antes_regra": {
+        "codigos": 1,
+        "exemplos": [
+          {
+            "municipio_cod": "315990",
+            "municipio_fato": [
+              "SANTO ANT DO AMPARO",
+              "SANTO ANTONIO DO AMPARO"
+            ],
+            "risp": [
+              "6"
+            ],
+            "rmbh": [
+              "Interior de MG"
+            ]
+          }
+        ]
+      },
+      "apos_regra": {
+        "codigos": 0,
+        "exemplos": []
+      }
+    },
+    "bloqueios_estruturais": false,
+    "ressalvas": [
+      "S/N preservado: semântica não confirmada oficialmente.",
+      "Formato de código municipal validado; sem validação externa contra cadastro oficial.",
+      "Quantitativos publicados não representam pessoas únicas; fontes não podem ser somadas.",
+      "Cobertura dos 12 meses não demonstra ausência de subnotificação."
+    ],
+    "silver_implementada": false
+  }
+}

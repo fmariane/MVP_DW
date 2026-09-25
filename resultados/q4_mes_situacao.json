@@ -1,0 +1,146 @@
+[
+  {
+    "mes": 1,
+    "situacao": "CONSUMADO",
+    "vitimas": 13,
+    "pct_no_mes": 41.93548387096774
+  },
+  {
+    "mes": 1,
+    "situacao": "TENTADO",
+    "vitimas": 18,
+    "pct_no_mes": 58.06451612903226
+  },
+  {
+    "mes": 2,
+    "situacao": "CONSUMADO",
+    "vitimas": 12,
+    "pct_no_mes": 34.28571428571429
+  },
+  {
+    "mes": 2,
+    "situacao": "TENTADO",
+    "vitimas": 23,
+    "pct_no_mes": 65.71428571428571
+  },
+  {
+    "mes": 3,
+    "situacao": "CONSUMADO",
+    "vitimas": 19,
+    "pct_no_mes": 57.57575757575758
+  },
+  {
+    "mes": 3,
+    "situacao": "TENTADO",
+    "vitimas": 14,
+    "pct_no_mes": 42.42424242424242
+  },
+  {
+    "mes": 4,
+    "situacao": "CONSUMADO",
+    "vitimas": 16,
+    "pct_no_mes": 61.53846153846154
+  },
+  {
+    "mes": 4,
+    "situacao": "TENTADO",
+    "vitimas": 10,
+    "pct_no_mes": 38.46153846153846
+  },
+  {
+    "mes": 5,
+    "situacao": "CONSUMADO",
+    "vitimas": 11,
+    "pct_no_mes": 40.74074074074074
+  },
+  {
+    "mes": 5,
+    "situacao": "TENTADO",
+    "vitimas": 16,
+    "pct_no_mes": 59.25925925925926
+  },
+  {
+    "mes": 6,
+    "situacao": "CONSUMADO",
+    "vitimas": 7,
+    "pct_no_mes": 29.16666666666667
+  },
+  {
+    "mes": 6,
+    "situacao": "TENTADO",
+    "vitimas": 17,
+    "pct_no_mes": 70.83333333333333
+  },
+  {
+    "mes": 7,
+    "situacao": "CONSUMADO",
+    "vitimas": 16,
+    "pct_no_mes": 55.17241379310345
+  },
+  {
+    "mes": 7,
+    "situacao": "TENTADO",
+    "vitimas": 13,
+    "pct_no_mes": 44.82758620689655
+  },
+  {
+    "mes": 8,
+    "situacao": "CONSUMADO",
+    "vitimas": 18,
+    "pct_no_mes": 43.90243902439024
+  },
+  {
+    "mes": 8,
+    "situacao": "TENTADO",
+    "vitimas": 23,
+    "pct_no_mes": 56.09756097560976
+  },
+  {
+    "mes": 9,
+    "situacao": "CONSUMADO",
+    "vitimas": 13,
+    "pct_no_mes": 50.0
+  },
+  {
+    "mes": 9,
+    "situacao": "TENTADO",
+    "vitimas": 13,
+    "pct_no_mes": 50.0
+  },
+  {
+    "mes": 10,
+    "situacao": "CONSUMADO",
+    "vitimas": 21,
+    "pct_no_mes": 61.76470588235294
+  },
+  {
+    "mes": 10,
+    "situacao": "TENTADO",
+    "vitimas": 13,
+    "pct_no_mes": 38.23529411764706
+  },
+  {
+    "mes": 11,
+    "situacao": "CONSUMADO",
+    "vitimas": 14,
+    "pct_no_mes": 50.0
+  },
+  {
+    "mes": 11,
+    "situacao": "TENTADO",
+    "vitimas": 14,
+    "pct_no_mes": 50.0
+  },
+  {
+    "mes": 12,
+    "situacao": "CONSUMADO",
+    "vitimas": 18,
+    "pct_no_mes": 31.57894736842105
+  },
+  {
+    "mes": 12,
+    "situacao": "TENTADO",
+    "vitimas": 39,
+    "pct_no_mes": 68.42105263157895
+  }
+]

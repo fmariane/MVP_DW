@@ -1,0 +1,1724 @@
+[
+  {
+    "risp_cod": "1",
+    "mes": 1,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 40.0
+  },
+  {
+    "risp_cod": "1",
+    "mes": 1,
+    "situacao": "TENTADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 60.0
+  },
+  {
+    "risp_cod": "1",
+    "mes": 2,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "1",
+    "mes": 3,
+    "situacao": "CONSUMADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 60.0
+  },
+  {
+    "risp_cod": "1",
+    "mes": 3,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 40.0
+  },
+  {
+    "risp_cod": "1",
+    "mes": 4,
+    "situacao": "CONSUMADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 75.0
+  },
+  {
+    "risp_cod": "1",
+    "mes": 4,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 25.0
+  },
+  {
+    "risp_cod": "1",
+    "mes": 5,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 33.33333333333333
+  },
+  {
+    "risp_cod": "1",
+    "mes": 5,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 66.66666666666667
+  },
+  {
+    "risp_cod": "1",
+    "mes": 6,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "1",
+    "mes": 7,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 25.0
+  },
+  {
+    "risp_cod": "1",
+    "mes": 7,
+    "situacao": "TENTADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 75.0
+  },
+  {
+    "risp_cod": "1",
+    "mes": 8,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 33.33333333333333
+  },
+  {
+    "risp_cod": "1",
+    "mes": 8,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 66.66666666666667
+  },
+  {
+    "risp_cod": "1",
+    "mes": 9,
+    "situacao": "TENTADO",
+    "vitimas": 5,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "1",
+    "mes": 10,
+    "situacao": "CONSUMADO",
+    "vitimas": 4,
+    "pct_na_regiao_mes": 80.0
+  },
+  {
+    "risp_cod": "1",
+    "mes": 10,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 20.0
+  },
+  {
+    "risp_cod": "1",
+    "mes": 11,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 16.66666666666667
+  },
+  {
+    "risp_cod": "1",
+    "mes": 11,
+    "situacao": "TENTADO",
+    "vitimas": 5,
+    "pct_na_regiao_mes": 83.33333333333333
+  },
+  {
+    "risp_cod": "1",
+    "mes": 12,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 28.57142857142857
+  },
+  {
+    "risp_cod": "1",
+    "mes": 12,
+    "situacao": "TENTADO",
+    "vitimas": 5,
+    "pct_na_regiao_mes": 71.42857142857143
+  },
+  {
+    "risp_cod": "2",
+    "mes": 1,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 20.0
+  },
+  {
+    "risp_cod": "2",
+    "mes": 1,
+    "situacao": "TENTADO",
+    "vitimas": 4,
+    "pct_na_regiao_mes": 80.0
+  },
+  {
+    "risp_cod": "2",
+    "mes": 2,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 25.0
+  },
+  {
+    "risp_cod": "2",
+    "mes": 2,
+    "situacao": "TENTADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 75.0
+  },
+  {
+    "risp_cod": "2",
+    "mes": 3,
+    "situacao": "CONSUMADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 75.0
+  },
+  {
+    "risp_cod": "2",
+    "mes": 3,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 25.0
+  },
+  {
+    "risp_cod": "2",
+    "mes": 4,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 40.0
+  },
+  {
+    "risp_cod": "2",
+    "mes": 4,
+    "situacao": "TENTADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 60.0
+  },
+  {
+    "risp_cod": "2",
+    "mes": 6,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 25.0
+  },
+  {
+    "risp_cod": "2",
+    "mes": 6,
+    "situacao": "TENTADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 75.0
+  },
+  {
+    "risp_cod": "2",
+    "mes": 7,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "2",
+    "mes": 8,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 20.0
+  },
+  {
+    "risp_cod": "2",
+    "mes": 8,
+    "situacao": "TENTADO",
+    "vitimas": 4,
+    "pct_na_regiao_mes": 80.0
+  },
+  {
+    "risp_cod": "2",
+    "mes": 9,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "2",
+    "mes": 9,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "2",
+    "mes": 10,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 33.33333333333333
+  },
+  {
+    "risp_cod": "2",
+    "mes": 10,
+    "situacao": "TENTADO",
+    "vitimas": 4,
+    "pct_na_regiao_mes": 66.66666666666667
+  },
+  {
+    "risp_cod": "2",
+    "mes": 11,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "2",
+    "mes": 11,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "2",
+    "mes": 12,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 20.0
+  },
+  {
+    "risp_cod": "2",
+    "mes": 12,
+    "situacao": "TENTADO",
+    "vitimas": 4,
+    "pct_na_regiao_mes": 80.0
+  },
+  {
+    "risp_cod": "3",
+    "mes": 2,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "3",
+    "mes": 2,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "3",
+    "mes": 3,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "3",
+    "mes": 4,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "3",
+    "mes": 5,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "3",
+    "mes": 6,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "3",
+    "mes": 7,
+    "situacao": "CONSUMADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "3",
+    "mes": 8,
+    "situacao": "TENTADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "3",
+    "mes": 9,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "3",
+    "mes": 10,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "3",
+    "mes": 11,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "3",
+    "mes": 11,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "3",
+    "mes": 12,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 20.0
+  },
+  {
+    "risp_cod": "3",
+    "mes": 12,
+    "situacao": "TENTADO",
+    "vitimas": 4,
+    "pct_na_regiao_mes": 80.0
+  },
+  {
+    "risp_cod": "4",
+    "mes": 1,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "4",
+    "mes": 1,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "4",
+    "mes": 2,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 40.0
+  },
+  {
+    "risp_cod": "4",
+    "mes": 2,
+    "situacao": "TENTADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 60.0
+  },
+  {
+    "risp_cod": "4",
+    "mes": 4,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 66.66666666666667
+  },
+  {
+    "risp_cod": "4",
+    "mes": 4,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 33.33333333333333
+  },
+  {
+    "risp_cod": "4",
+    "mes": 5,
+    "situacao": "TENTADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "4",
+    "mes": 6,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "4",
+    "mes": 9,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "4",
+    "mes": 10,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "4",
+    "mes": 12,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 25.0
+  },
+  {
+    "risp_cod": "4",
+    "mes": 12,
+    "situacao": "TENTADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 75.0
+  },
+  {
+    "risp_cod": "5",
+    "mes": 2,
+    "situacao": "CONSUMADO",
+    "vitimas": 4,
+    "pct_na_regiao_mes": 57.14285714285714
+  },
+  {
+    "risp_cod": "5",
+    "mes": 2,
+    "situacao": "TENTADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 42.85714285714286
+  },
+  {
+    "risp_cod": "5",
+    "mes": 3,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "5",
+    "mes": 5,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "5",
+    "mes": 6,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "5",
+    "mes": 8,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "5",
+    "mes": 9,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "5",
+    "mes": 10,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "5",
+    "mes": 11,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "5",
+    "mes": 12,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "5",
+    "mes": 12,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "6",
+    "mes": 3,
+    "situacao": "CONSUMADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "6",
+    "mes": 6,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "6",
+    "mes": 6,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "6",
+    "mes": 7,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "6",
+    "mes": 8,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "6",
+    "mes": 9,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "6",
+    "mes": 12,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 66.66666666666667
+  },
+  {
+    "risp_cod": "6",
+    "mes": 12,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 33.33333333333333
+  },
+  {
+    "risp_cod": "7",
+    "mes": 1,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "7",
+    "mes": 2,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "7",
+    "mes": 3,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "7",
+    "mes": 4,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "7",
+    "mes": 4,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "7",
+    "mes": 5,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "7",
+    "mes": 5,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "7",
+    "mes": 7,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "7",
+    "mes": 8,
+    "situacao": "CONSUMADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 60.0
+  },
+  {
+    "risp_cod": "7",
+    "mes": 8,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 40.0
+  },
+  {
+    "risp_cod": "7",
+    "mes": 9,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "7",
+    "mes": 10,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 66.66666666666667
+  },
+  {
+    "risp_cod": "7",
+    "mes": 10,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 33.33333333333333
+  },
+  {
+    "risp_cod": "7",
+    "mes": 12,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "7",
+    "mes": 12,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "8",
+    "mes": 1,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "8",
+    "mes": 2,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 33.33333333333333
+  },
+  {
+    "risp_cod": "8",
+    "mes": 2,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 66.66666666666667
+  },
+  {
+    "risp_cod": "8",
+    "mes": 4,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "8",
+    "mes": 5,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "8",
+    "mes": 6,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 25.0
+  },
+  {
+    "risp_cod": "8",
+    "mes": 6,
+    "situacao": "TENTADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 75.0
+  },
+  {
+    "risp_cod": "8",
+    "mes": 7,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "8",
+    "mes": 8,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "8",
+    "mes": 9,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "8",
+    "mes": 11,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "8",
+    "mes": 12,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "9",
+    "mes": 5,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "9",
+    "mes": 6,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "9",
+    "mes": 6,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "9",
+    "mes": 8,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 33.33333333333333
+  },
+  {
+    "risp_cod": "9",
+    "mes": 8,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 66.66666666666667
+  },
+  {
+    "risp_cod": "9",
+    "mes": 10,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 33.33333333333333
+  },
+  {
+    "risp_cod": "9",
+    "mes": 10,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 66.66666666666667
+  },
+  {
+    "risp_cod": "9",
+    "mes": 11,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "9",
+    "mes": 11,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "9",
+    "mes": 12,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 40.0
+  },
+  {
+    "risp_cod": "9",
+    "mes": 12,
+    "situacao": "TENTADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 60.0
+  },
+  {
+    "risp_cod": "10",
+    "mes": 1,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "10",
+    "mes": 3,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "10",
+    "mes": 7,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 66.66666666666667
+  },
+  {
+    "risp_cod": "10",
+    "mes": 7,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 33.33333333333333
+  },
+  {
+    "risp_cod": "10",
+    "mes": 8,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "10",
+    "mes": 11,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "10",
+    "mes": 11,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "10",
+    "mes": 12,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "11",
+    "mes": 1,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 66.66666666666667
+  },
+  {
+    "risp_cod": "11",
+    "mes": 1,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 33.33333333333333
+  },
+  {
+    "risp_cod": "11",
+    "mes": 2,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 33.33333333333333
+  },
+  {
+    "risp_cod": "11",
+    "mes": 2,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 66.66666666666667
+  },
+  {
+    "risp_cod": "11",
+    "mes": 4,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "11",
+    "mes": 5,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "11",
+    "mes": 5,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "11",
+    "mes": 6,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "11",
+    "mes": 8,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "11",
+    "mes": 8,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "11",
+    "mes": 9,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "11",
+    "mes": 9,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "11",
+    "mes": 10,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "11",
+    "mes": 11,
+    "situacao": "CONSUMADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 75.0
+  },
+  {
+    "risp_cod": "11",
+    "mes": 11,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 25.0
+  },
+  {
+    "risp_cod": "11",
+    "mes": 12,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "11",
+    "mes": 12,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "12",
+    "mes": 1,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 40.0
+  },
+  {
+    "risp_cod": "12",
+    "mes": 1,
+    "situacao": "TENTADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 60.0
+  },
+  {
+    "risp_cod": "12",
+    "mes": 2,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 33.33333333333333
+  },
+  {
+    "risp_cod": "12",
+    "mes": 2,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 66.66666666666667
+  },
+  {
+    "risp_cod": "12",
+    "mes": 3,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 66.66666666666667
+  },
+  {
+    "risp_cod": "12",
+    "mes": 3,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 33.33333333333333
+  },
+  {
+    "risp_cod": "12",
+    "mes": 4,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "12",
+    "mes": 5,
+    "situacao": "CONSUMADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "12",
+    "mes": 6,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "12",
+    "mes": 7,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 66.66666666666667
+  },
+  {
+    "risp_cod": "12",
+    "mes": 7,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 33.33333333333333
+  },
+  {
+    "risp_cod": "12",
+    "mes": 8,
+    "situacao": "CONSUMADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 60.0
+  },
+  {
+    "risp_cod": "12",
+    "mes": 8,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 40.0
+  },
+  {
+    "risp_cod": "12",
+    "mes": 9,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "12",
+    "mes": 10,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 33.33333333333333
+  },
+  {
+    "risp_cod": "12",
+    "mes": 10,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 66.66666666666667
+  },
+  {
+    "risp_cod": "12",
+    "mes": 11,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "12",
+    "mes": 12,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "13",
+    "mes": 3,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "13",
+    "mes": 4,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "13",
+    "mes": 5,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "13",
+    "mes": 8,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "13",
+    "mes": 10,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "14",
+    "mes": 1,
+    "situacao": "CONSUMADO",
+    "vitimas": 4,
+    "pct_na_regiao_mes": 80.0
+  },
+  {
+    "risp_cod": "14",
+    "mes": 1,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 20.0
+  },
+  {
+    "risp_cod": "14",
+    "mes": 3,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "14",
+    "mes": 3,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "14",
+    "mes": 5,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "14",
+    "mes": 6,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "14",
+    "mes": 7,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "14",
+    "mes": 8,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "14",
+    "mes": 10,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "14",
+    "mes": 11,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "14",
+    "mes": 12,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "14",
+    "mes": 12,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "15",
+    "mes": 1,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "15",
+    "mes": 2,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "15",
+    "mes": 3,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "15",
+    "mes": 4,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "15",
+    "mes": 5,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "15",
+    "mes": 7,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "15",
+    "mes": 7,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "15",
+    "mes": 8,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "15",
+    "mes": 8,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "15",
+    "mes": 9,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "15",
+    "mes": 10,
+    "situacao": "CONSUMADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "15",
+    "mes": 11,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "15",
+    "mes": 12,
+    "situacao": "CONSUMADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "15",
+    "mes": 12,
+    "situacao": "TENTADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "16",
+    "mes": 2,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "16",
+    "mes": 3,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "16",
+    "mes": 4,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "16",
+    "mes": 5,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "16",
+    "mes": 6,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "16",
+    "mes": 7,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "16",
+    "mes": 8,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "16",
+    "mes": 10,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "16",
+    "mes": 11,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "16",
+    "mes": 12,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "16",
+    "mes": 12,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "17",
+    "mes": 2,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "17",
+    "mes": 3,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "17",
+    "mes": 3,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "17",
+    "mes": 4,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "17",
+    "mes": 5,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "17",
+    "mes": 6,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "17",
+    "mes": 7,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "17",
+    "mes": 7,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "17",
+    "mes": 8,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "17",
+    "mes": 9,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "17",
+    "mes": 10,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "17",
+    "mes": 12,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "18",
+    "mes": 1,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "18",
+    "mes": 3,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "18",
+    "mes": 4,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "18",
+    "mes": 5,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "18",
+    "mes": 5,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "18",
+    "mes": 6,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "18",
+    "mes": 7,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "18",
+    "mes": 8,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "18",
+    "mes": 9,
+    "situacao": "TENTADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "18",
+    "mes": 10,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "18",
+    "mes": 11,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "18",
+    "mes": 12,
+    "situacao": "TENTADO",
+    "vitimas": 3,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "19",
+    "mes": 2,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "19",
+    "mes": 2,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 50.0
+  },
+  {
+    "risp_cod": "19",
+    "mes": 3,
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "19",
+    "mes": 4,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "19",
+    "mes": 5,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "19",
+    "mes": 6,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "19",
+    "mes": 7,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "19",
+    "mes": 8,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "19",
+    "mes": 9,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "19",
+    "mes": 10,
+    "situacao": "CONSUMADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "19",
+    "mes": 11,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  },
+  {
+    "risp_cod": "19",
+    "mes": 12,
+    "situacao": "TENTADO",
+    "vitimas": 1,
+    "pct_na_regiao_mes": 100.0
+  }
+]

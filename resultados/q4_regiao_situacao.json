@@ -1,0 +1,230 @@
+[
+  {
+    "risp_cod": "1",
+    "situacao": "CONSUMADO",
+    "vitimas": 18,
+    "pct_na_regiao": 35.29411764705882
+  },
+  {
+    "risp_cod": "1",
+    "situacao": "TENTADO",
+    "vitimas": 33,
+    "pct_na_regiao": 64.70588235294117
+  },
+  {
+    "risp_cod": "2",
+    "situacao": "CONSUMADO",
+    "vitimas": 15,
+    "pct_na_regiao": 33.33333333333333
+  },
+  {
+    "risp_cod": "2",
+    "situacao": "TENTADO",
+    "vitimas": 30,
+    "pct_na_regiao": 66.66666666666667
+  },
+  {
+    "risp_cod": "3",
+    "situacao": "CONSUMADO",
+    "vitimas": 7,
+    "pct_na_regiao": 33.33333333333333
+  },
+  {
+    "risp_cod": "3",
+    "situacao": "TENTADO",
+    "vitimas": 14,
+    "pct_na_regiao": 66.66666666666667
+  },
+  {
+    "risp_cod": "4",
+    "situacao": "CONSUMADO",
+    "vitimas": 9,
+    "pct_na_regiao": 42.85714285714286
+  },
+  {
+    "risp_cod": "4",
+    "situacao": "TENTADO",
+    "vitimas": 12,
+    "pct_na_regiao": 57.14285714285714
+  },
+  {
+    "risp_cod": "5",
+    "situacao": "CONSUMADO",
+    "vitimas": 12,
+    "pct_na_regiao": 70.58823529411765
+  },
+  {
+    "risp_cod": "5",
+    "situacao": "TENTADO",
+    "vitimas": 5,
+    "pct_na_regiao": 29.41176470588235
+  },
+  {
+    "risp_cod": "6",
+    "situacao": "CONSUMADO",
+    "vitimas": 8,
+    "pct_na_regiao": 72.72727272727273
+  },
+  {
+    "risp_cod": "6",
+    "situacao": "TENTADO",
+    "vitimas": 3,
+    "pct_na_regiao": 27.27272727272727
+  },
+  {
+    "risp_cod": "7",
+    "situacao": "CONSUMADO",
+    "vitimas": 11,
+    "pct_na_regiao": 50.0
+  },
+  {
+    "risp_cod": "7",
+    "situacao": "TENTADO",
+    "vitimas": 11,
+    "pct_na_regiao": 50.0
+  },
+  {
+    "risp_cod": "8",
+    "situacao": "CONSUMADO",
+    "vitimas": 7,
+    "pct_na_regiao": 38.88888888888889
+  },
+  {
+    "risp_cod": "8",
+    "situacao": "TENTADO",
+    "vitimas": 11,
+    "pct_na_regiao": 61.11111111111111
+  },
+  {
+    "risp_cod": "9",
+    "situacao": "CONSUMADO",
+    "vitimas": 6,
+    "pct_na_regiao": 37.5
+  },
+  {
+    "risp_cod": "9",
+    "situacao": "TENTADO",
+    "vitimas": 10,
+    "pct_na_regiao": 62.5
+  },
+  {
+    "risp_cod": "10",
+    "situacao": "CONSUMADO",
+    "vitimas": 4,
+    "pct_na_regiao": 44.44444444444444
+  },
+  {
+    "risp_cod": "10",
+    "situacao": "TENTADO",
+    "vitimas": 5,
+    "pct_na_regiao": 55.55555555555556
+  },
+  {
+    "risp_cod": "11",
+    "situacao": "CONSUMADO",
+    "vitimas": 13,
+    "pct_na_regiao": 54.16666666666667
+  },
+  {
+    "risp_cod": "11",
+    "situacao": "TENTADO",
+    "vitimas": 11,
+    "pct_na_regiao": 45.83333333333333
+  },
+  {
+    "risp_cod": "12",
+    "situacao": "CONSUMADO",
+    "vitimas": 18,
+    "pct_na_regiao": 56.25
+  },
+  {
+    "risp_cod": "12",
+    "situacao": "TENTADO",
+    "vitimas": 14,
+    "pct_na_regiao": 43.75
+  },
+  {
+    "risp_cod": "13",
+    "situacao": "CONSUMADO",
+    "vitimas": 2,
+    "pct_na_regiao": 40.0
+  },
+  {
+    "risp_cod": "13",
+    "situacao": "TENTADO",
+    "vitimas": 3,
+    "pct_na_regiao": 60.0
+  },
+  {
+    "risp_cod": "14",
+    "situacao": "CONSUMADO",
+    "vitimas": 9,
+    "pct_na_regiao": 56.25
+  },
+  {
+    "risp_cod": "14",
+    "situacao": "TENTADO",
+    "vitimas": 7,
+    "pct_na_regiao": 43.75
+  },
+  {
+    "risp_cod": "15",
+    "situacao": "CONSUMADO",
+    "vitimas": 11,
+    "pct_na_regiao": 47.82608695652174
+  },
+  {
+    "risp_cod": "15",
+    "situacao": "TENTADO",
+    "vitimas": 12,
+    "pct_na_regiao": 52.17391304347826
+  },
+  {
+    "risp_cod": "16",
+    "situacao": "CONSUMADO",
+    "vitimas": 5,
+    "pct_na_regiao": 41.66666666666667
+  },
+  {
+    "risp_cod": "16",
+    "situacao": "TENTADO",
+    "vitimas": 7,
+    "pct_na_regiao": 58.33333333333333
+  },
+  {
+    "risp_cod": "17",
+    "situacao": "CONSUMADO",
+    "vitimas": 6,
+    "pct_na_regiao": 42.85714285714286
+  },
+  {
+    "risp_cod": "17",
+    "situacao": "TENTADO",
+    "vitimas": 8,
+    "pct_na_regiao": 57.14285714285714
+  },
+  {
+    "risp_cod": "18",
+    "situacao": "CONSUMADO",
+    "vitimas": 10,
+    "pct_na_regiao": 47.61904761904762
+  },
+  {
+    "risp_cod": "18",
+    "situacao": "TENTADO",
+    "vitimas": 11,
+    "pct_na_regiao": 52.38095238095238
+  },
+  {
+    "risp_cod": "19",
+    "situacao": "CONSUMADO",
+    "vitimas": 7,
+    "pct_na_regiao": 53.84615384615385
+  },
+  {
+    "risp_cod": "19",
+    "situacao": "TENTADO",
+    "vitimas": 6,
+    "pct_na_regiao": 46.15384615384615
+  }
+]

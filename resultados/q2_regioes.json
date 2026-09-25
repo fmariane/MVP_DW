@@ -1,0 +1,268 @@
+[
+  {
+    "fonte": "Feminicídio",
+    "risp_cod": "1",
+    "vitimas": 51,
+    "posicao": 1,
+    "pct_fonte": 13.04347826086957
+  },
+  {
+    "fonte": "Feminicídio",
+    "risp_cod": "2",
+    "vitimas": 45,
+    "posicao": 2,
+    "pct_fonte": 11.50895140664962
+  },
+  {
+    "fonte": "Feminicídio",
+    "risp_cod": "12",
+    "vitimas": 32,
+    "posicao": 3,
+    "pct_fonte": 8.18414322250639
+  },
+  {
+    "fonte": "Feminicídio",
+    "risp_cod": "11",
+    "vitimas": 24,
+    "posicao": 4,
+    "pct_fonte": 6.1381074168798
+  },
+  {
+    "fonte": "Feminicídio",
+    "risp_cod": "15",
+    "vitimas": 23,
+    "posicao": 5,
+    "pct_fonte": 5.88235294117647
+  },
+  {
+    "fonte": "Feminicídio",
+    "risp_cod": "7",
+    "vitimas": 22,
+    "posicao": 6,
+    "pct_fonte": 5.62659846547315
+  },
+  {
+    "fonte": "Feminicídio",
+    "risp_cod": "3",
+    "vitimas": 21,
+    "posicao": 7,
+    "pct_fonte": 5.37084398976982
+  },
+  {
+    "fonte": "Feminicídio",
+    "risp_cod": "4",
+    "vitimas": 21,
+    "posicao": 7,
+    "pct_fonte": 5.37084398976982
+  },
+  {
+    "fonte": "Feminicídio",
+    "risp_cod": "18",
+    "vitimas": 21,
+    "posicao": 7,
+    "pct_fonte": 5.37084398976982
+  },
+  {
+    "fonte": "Feminicídio",
+    "risp_cod": "8",
+    "vitimas": 18,
+    "posicao": 8,
+    "pct_fonte": 4.60358056265985
+  },
+  {
+    "fonte": "Feminicídio",
+    "risp_cod": "5",
+    "vitimas": 17,
+    "posicao": 9,
+    "pct_fonte": 4.34782608695652
+  },
+  {
+    "fonte": "Feminicídio",
+    "risp_cod": "9",
+    "vitimas": 16,
+    "posicao": 10,
+    "pct_fonte": 4.0920716112532
+  },
+  {
+    "fonte": "Feminicídio",
+    "risp_cod": "14",
+    "vitimas": 16,
+    "posicao": 10,
+    "pct_fonte": 4.0920716112532
+  },
+  {
+    "fonte": "Feminicídio",
+    "risp_cod": "17",
+    "vitimas": 14,
+    "posicao": 11,
+    "pct_fonte": 3.58056265984655
+  },
+  {
+    "fonte": "Feminicídio",
+    "risp_cod": "19",
+    "vitimas": 13,
+    "posicao": 12,
+    "pct_fonte": 3.32480818414322
+  },
+  {
+    "fonte": "Feminicídio",
+    "risp_cod": "16",
+    "vitimas": 12,
+    "posicao": 13,
+    "pct_fonte": 3.0690537084399
+  },
+  {
+    "fonte": "Feminicídio",
+    "risp_cod": "6",
+    "vitimas": 11,
+    "posicao": 14,
+    "pct_fonte": 2.81329923273657
+  },
+  {
+    "fonte": "Feminicídio",
+    "risp_cod": "10",
+    "vitimas": 9,
+    "posicao": 15,
+    "pct_fonte": 2.30179028132992
+  },
+  {
+    "fonte": "Feminicídio",
+    "risp_cod": "13",
+    "vitimas": 5,
+    "posicao": 16,
+    "pct_fonte": 1.27877237851662
+  },
+  {
+    "fonte": "Violência doméstica",
+    "risp_cod": "1",
+    "vitimas": 19150,
+    "posicao": 1,
+    "pct_fonte": 11.8186531055594
+  },
+  {
+    "fonte": "Violência doméstica",
+    "risp_cod": "2",
+    "vitimas": 16405,
+    "posicao": 2,
+    "pct_fonte": 10.12454330008887
+  },
+  {
+    "fonte": "Violência doméstica",
+    "risp_cod": "12",
+    "vitimas": 12879,
+    "posicao": 3,
+    "pct_fonte": 7.94842993976498
+  },
+  {
+    "fonte": "Violência doméstica",
+    "risp_cod": "4",
+    "vitimas": 10807,
+    "posicao": 4,
+    "pct_fonte": 6.66967018860472
+  },
+  {
+    "fonte": "Violência doméstica",
+    "risp_cod": "11",
+    "vitimas": 10579,
+    "posicao": 5,
+    "pct_fonte": 6.52895724301373
+  },
+  {
+    "fonte": "Violência doméstica",
+    "risp_cod": "7",
+    "vitimas": 9902,
+    "posicao": 6,
+    "pct_fonte": 6.1111385405352
+  },
+  {
+    "fonte": "Violência doméstica",
+    "risp_cod": "3",
+    "vitimas": 9689,
+    "posicao": 7,
+    "pct_fonte": 5.9796830255752
+  },
+  {
+    "fonte": "Violência doméstica",
+    "risp_cod": "18",
+    "vitimas": 9041,
+    "posicao": 8,
+    "pct_fonte": 5.57976202231658
+  },
+  {
+    "fonte": "Violência doméstica",
+    "risp_cod": "5",
+    "vitimas": 8189,
+    "posicao": 9,
+    "pct_fonte": 5.05393996247655
+  },
+  {
+    "fonte": "Violência doméstica",
+    "risp_cod": "6",
+    "vitimas": 7351,
+    "posicao": 10,
+    "pct_fonte": 4.53675817122544
+  },
+  {
+    "fonte": "Violência doméstica",
+    "risp_cod": "17",
+    "vitimas": 7072,
+    "posicao": 11,
+    "pct_fonte": 4.36456996148909
+  },
+  {
+    "fonte": "Violência doméstica",
+    "risp_cod": "9",
+    "vitimas": 6707,
+    "posicao": 12,
+    "pct_fonte": 4.13930581613508
+  },
+  {
+    "fonte": "Violência doméstica",
+    "risp_cod": "13",
+    "vitimas": 6016,
+    "posicao": 13,
+    "pct_fonte": 3.71284684506764
+  },
+  {
+    "fonte": "Violência doméstica",
+    "risp_cod": "14",
+    "vitimas": 5853,
+    "posicao": 14,
+    "pct_fonte": 3.61224943221092
+  },
+  {
+    "fonte": "Violência doméstica",
+    "risp_cod": "15",
+    "vitimas": 5646,
+    "posicao": 15,
+    "pct_fonte": 3.48449688950331
+  },
+  {
+    "fonte": "Violência doméstica",
+    "risp_cod": "8",
+    "vitimas": 5564,
+    "posicao": 16,
+    "pct_fonte": 3.43388960205392
+  },
+  {
+    "fonte": "Violência doméstica",
+    "risp_cod": "10",
+    "vitimas": 4490,
+    "posicao": 17,
+    "pct_fonte": 2.77105756887528
+  },
+  {
+    "fonte": "Violência doméstica",
+    "risp_cod": "19",
+    "vitimas": 3688,
+    "posicao": 18,
+    "pct_fonte": 2.27609361113854
+  },
+  {
+    "fonte": "Violência doméstica",
+    "risp_cod": "16",
+    "vitimas": 3004,
+    "posicao": 19,
+    "pct_fonte": 1.85395477436556
+  }
+]

@@ -1,0 +1,155 @@
+{
+  "job_id": 1075813885223029,
+  "run_id": 572585419270618,
+  "task_run_id": 364349341929591,
+  "run_page_url": "https://dbc-0a2b6ff1-9976.cloud.databricks.com/?o=7474657037018547#job/1075813885223029/run/572585419270618",
+  "state": {
+    "life_cycle_state": "TERMINATED",
+    "result_state": "SUCCESS",
+    "state_message": "",
+    "user_cancelled_or_timedout": false
+  },
+  "start_time": 1790300440036,
+  "end_time": 1790300521634,
+  "report": {
+    "etapa": "silver",
+    "status": "APROVADO",
+    "execucao_id": "2db675b8-2d7c-4431-b893-0485caf794ba",
+    "versao_regras": "silver_v1",
+    "executado_em_utc": "2026-09-25T01:41:57.314907+00:00",
+    "testes_sinteticos": "APROVADOS",
+    "conflitos_geograficos": 0,
+    "fontes": [
+      {
+        "tabela": "workspace.mvp_silver.violencia_domestica_2025",
+        "acao": "snapshot_existente_validado",
+        "arquivo_sha256": "0d6e677ab65e7d04834904080ec0296eccf8dabd6013fe45910c9d754f94b4fe",
+        "versao_bronze": 0,
+        "reconciliacao": {
+          "entrada": {
+            "linhas": 117169,
+            "soma_quantidades_validas": 162032,
+            "quantidades_invalidas": 0
+          },
+          "candidatos": {
+            "linhas": 117169,
+            "soma_quantidades_validas": 162032,
+            "quantidades_invalidas": 0
+          },
+          "rejeitados": {
+            "linhas": 0,
+            "soma_quantidades_validas": 0,
+            "quantidades_invalidas": 0
+          }
+        },
+        "persistido": {
+          "linhas": 117169,
+          "soma_vitimas": 162032
+        },
+        "alteracoes_textuais_por_campo": {
+          "municipio_cod": 0,
+          "municipio_fato": 109,
+          "data_fato": 0,
+          "mes": 0,
+          "ano": 0,
+          "risp": 0,
+          "rmbh": 0,
+          "natureza_delito": 0,
+          "tentado_consumado": 0,
+          "qtde_vitimas": 0
+        },
+        "tabela_rejeicoes": "workspace.mvp_silver.rejeicoes_violencia_domestica_2025",
+        "dados_brutos_preservados": true,
+        "duplicatas_chave": 0,
+        "formato": "delta",
+        "delta_id": "a8cec434-b337-4c42-bc5c-51ae793b42d1",
+        "tipos": {
+          "municipio_cod": "string",
+          "municipio_fato": "string",
+          "data_fato": "date",
+          "mes": "int",
+          "ano": "int",
+          "risp": "string",
+          "rmbh": "string",
+          "natureza_delito": "string",
+          "tentado_consumado": "string",
+          "qtde_vitimas": "bigint",
+          "dados_brutos": "struct<municipio_cod:string,municipio_fato:string,data_fato:string,mes:string,ano:string,risp:string,rmbh:string,natureza_delito:string,tentado_consumado:string,qtde_vitimas:string>",
+          "arquivo_origem": "string",
+          "arquivo_sha256": "string",
+          "ingerido_em": "timestamp",
+          "tabela_bronze": "string",
+          "versao_bronze": "bigint",
+          "versao_regras": "string",
+          "tratado_em": "timestamp"
+        }
+      },
+      {
+        "tabela": "workspace.mvp_silver.feminicidio_2025",
+        "acao": "snapshot_existente_validado",
+        "arquivo_sha256": "364dec0197c1d9c40a050883573ce22efd280a43114680fc1491e40db6e89630",
+        "versao_bronze": 0,
+        "reconciliacao": {
+          "entrada": {
+            "linhas": 381,
+            "soma_quantidades_validas": 391,
+            "quantidades_invalidas": 0
+          },
+          "candidatos": {
+            "linhas": 381,
+            "soma_quantidades_validas": 391,
+            "quantidades_invalidas": 0
+          },
+          "rejeitados": {
+            "linhas": 0,
+            "soma_quantidades_validas": 0,
+            "quantidades_invalidas": 0
+          }
+        },
+        "persistido": {
+          "linhas": 381,
+          "soma_vitimas": 391
+        },
+        "alteracoes_textuais_por_campo": {
+          "municipio_cod": 0,
+          "municipio_fato": 0,
+          "data_fato": 0,
+          "mes": 0,
+          "ano": 0,
+          "risp": 0,
+          "rmbh": 0,
+          "tentado_consumado": 0,
+          "qtde_vitimas": 0
+        },
+        "tabela_rejeicoes": "workspace.mvp_silver.rejeicoes_feminicidio_2025",
+        "dados_brutos_preservados": true,
+        "duplicatas_chave": 0,
+        "formato": "delta",
+        "delta_id": "61fd6086-240b-464e-8f93-94701ab3803b",
+        "tipos": {
+          "municipio_cod": "string",
+          "municipio_fato": "string",
+          "data_fato": "date",
+          "mes": "int",
+          "ano": "int",
+          "risp": "string",
+          "rmbh": "string",
+          "tentado_consumado": "string",
+          "qtde_vitimas": "bigint",
+          "dados_brutos": "struct<municipio_cod:string,municipio_fato:string,data_fato:string,mes:string,ano:string,risp:string,rmbh:string,tentado_consumado:string,qtde_vitimas:string>",
+          "arquivo_origem": "string",
+          "arquivo_sha256": "string",
+          "ingerido_em": "timestamp",
+          "tabela_bronze": "string",
+          "versao_bronze": "bigint",
+          "versao_regras": "string",
+          "tratado_em": "timestamp"
+        }
+      }
+    ],
+    "ressalvas": [
+      "S/N preservado sem interpretação.",
+      "Fontes separadas; quantitativos não representam pessoas únicas."
+    ]
+  }
+}

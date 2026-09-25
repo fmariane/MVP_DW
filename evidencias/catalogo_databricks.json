@@ -1,0 +1,1062 @@
+{
+  "extraido_em_utc": "2026-09-25T02:03:20.361847+00:00",
+  "origem": "Databricks CLI / Unity Catalog",
+  "objetos": [
+    {
+      "full_name": "workspace.mvp_bronze.feminicidio_2025",
+      "table_type": "MANAGED",
+      "data_source_format": "DELTA",
+      "table_id": "5acc8d2f-ded0-4be2-b7aa-3382bb4585a9",
+      "columns": [
+        {
+          "name": "municipio_cod",
+          "position": 0,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"municipio_cod\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "municipio_fato",
+          "position": 1,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"municipio_fato\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "data_fato",
+          "position": 2,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"data_fato\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "mes",
+          "position": 3,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"mes\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "ano",
+          "position": 4,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"ano\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "risp",
+          "position": 5,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"risp\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "rmbh",
+          "position": 6,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"rmbh\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "tentado_consumado",
+          "position": 7,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"tentado_consumado\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "qtde_vitimas",
+          "position": 8,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"qtde_vitimas\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "arquivo_origem",
+          "position": 9,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"arquivo_origem\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "arquivo_sha256",
+          "position": 10,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"arquivo_sha256\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "ingerido_em",
+          "position": 11,
+          "type_text": "timestamp",
+          "nullable": true,
+          "type_json": "{\"name\":\"ingerido_em\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}}"
+        }
+      ]
+    },
+    {
+      "full_name": "workspace.mvp_bronze.violencia_domestica_2025",
+      "table_type": "MANAGED",
+      "data_source_format": "DELTA",
+      "table_id": "7cbe7cff-161e-47cb-ba1e-f462ab202521",
+      "columns": [
+        {
+          "name": "municipio_cod",
+          "position": 0,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"municipio_cod\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "municipio_fato",
+          "position": 1,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"municipio_fato\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "data_fato",
+          "position": 2,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"data_fato\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "mes",
+          "position": 3,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"mes\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "ano",
+          "position": 4,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"ano\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "risp",
+          "position": 5,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"risp\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "rmbh",
+          "position": 6,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"rmbh\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "natureza_delito",
+          "position": 7,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"natureza_delito\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "tentado_consumado",
+          "position": 8,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"tentado_consumado\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "qtde_vitimas",
+          "position": 9,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"qtde_vitimas\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "arquivo_origem",
+          "position": 10,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"arquivo_origem\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "arquivo_sha256",
+          "position": 11,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"arquivo_sha256\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "ingerido_em",
+          "position": 12,
+          "type_text": "timestamp",
+          "nullable": true,
+          "type_json": "{\"name\":\"ingerido_em\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}}"
+        }
+      ]
+    },
+    {
+      "full_name": "workspace.mvp_silver.feminicidio_2025",
+      "table_type": "MANAGED",
+      "data_source_format": "DELTA",
+      "table_id": "0a48b4e3-4be4-4f6f-ad36-c4bfc068325c",
+      "columns": [
+        {
+          "name": "municipio_cod",
+          "position": 0,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"municipio_cod\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "municipio_fato",
+          "position": 1,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"municipio_fato\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "data_fato",
+          "position": 2,
+          "type_text": "date",
+          "nullable": true,
+          "type_json": "{\"name\":\"data_fato\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "mes",
+          "position": 3,
+          "type_text": "int",
+          "nullable": true,
+          "type_json": "{\"name\":\"mes\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "ano",
+          "position": 4,
+          "type_text": "int",
+          "nullable": true,
+          "type_json": "{\"name\":\"ano\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "risp",
+          "position": 5,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"risp\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "rmbh",
+          "position": 6,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"rmbh\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "tentado_consumado",
+          "position": 7,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"tentado_consumado\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "qtde_vitimas",
+          "position": 8,
+          "type_text": "bigint",
+          "nullable": true,
+          "type_json": "{\"name\":\"qtde_vitimas\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "dados_brutos",
+          "position": 9,
+          "type_text": "struct<municipio_cod:string,municipio_fato:string,data_fato:string,mes:string,ano:string,risp:string,rmbh:string,tentado_consumado:string,qtde_vitimas:string>",
+          "nullable": true,
+          "type_json": "{\"name\":\"dados_brutos\",\"type\":{\"type\":\"struct\",\"fields\":[{\"name\":\"municipio_cod\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"municipio_fato\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"data_fato\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"mes\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ano\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"risp\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"rmbh\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"tentado_consumado\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"qtde_vitimas\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]},\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "arquivo_origem",
+          "position": 10,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"arquivo_origem\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "arquivo_sha256",
+          "position": 11,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"arquivo_sha256\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "ingerido_em",
+          "position": 12,
+          "type_text": "timestamp",
+          "nullable": true,
+          "type_json": "{\"name\":\"ingerido_em\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "tabela_bronze",
+          "position": 13,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"tabela_bronze\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "versao_bronze",
+          "position": 14,
+          "type_text": "bigint",
+          "nullable": true,
+          "type_json": "{\"name\":\"versao_bronze\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "versao_regras",
+          "position": 15,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"versao_regras\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "tratado_em",
+          "position": 16,
+          "type_text": "timestamp",
+          "nullable": true,
+          "type_json": "{\"name\":\"tratado_em\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}}"
+        }
+      ]
+    },
+    {
+      "full_name": "workspace.mvp_silver.rejeicoes_feminicidio_2025",
+      "table_type": "MANAGED",
+      "data_source_format": "DELTA",
+      "table_id": "a242d96f-4ca8-494e-b21e-d084b8cb5be8",
+      "columns": [
+        {
+          "name": "municipio_cod",
+          "position": 0,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"municipio_cod\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "municipio_fato",
+          "position": 1,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"municipio_fato\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "data_fato",
+          "position": 2,
+          "type_text": "date",
+          "nullable": true,
+          "type_json": "{\"name\":\"data_fato\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "mes",
+          "position": 3,
+          "type_text": "int",
+          "nullable": true,
+          "type_json": "{\"name\":\"mes\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "ano",
+          "position": 4,
+          "type_text": "int",
+          "nullable": true,
+          "type_json": "{\"name\":\"ano\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "risp",
+          "position": 5,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"risp\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "rmbh",
+          "position": 6,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"rmbh\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "tentado_consumado",
+          "position": 7,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"tentado_consumado\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "qtde_vitimas",
+          "position": 8,
+          "type_text": "bigint",
+          "nullable": true,
+          "type_json": "{\"name\":\"qtde_vitimas\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "dados_brutos",
+          "position": 9,
+          "type_text": "struct<municipio_cod:string,municipio_fato:string,data_fato:string,mes:string,ano:string,risp:string,rmbh:string,tentado_consumado:string,qtde_vitimas:string>",
+          "nullable": true,
+          "type_json": "{\"name\":\"dados_brutos\",\"type\":{\"type\":\"struct\",\"fields\":[{\"name\":\"municipio_cod\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"municipio_fato\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"data_fato\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"mes\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ano\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"risp\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"rmbh\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"tentado_consumado\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"qtde_vitimas\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]},\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "arquivo_origem",
+          "position": 10,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"arquivo_origem\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "arquivo_sha256",
+          "position": 11,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"arquivo_sha256\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "ingerido_em",
+          "position": 12,
+          "type_text": "timestamp",
+          "nullable": true,
+          "type_json": "{\"name\":\"ingerido_em\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "tabela_bronze",
+          "position": 13,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"tabela_bronze\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "versao_bronze",
+          "position": 14,
+          "type_text": "bigint",
+          "nullable": true,
+          "type_json": "{\"name\":\"versao_bronze\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "versao_regras",
+          "position": 15,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"versao_regras\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "tratado_em",
+          "position": 16,
+          "type_text": "timestamp",
+          "nullable": true,
+          "type_json": "{\"name\":\"tratado_em\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "_quantidade_valida",
+          "position": 17,
+          "type_text": "boolean",
+          "nullable": true,
+          "type_json": "{\"name\":\"_quantidade_valida\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "motivos_rejeicao",
+          "position": 18,
+          "type_text": "array<string>",
+          "nullable": true,
+          "type_json": "{\"name\":\"motivos_rejeicao\",\"type\":{\"type\":\"array\",\"elementType\":\"string\",\"containsNull\":true},\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "execucao_id",
+          "position": 19,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"execucao_id\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        }
+      ]
+    },
+    {
+      "full_name": "workspace.mvp_silver.rejeicoes_violencia_domestica_2025",
+      "table_type": "MANAGED",
+      "data_source_format": "DELTA",
+      "table_id": "f968d87b-ecef-483b-bc05-2ec2c81b4020",
+      "columns": [
+        {
+          "name": "municipio_cod",
+          "position": 0,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"municipio_cod\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "municipio_fato",
+          "position": 1,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"municipio_fato\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "data_fato",
+          "position": 2,
+          "type_text": "date",
+          "nullable": true,
+          "type_json": "{\"name\":\"data_fato\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "mes",
+          "position": 3,
+          "type_text": "int",
+          "nullable": true,
+          "type_json": "{\"name\":\"mes\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "ano",
+          "position": 4,
+          "type_text": "int",
+          "nullable": true,
+          "type_json": "{\"name\":\"ano\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "risp",
+          "position": 5,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"risp\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "rmbh",
+          "position": 6,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"rmbh\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "natureza_delito",
+          "position": 7,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"natureza_delito\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "tentado_consumado",
+          "position": 8,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"tentado_consumado\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "qtde_vitimas",
+          "position": 9,
+          "type_text": "bigint",
+          "nullable": true,
+          "type_json": "{\"name\":\"qtde_vitimas\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "dados_brutos",
+          "position": 10,
+          "type_text": "struct<municipio_cod:string,municipio_fato:string,data_fato:string,mes:string,ano:string,risp:string,rmbh:string,natureza_delito:string,tentado_consumado:string,qtde_vitimas:string>",
+          "nullable": true,
+          "type_json": "{\"name\":\"dados_brutos\",\"type\":{\"type\":\"struct\",\"fields\":[{\"name\":\"municipio_cod\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"municipio_fato\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"data_fato\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"mes\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ano\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"risp\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"rmbh\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"natureza_delito\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"tentado_consumado\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"qtde_vitimas\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]},\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "arquivo_origem",
+          "position": 11,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"arquivo_origem\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "arquivo_sha256",
+          "position": 12,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"arquivo_sha256\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "ingerido_em",
+          "position": 13,
+          "type_text": "timestamp",
+          "nullable": true,
+          "type_json": "{\"name\":\"ingerido_em\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "tabela_bronze",
+          "position": 14,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"tabela_bronze\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "versao_bronze",
+          "position": 15,
+          "type_text": "bigint",
+          "nullable": true,
+          "type_json": "{\"name\":\"versao_bronze\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "versao_regras",
+          "position": 16,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"versao_regras\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "tratado_em",
+          "position": 17,
+          "type_text": "timestamp",
+          "nullable": true,
+          "type_json": "{\"name\":\"tratado_em\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "_quantidade_valida",
+          "position": 18,
+          "type_text": "boolean",
+          "nullable": true,
+          "type_json": "{\"name\":\"_quantidade_valida\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "motivos_rejeicao",
+          "position": 19,
+          "type_text": "array<string>",
+          "nullable": true,
+          "type_json": "{\"name\":\"motivos_rejeicao\",\"type\":{\"type\":\"array\",\"elementType\":\"string\",\"containsNull\":true},\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "execucao_id",
+          "position": 20,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"execucao_id\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        }
+      ]
+    },
+    {
+      "full_name": "workspace.mvp_silver.violencia_domestica_2025",
+      "table_type": "MANAGED",
+      "data_source_format": "DELTA",
+      "table_id": "d9b83add-a0c3-4e72-b23d-852fd2d51382",
+      "columns": [
+        {
+          "name": "municipio_cod",
+          "position": 0,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"municipio_cod\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "municipio_fato",
+          "position": 1,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"municipio_fato\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "data_fato",
+          "position": 2,
+          "type_text": "date",
+          "nullable": true,
+          "type_json": "{\"name\":\"data_fato\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "mes",
+          "position": 3,
+          "type_text": "int",
+          "nullable": true,
+          "type_json": "{\"name\":\"mes\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "ano",
+          "position": 4,
+          "type_text": "int",
+          "nullable": true,
+          "type_json": "{\"name\":\"ano\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "risp",
+          "position": 5,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"risp\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "rmbh",
+          "position": 6,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"rmbh\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "natureza_delito",
+          "position": 7,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"natureza_delito\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "tentado_consumado",
+          "position": 8,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"tentado_consumado\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "qtde_vitimas",
+          "position": 9,
+          "type_text": "bigint",
+          "nullable": true,
+          "type_json": "{\"name\":\"qtde_vitimas\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "dados_brutos",
+          "position": 10,
+          "type_text": "struct<municipio_cod:string,municipio_fato:string,data_fato:string,mes:string,ano:string,risp:string,rmbh:string,natureza_delito:string,tentado_consumado:string,qtde_vitimas:string>",
+          "nullable": true,
+          "type_json": "{\"name\":\"dados_brutos\",\"type\":{\"type\":\"struct\",\"fields\":[{\"name\":\"municipio_cod\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"municipio_fato\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"data_fato\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"mes\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ano\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"risp\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"rmbh\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"natureza_delito\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"tentado_consumado\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"qtde_vitimas\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]},\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "arquivo_origem",
+          "position": 11,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"arquivo_origem\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "arquivo_sha256",
+          "position": 12,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"arquivo_sha256\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "ingerido_em",
+          "position": 13,
+          "type_text": "timestamp",
+          "nullable": true,
+          "type_json": "{\"name\":\"ingerido_em\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "tabela_bronze",
+          "position": 14,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"tabela_bronze\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "versao_bronze",
+          "position": 15,
+          "type_text": "bigint",
+          "nullable": true,
+          "type_json": "{\"name\":\"versao_bronze\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "versao_regras",
+          "position": 16,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"versao_regras\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "tratado_em",
+          "position": 17,
+          "type_text": "timestamp",
+          "nullable": true,
+          "type_json": "{\"name\":\"tratado_em\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}}"
+        }
+      ]
+    },
+    {
+      "full_name": "workspace.mvp_gold.comparativo_municipio_mes",
+      "table_type": "VIEW",
+      "table_id": "086765d1-758c-4cf7-9697-3b99847fd313",
+      "view_definition": "WITH d AS (\n  SELECT f.municipio_cod, t.ano, t.mes, SUM(f.qtde_vitimas) AS vitimas_violencia_domestica\n  FROM workspace.mvp_gold.fato_violencia_domestica f JOIN workspace.mvp_gold.dim_tempo t USING(data_key)\n  GROUP BY f.municipio_cod, t.ano, t.mes\n), f AS (\n  SELECT f.municipio_cod, t.ano, t.mes, SUM(f.qtde_vitimas) AS vitimas_feminicidio\n  FROM workspace.mvp_gold.fato_feminicidio f JOIN workspace.mvp_gold.dim_tempo t USING(data_key)\n  GROUP BY f.municipio_cod, t.ano, t.mes\n)\nSELECT COALESCE(d.municipio_cod,f.municipio_cod) AS municipio_cod,\n       COALESCE(d.ano,f.ano) AS ano, COALESCE(d.mes,f.mes) AS mes,\n       d.vitimas_violencia_domestica, d.municipio_cod IS NOT NULL AS presente_vitimas_violencia_domestica,\n       f.vitimas_feminicidio, f.municipio_cod IS NOT NULL AS presente_vitimas_feminicidio\nFROM d FULL OUTER JOIN f ON d.municipio_cod=f.municipio_cod AND d.ano=f.ano AND d.mes=f.mes",
+      "columns": [
+        {
+          "name": "municipio_cod",
+          "position": 0,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"municipio_cod\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "ano",
+          "position": 1,
+          "type_text": "int",
+          "nullable": true,
+          "type_json": "{\"name\":\"ano\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "mes",
+          "position": 2,
+          "type_text": "int",
+          "nullable": true,
+          "type_json": "{\"name\":\"mes\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "vitimas_violencia_domestica",
+          "position": 3,
+          "type_text": "bigint",
+          "nullable": true,
+          "type_json": "{\"name\":\"vitimas_violencia_domestica\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "presente_vitimas_violencia_domestica",
+          "position": 4,
+          "type_text": "boolean",
+          "nullable": false,
+          "type_json": "{\"name\":\"presente_vitimas_violencia_domestica\",\"type\":\"boolean\",\"nullable\":false,\"metadata\":{}}"
+        },
+        {
+          "name": "vitimas_feminicidio",
+          "position": 5,
+          "type_text": "bigint",
+          "nullable": true,
+          "type_json": "{\"name\":\"vitimas_feminicidio\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "presente_vitimas_feminicidio",
+          "position": 6,
+          "type_text": "boolean",
+          "nullable": false,
+          "type_json": "{\"name\":\"presente_vitimas_feminicidio\",\"type\":\"boolean\",\"nullable\":false,\"metadata\":{}}"
+        }
+      ]
+    },
+    {
+      "full_name": "workspace.mvp_gold.dim_municipio",
+      "table_type": "MANAGED",
+      "data_source_format": "DELTA",
+      "table_id": "a065e8a8-7fa7-42d5-815f-da46851701ef",
+      "columns": [
+        {
+          "name": "municipio_cod",
+          "position": 0,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"municipio_cod\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "municipio_nome",
+          "position": 1,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"municipio_nome\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "uf",
+          "position": 2,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"uf\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "risp_cod",
+          "position": 3,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"risp_cod\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "recorte_metropolitano",
+          "position": 4,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"recorte_metropolitano\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        }
+      ]
+    },
+    {
+      "full_name": "workspace.mvp_gold.dim_natureza_delito",
+      "table_type": "MANAGED",
+      "data_source_format": "DELTA",
+      "table_id": "8c130733-1bba-4d80-becb-f0fb83c1aa3c",
+      "columns": [
+        {
+          "name": "natureza_key",
+          "position": 0,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"natureza_key\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "natureza_nome",
+          "position": 1,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"natureza_nome\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        }
+      ]
+    },
+    {
+      "full_name": "workspace.mvp_gold.dim_tempo",
+      "table_type": "MANAGED",
+      "data_source_format": "DELTA",
+      "table_id": "e62ba495-1ca4-40bd-b0fa-699b16f53b50",
+      "columns": [
+        {
+          "name": "data_key",
+          "position": 0,
+          "type_text": "int",
+          "nullable": true,
+          "type_json": "{\"name\":\"data_key\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "data",
+          "position": 1,
+          "type_text": "date",
+          "nullable": true,
+          "type_json": "{\"name\":\"data\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "ano",
+          "position": 2,
+          "type_text": "int",
+          "nullable": true,
+          "type_json": "{\"name\":\"ano\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "mes",
+          "position": 3,
+          "type_text": "int",
+          "nullable": true,
+          "type_json": "{\"name\":\"mes\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "dia",
+          "position": 4,
+          "type_text": "int",
+          "nullable": true,
+          "type_json": "{\"name\":\"dia\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "trimestre",
+          "position": 5,
+          "type_text": "int",
+          "nullable": true,
+          "type_json": "{\"name\":\"trimestre\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}"
+        }
+      ]
+    },
+    {
+      "full_name": "workspace.mvp_gold.fato_feminicidio",
+      "table_type": "MANAGED",
+      "data_source_format": "DELTA",
+      "table_id": "ee626490-4248-450e-a544-f668f7a7dd9d",
+      "columns": [
+        {
+          "name": "data_key",
+          "position": 0,
+          "type_text": "int",
+          "nullable": true,
+          "type_json": "{\"name\":\"data_key\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "municipio_cod",
+          "position": 1,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"municipio_cod\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "situacao",
+          "position": 2,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"situacao\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "qtde_vitimas",
+          "position": 3,
+          "type_text": "bigint",
+          "nullable": true,
+          "type_json": "{\"name\":\"qtde_vitimas\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "arquivo_origem",
+          "position": 4,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"arquivo_origem\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "arquivo_sha256",
+          "position": 5,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"arquivo_sha256\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "ingerido_em",
+          "position": 6,
+          "type_text": "timestamp",
+          "nullable": true,
+          "type_json": "{\"name\":\"ingerido_em\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}}"
+        }
+      ]
+    },
+    {
+      "full_name": "workspace.mvp_gold.fato_violencia_domestica",
+      "table_type": "MANAGED",
+      "data_source_format": "DELTA",
+      "table_id": "9b346b09-9e5b-4ec3-bf2a-b861a529a6af",
+      "columns": [
+        {
+          "name": "data_key",
+          "position": 0,
+          "type_text": "int",
+          "nullable": true,
+          "type_json": "{\"name\":\"data_key\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "municipio_cod",
+          "position": 1,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"municipio_cod\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "natureza_key",
+          "position": 2,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"natureza_key\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "codigo_tentado_consumado",
+          "position": 3,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"codigo_tentado_consumado\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "qtde_vitimas",
+          "position": 4,
+          "type_text": "bigint",
+          "nullable": true,
+          "type_json": "{\"name\":\"qtde_vitimas\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "arquivo_origem",
+          "position": 5,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"arquivo_origem\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "arquivo_sha256",
+          "position": 6,
+          "type_text": "string",
+          "nullable": true,
+          "type_json": "{\"name\":\"arquivo_sha256\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}"
+        },
+        {
+          "name": "ingerido_em",
+          "position": 7,
+          "type_text": "timestamp",
+          "nullable": true,
+          "type_json": "{\"name\":\"ingerido_em\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}}"
+        }
+      ]
+    }
+  ],
+  "volume": {
+    "full_name": "workspace.mvp_bronze.arquivos",
+    "name": "arquivos",
+    "catalog_name": "workspace",
+    "schema_name": "mvp_bronze",
+    "volume_type": "MANAGED",
+    "volume_id": "4cb1d0da-7d8d-4160-88c5-880bd22da57b"
+  }
+}

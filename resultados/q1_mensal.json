@@ -1,0 +1,146 @@
+[
+  {
+    "fonte": "Feminicídio",
+    "mes": 1,
+    "vitimas": 31,
+    "pct_fonte": 7.92838874680307
+  },
+  {
+    "fonte": "Feminicídio",
+    "mes": 2,
+    "vitimas": 35,
+    "pct_fonte": 8.95140664961637
+  },
+  {
+    "fonte": "Feminicídio",
+    "mes": 3,
+    "vitimas": 33,
+    "pct_fonte": 8.43989769820972
+  },
+  {
+    "fonte": "Feminicídio",
+    "mes": 4,
+    "vitimas": 26,
+    "pct_fonte": 6.64961636828645
+  },
+  {
+    "fonte": "Feminicídio",
+    "mes": 5,
+    "vitimas": 27,
+    "pct_fonte": 6.90537084398977
+  },
+  {
+    "fonte": "Feminicídio",
+    "mes": 6,
+    "vitimas": 24,
+    "pct_fonte": 6.1381074168798
+  },
+  {
+    "fonte": "Feminicídio",
+    "mes": 7,
+    "vitimas": 29,
+    "pct_fonte": 7.41687979539642
+  },
+  {
+    "fonte": "Feminicídio",
+    "mes": 8,
+    "vitimas": 41,
+    "pct_fonte": 10.48593350383632
+  },
+  {
+    "fonte": "Feminicídio",
+    "mes": 9,
+    "vitimas": 26,
+    "pct_fonte": 6.64961636828645
+  },
+  {
+    "fonte": "Feminicídio",
+    "mes": 10,
+    "vitimas": 34,
+    "pct_fonte": 8.69565217391304
+  },
+  {
+    "fonte": "Feminicídio",
+    "mes": 11,
+    "vitimas": 28,
+    "pct_fonte": 7.16112531969309
+  },
+  {
+    "fonte": "Feminicídio",
+    "mes": 12,
+    "vitimas": 57,
+    "pct_fonte": 14.57800511508951
+  },
+  {
+    "fonte": "Violência doméstica",
+    "mes": 1,
+    "vitimas": 13853,
+    "pct_fonte": 8.54954576873704
+  },
+  {
+    "fonte": "Violência doméstica",
+    "mes": 2,
+    "vitimas": 13104,
+    "pct_fonte": 8.08729139922978
+  },
+  {
+    "fonte": "Violência doméstica",
+    "mes": 3,
+    "vitimas": 14648,
+    "pct_fonte": 9.04018959217932
+  },
+  {
+    "fonte": "Violência doméstica",
+    "mes": 4,
+    "vitimas": 13224,
+    "pct_fonte": 8.16135084427767
+  },
+  {
+    "fonte": "Violência doméstica",
+    "mes": 5,
+    "vitimas": 12487,
+    "pct_fonte": 7.7065024192752
+  },
+  {
+    "fonte": "Violência doméstica",
+    "mes": 6,
+    "vitimas": 12311,
+    "pct_fonte": 7.59788189987163
+  },
+  {
+    "fonte": "Violência doméstica",
+    "mes": 7,
+    "vitimas": 12481,
+    "pct_fonte": 7.70279944702281
+  },
+  {
+    "fonte": "Violência doméstica",
+    "mes": 8,
+    "vitimas": 13713,
+    "pct_fonte": 8.46314308284783
+  },
+  {
+    "fonte": "Violência doméstica",
+    "mes": 9,
+    "vitimas": 13705,
+    "pct_fonte": 8.45820578651131
+  },
+  {
+    "fonte": "Violência doméstica",
+    "mes": 10,
+    "vitimas": 13759,
+    "pct_fonte": 8.49153253678286
+  },
+  {
+    "fonte": "Violência doméstica",
+    "mes": 11,
+    "vitimas": 13976,
+    "pct_fonte": 8.62545669991113
+  },
+  {
+    "fonte": "Violência doméstica",
+    "mes": 12,
+    "vitimas": 14771,
+    "pct_fonte": 9.11610052335341
+  }
+]
