@@ -229,10 +229,3 @@ Para os gráficos, foi utilizado Python 3.12 com Matplotlib 3.11.2 e NumPy 2.5.3
 ```zsh
 python3.12 scripts/gerar_graficos.py evidencias/analises_931355409551552.json
 ```
-
-A ausência de duplicação deverá ser conferida após nova execução. A publicação final, o acesso público sem autenticação e a submissão do link no fórum deverão ser verificados separadamente; não são comprovados pela presença deste relatório.
-
-
-### Documentação em HTML
-
-Foram convertidos os 15 documentos Markdown e o arquivo JSON da pasta docs em 16 páginas HTML. Foi disponibilizado um [índice da documentação](https://fmariane.github.io/MVP_DW/docs/index.html), com navegação entre as páginas, tabelas, imagens e diagramas. Foram preservados os arquivos originais. A conversão pode ser repetida pelo [gerador de HTML](scripts/gerar_docs_html.py), com as versões registradas no [arquivo de dependências da documentação](requirements%2Ddocs.txt).
