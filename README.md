@@ -27,6 +27,10 @@ Foram lidos CSVs com separador ponto e vírgula e codificação UTF8. Na base do
 
 Em ambas, foram disponibilizados `municipio_cod`, `municipio_fato`, `data_fato`, `mes`, `ano`, `risp`, `rmbh`, `tentado_consumado` e `qtde_vitimas`. Apenas na fonte doméstica foi disponibilizado `natureza_delito`. Nesses campos, foram representados município, data, região de segurança, recorte metropolitano, classificação e quantidade publicada de vítimas. Não foi disponibilizado identificador de pessoa ou ocorrência. Uma linha não foi interpretada como uma mulher distinta ou um crime individual.
 
+Por **RISP**, é designada a **Região Integrada de Segurança Pública**. No campo `risp`, é registrado o código da região à qual o município está associado. Nas bases utilizadas, foram observados códigos de 1 a 19, tratados como identificadores territoriais, sem ordenação por gravidade ou intensidade da violência. Assim, pelo código 19 não é indicado um nível de violência superior ao representado pelo código 1.
+
+Nas análises regionais, foram agrupados os quantitativos dos municípios associados ao mesmo código RISP, mantendo cada fonte separada. Por esse agrupamento, foi permitida a comparação de volumes registrados entre regiões de segurança pública. Foram preservados os códigos publicados, sem acréscimo dos nomes das regiões, pois a correspondência entre códigos e nomes ainda não foi validada em fonte oficial.
+
 Foram formuladas as seguintes perguntas:
 
 1. Como os quantitativos de vítimas registrados se distribuem pelos meses de 2025 em cada base?
