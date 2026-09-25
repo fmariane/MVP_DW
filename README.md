@@ -2,7 +2,7 @@
 
 Foi construído um pipeline no Databricks Free Edition para análise de duas bases da Polícia Civil de Minas Gerais. Foram realizadas ingestão, verificação de qualidade, transformação e modelagem dimensional. Foram respondidas quatro perguntas por meio de sete consultas SQL e sete gráficos. Neste README, foram reunidos o relatório, a correspondência com os critérios de avaliação e os links para verificação dos arquivos. Atualização: 25/09/2026.
 
-## Rubrica e índice de navegação
+## Índice de navegação
 
 Os pesos da especificação são apresentados para orientar a conferência. Não foi atribuída nota ao trabalho.
 
