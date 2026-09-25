@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diagnóstico de qualidade da Bronze | MVP DW</title><style>
+:root{color-scheme:light;--ink:#203244;--accent:#086a80;--line:#d9e3ec}
+*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:var(--ink);font:17px/1.7 system-ui,sans-serif}
+header{border-bottom:1px solid var(--line);background:#fff;padding:18px max(24px,calc((100vw - 1180px)/2))}
+nav{display:flex;gap:22px;flex-wrap:wrap}a{color:var(--accent);text-underline-offset:3px}
+main{max-width:1180px;margin:32px auto;padding:32px;background:#fff;border:1px solid var(--line);border-radius:12px}
+h1,h2,h3{line-height:1.3;color:#183044}h1{font-size:2rem}h2{margin-top:2em}h3{margin-top:1.6em}
+img{display:block;max-width:100%;height:auto;margin:24px auto}pre{padding:18px;background:#f0f4f8;overflow:auto;border-radius:8px}
+code{font-family:ui-monospace,monospace;font-size:.88em;overflow-wrap:anywhere}pre code{overflow-wrap:normal}
+.tablewrap{overflow-x:auto;margin:24px 0}table{width:100%;border-collapse:collapse;font-size:.94em}
+th,td{text-align:left;padding:11px 14px;border:1px solid var(--line);vertical-align:top}th{background:#eef5f7}
+tbody tr:nth-child(even){background:#fafcfd}.toc{padding:12px 24px;background:#f4f8fa;border-radius:8px}
+.mermaid{overflow-x:auto;margin:24px 0}.mermaid svg{height:auto}summary{cursor:pointer;font-weight:600}
+.note,footer{color:#526779;font-size:.9em}footer{max-width:1180px;margin:24px auto;padding:0 24px}
+@media(max-width:720px){main{margin:12px;padding:18px}h1{font-size:1.65rem}header{padding:16px}}
+@media print{header,.toc{display:none}main{border:0;margin:0;max-width:none;padding:0}pre{white-space:pre-wrap}}
+</style></head>
+<body><header><nav><a href="https://fmariane.github.io/MVP_DW/">Início</a><a href="https://fmariane.github.io/MVP_DW/docs/index.html">Documentação</a>
+<a href="https://github.com/fmariane/MVP_DW#readme">Relatório completo</a><a href="https://github.com/fmariane/MVP_DW/blob/main/docs/qualidade_bronze.md">Arquivo original</a></nav></header>
+<main><details><summary>Navegação nesta página</summary><div class="toc">
+<ul>
+<li><a href="#diagnostico-de-qualidade-da-bronze">Diagnóstico de qualidade da Bronze</a><ul>
+<li><a href="#resultado">Resultado</a></li>
+<li><a href="#divergencia-municipal-e-correcao-proposta">Divergência municipal e correção proposta</a></li>
+<li><a href="#validacao-dos-controles">Validação dos controles</a></li>
+<li><a href="#limitacoes-e-proximos-passos">Limitações e próximos passos</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</details><h1 id="diagnostico-de-qualidade-da-bronze">Diagnóstico de qualidade da Bronze</h1>
+<p>Executado no Databricks Free Edition em 24/09/2026, às 22:20 no horário de
+São Paulo (25/09 às 01:20 UTC), por job serverless <code>1005669937621880</code>.
+Execução <code>183810729128831</code>, tarefa <code>66854634334120</code>, estado <code>SUCCESS</code>.</p>
+<ul>
+<li><a href="https://fmariane.github.io/MVP_DW/evidencias/qualidade_183810729128831.json">Evidência completa</a></li>
+<li><a href="https://github.com/fmariane/MVP_DW/blob/main/notebooks/02_qualidade.py">Notebook executado</a></li>
+<li><a href="https://fmariane.github.io/MVP_DW/docs/regras_silver.html">Regras da Silver</a></li>
+<li><a href="https://dbc-0a2b6ff1-9976.cloud.databricks.com/?o=7474657037018547#job/1005669937621880/run/183810729128831">Execução no Databricks</a></li>
+</ul>
+<h2 id="resultado">Resultado</h2>
+<p>As duas tabelas foram lidas na versão Delta 0, com hashes correspondentes aos
+snapshots da Bronze. Não foram encontrados bloqueios estruturais para avançar
+à implementação da Silver com as regras documentadas.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Controle</th>
+<th style="text-align: right;">Violência doméstica</th>
+<th style="text-align: right;">Feminicídio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linhas</td>
+<td style="text-align: right;">117169</td>
+<td style="text-align: right;">381</td>
+</tr>
+<tr>
+<td>Soma de qtde_vitimas</td>
+<td style="text-align: right;">162032</td>
+<td style="text-align: right;">391</td>
+</tr>
+<tr>
+<td>Linhas com qualquer erro nas regras</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Campos ausentes, vazios ou apenas espaços</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Datas inválidas ou fora de 2025</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Incoerências entre data, mês e ano</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Códigos municipais fora do formato do recorte</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>RISP, RMBH ou situação fora do domínio</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Quantidades inválidas, zero ou negativas</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Linhas integralmente duplicadas (excedentes)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Chaves compostas duplicadas, antes/depois da normalização</td>
+<td style="text-align: right;">0 / 0</td>
+<td style="text-align: right;">0 / 0</td>
+</tr>
+<tr>
+<td>Campos com espaços externos detectados por trim</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Metadados ausentes ou hash divergente</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Meses presentes</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr>
+<td>Municípios presentes</td>
+<td style="text-align: right;">853</td>
+<td style="text-align: right;">183</td>
+</tr>
+<tr>
+<td>Quantidade mínima / máxima por linha</td>
+<td style="text-align: right;">1 / 31</td>
+<td style="text-align: right;">1 / 2</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ambas abrangem datas de 01/01/2025 a 31/12/2025. A evidência inclui o inventário
+de categorias, contagens e somas por mês, RISP, RMBH e situação. A violência
+doméstica possui 174 naturezas; os totais S/N são 161004/1028. Feminicídio:
+178 consumados e 213 tentados, medidos pela soma de <code>qtde_vitimas</code>.</p>
+<h2 id="divergencia-municipal-e-correcao-proposta">Divergência municipal e correção proposta</h2>
+<p>Não há conflitos geográficos internos por fonte. Entre as fontes, há um código
+com dois nomes: <code>315990</code>, <code>SANTO ANT DO AMPARO</code> e <code>SANTO ANTONIO DO AMPARO</code>.
+RISP e RMBH coincidem. A simulação da correspondência explícita para o nome
+completo resulta em zero conflitos na união dos 853 municípios.</p>
+<p>O diagnóstico remoto e a releitura dos CSVs locais não identificaram espaço
+externo nesses nomes. A anotação anterior da modelagem sobre espaço externo foi
+corrigida. A regra de trim permanece preventiva, sem alteração observada neste
+snapshot. A normalização foi apenas simulada; não foram gravadas tabelas Silver.</p>
+<h2 id="validacao-dos-controles">Validação dos controles</h2>
+<p>Os testes sintéticos rodaram no mesmo runtime Spark antes do diagnóstico e
+passaram. Exercitaram registro válido, data impossível, data fora do recorte,
+incoerência de mês, código nulo ou com tamanho errado, nome vazio, categoria
+inesperada, RISP/RMBH inválidas, quantidade fracionada, zero e overflow de BIGINT.
+Também verificaram duplicatas brutas e colisões criadas pela remoção de espaços.
+Esses registros foram usados apenas em memória, sem inserção nas fontes.</p>
+<h2 id="limitacoes-e-proximos-passos">Limitações e próximos passos</h2>
+<p>O formato dos códigos municipais foi validado; sua correspondência com um
+cadastro externo não foi comprovada. S/N mantém semântica pendente e não será
+traduzido. As medidas não representam pessoas distintas e as fontes não devem
+ser somadas. Cobertura mensal e consistência não demonstram ausência de
+subnotificação.</p>
+<p>Itens 10 e 13 concluídos. Próximos: implementar a Silver (14) e reconciliar
+entrada, rejeições e saída (15). Screenshots de entrega permanecem pendentes
+no item 21.</p></main><footer>Documentação do MVP de Minas Gerais, 2025. Foram preservados os arquivos fonte no repositório.</footer></body></html>

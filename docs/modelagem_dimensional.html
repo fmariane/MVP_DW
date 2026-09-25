@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modelagem dimensional — MG, 2025 | MVP DW</title><style>
+:root{color-scheme:light;--ink:#203244;--accent:#086a80;--line:#d9e3ec}
+*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:var(--ink);font:17px/1.7 system-ui,sans-serif}
+header{border-bottom:1px solid var(--line);background:#fff;padding:18px max(24px,calc((100vw - 1180px)/2))}
+nav{display:flex;gap:22px;flex-wrap:wrap}a{color:var(--accent);text-underline-offset:3px}
+main{max-width:1180px;margin:32px auto;padding:32px;background:#fff;border:1px solid var(--line);border-radius:12px}
+h1,h2,h3{line-height:1.3;color:#183044}h1{font-size:2rem}h2{margin-top:2em}h3{margin-top:1.6em}
+img{display:block;max-width:100%;height:auto;margin:24px auto}pre{padding:18px;background:#f0f4f8;overflow:auto;border-radius:8px}
+code{font-family:ui-monospace,monospace;font-size:.88em;overflow-wrap:anywhere}pre code{overflow-wrap:normal}
+.tablewrap{overflow-x:auto;margin:24px 0}table{width:100%;border-collapse:collapse;font-size:.94em}
+th,td{text-align:left;padding:11px 14px;border:1px solid var(--line);vertical-align:top}th{background:#eef5f7}
+tbody tr:nth-child(even){background:#fafcfd}.toc{padding:12px 24px;background:#f4f8fa;border-radius:8px}
+.mermaid{overflow-x:auto;margin:24px 0}.mermaid svg{height:auto}summary{cursor:pointer;font-weight:600}
+.note,footer{color:#526779;font-size:.9em}footer{max-width:1180px;margin:24px auto;padding:0 24px}
+@media(max-width:720px){main{margin:12px;padding:18px}h1{font-size:1.65rem}header{padding:16px}}
+@media print{header,.toc{display:none}main{border:0;margin:0;max-width:none;padding:0}pre{white-space:pre-wrap}}
+</style></head>
+<body><header><nav><a href="https://fmariane.github.io/MVP_DW/">Início</a><a href="https://fmariane.github.io/MVP_DW/docs/index.html">Documentação</a>
+<a href="https://github.com/fmariane/MVP_DW#readme">Relatório completo</a><a href="https://github.com/fmariane/MVP_DW/blob/main/docs/modelagem_dimensional.md">Arquivo original</a></nav></header>
+<main><details><summary>Navegação nesta página</summary><div class="toc">
+<ul>
+<li><a href="#modelagem-dimensional-mg-2025">Modelagem dimensional — MG, 2025</a><ul>
+<li><a href="#decisao-e-estado">Decisão e estado</a></li>
+<li><a href="#diagrama">Diagrama</a></li>
+<li><a href="#granularidade-e-chaves">Granularidade e chaves</a></li>
+<li><a href="#dimensoes-e-classificacoes">Dimensões e classificações</a></li>
+<li><a href="#regra-municipal-comprovada-na-inspecao">Regra municipal comprovada na inspeção</a></li>
+<li><a href="#fluxo-e-linhagem-propostos">Fluxo e linhagem propostos</a></li>
+<li><a href="#consultas-e-medidas">Consultas e medidas</a></li>
+<li><a href="#controles-de-aceitacao">Controles de aceitação</a></li>
+<li><a href="#evidencia-e-proximos-passos">Evidência e próximos passos</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</details><h1 id="modelagem-dimensional-mg-2025">Modelagem dimensional — MG, 2025</h1>
+<h2 id="decisao-e-estado">Decisão e estado</h2>
+<p>Modelo lógico e catálogo inicial para o MVP de violência doméstica contra a mulher e feminicídios. São duas estrelas com dimensões compartilhadas de tempo e município. A medida principal é o quantitativo de vítimas publicado, mantido por fonte. Não há ligação entre pessoas ou ocorrências das duas bases.</p>
+<p>O desenho foi confrontado com os CSVs locais e implementado no Databricks. Bronze, Silver e Gold foram validadas; a <a href="https://fmariane.github.io/MVP_DW/docs/validacao_gold.html">evidência Gold</a> confirma dimensões, fatos, chaves e preservação dos totais nas junções.</p>
+<h2 id="diagrama">Diagrama</h2>
+<div class="mermaid">erDiagram
+    DIM_TEMPO ||--o{ FATO_VIOLENCIA_DOMESTICA : data_key
+    DIM_TEMPO ||--o{ FATO_FEMINICIDIO : data_key
+    DIM_MUNICIPIO ||--o{ FATO_VIOLENCIA_DOMESTICA : municipio_cod
+    DIM_MUNICIPIO ||--o{ FATO_FEMINICIDIO : municipio_cod
+    DIM_NATUREZA_DELITO ||--o{ FATO_VIOLENCIA_DOMESTICA : natureza_key
+    DIM_TEMPO {
+        int data_key PK
+        date data
+        int ano
+        int mes
+        int dia
+        int trimestre
+    }
+    DIM_MUNICIPIO {
+        string municipio_cod PK
+        string municipio_nome
+        string uf
+        string risp_cod
+        string recorte_metropolitano
+    }
+    DIM_NATUREZA_DELITO {
+        string natureza_key PK
+        string natureza_nome
+    }
+    FATO_VIOLENCIA_DOMESTICA {
+        int data_key FK
+        string municipio_cod FK
+        string natureza_key FK
+        string codigo_tentado_consumado
+        bigint qtde_vitimas
+        string arquivo_origem
+        string arquivo_sha256
+        timestamp ingerido_em
+    }
+    FATO_FEMINICIDIO {
+        int data_key FK
+        string municipio_cod FK
+        string situacao
+        bigint qtde_vitimas
+        string arquivo_origem
+        string arquivo_sha256
+        timestamp ingerido_em
+    }
+</div><details><summary>Definição textual do diagrama</summary><pre>erDiagram
+    DIM_TEMPO ||--o{ FATO_VIOLENCIA_DOMESTICA : data_key
+    DIM_TEMPO ||--o{ FATO_FEMINICIDIO : data_key
+    DIM_MUNICIPIO ||--o{ FATO_VIOLENCIA_DOMESTICA : municipio_cod
+    DIM_MUNICIPIO ||--o{ FATO_FEMINICIDIO : municipio_cod
+    DIM_NATUREZA_DELITO ||--o{ FATO_VIOLENCIA_DOMESTICA : natureza_key
+    DIM_TEMPO {
+        int data_key PK
+        date data
+        int ano
+        int mes
+        int dia
+        int trimestre
+    }
+    DIM_MUNICIPIO {
+        string municipio_cod PK
+        string municipio_nome
+        string uf
+        string risp_cod
+        string recorte_metropolitano
+    }
+    DIM_NATUREZA_DELITO {
+        string natureza_key PK
+        string natureza_nome
+    }
+    FATO_VIOLENCIA_DOMESTICA {
+        int data_key FK
+        string municipio_cod FK
+        string natureza_key FK
+        string codigo_tentado_consumado
+        bigint qtde_vitimas
+        string arquivo_origem
+        string arquivo_sha256
+        timestamp ingerido_em
+    }
+    FATO_FEMINICIDIO {
+        int data_key FK
+        string municipio_cod FK
+        string situacao
+        bigint qtde_vitimas
+        string arquivo_origem
+        string arquivo_sha256
+        timestamp ingerido_em
+    }
+</pre></details>
+
+<h2 id="granularidade-e-chaves">Granularidade e chaves</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Tabela Gold</th>
+<th>Uma linha representa</th>
+<th>Chave lógica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dim_tempo</td>
+<td>Um dia do calendário de 2025</td>
+<td>data_key = AAAAMMDD</td>
+</tr>
+<tr>
+<td>dim_municipio</td>
+<td>Um código municipal da publicação, no recorte de 2025</td>
+<td>municipio_cod</td>
+</tr>
+<tr>
+<td>dim_natureza_delito</td>
+<td>Uma natureza de delito normalizada</td>
+<td>natureza_key</td>
+</tr>
+<tr>
+<td>fato_violencia_domestica</td>
+<td>Quantitativo publicado para município, dia, natureza e código S/N</td>
+<td>data_key + municipio_cod + natureza_key + codigo_tentado_consumado</td>
+</tr>
+<tr>
+<td>fato_feminicidio</td>
+<td>Quantitativo publicado para município, dia e situação</td>
+<td>data_key + municipio_cod + situacao</td>
+</tr>
+</tbody>
+</table></div>
+<p>As chaves compostas são únicas nas cópias verificadas, mas não são IDs de ocorrência. A granularidade operacional preserva os grupos observados; não estabelece unicidade de pessoas. Repetições inesperadas numa nova carga devem interromper a publicação da Gold para investigação, não ser apagadas ou somadas automaticamente.</p>
+<p>Não é necessário criar um identificador artificial da fato. O código municipal de seis caracteres será preservado como texto, sem acrescentar dígito ou pressupor equivalência com outros códigos. A chave de natureza será SHA-256 hexadecimal do nome após remoção de espaços externos e conversão para maiúsculas em UTF-8, mantendo acentos e espaços internos. Isso permite regenerar a dimensão com chaves estáveis; validar unicidade da chave e correspondência com o nome.</p>
+<h2 id="dimensoes-e-classificacoes">Dimensões e classificações</h2>
+<ul>
+<li><strong>Tempo:</strong> calendário completo com 365 dias. Mês, ano, dia e trimestre são derivados da data validada. Meses sem linhas não serão automaticamente interpretados como zero em toda análise.</li>
+<li><strong>Município:</strong> união dos códigos das duas fontes, com 853 membros. Nome, RISP e recorte metropolitano ficam na mesma dimensão, simplificando consultas. Os códigos de RISP são 1 a 19; o arquivo não fornece seus nomes.</li>
+<li><strong>Natureza:</strong> 174 categorias observadas, exclusiva da fato de violência doméstica. Não atribuir natureza genérica às linhas de feminicídio para forçar uma unificação.</li>
+<li><strong>Situação:</strong> atributos categóricos nas próprias fatos, sem dimensão adicional para dois valores. Em feminicídio, preservar TENTADO/CONSUMADO. Em violência doméstica, preservar S/N com semântica pendente; não harmonizar os dois domínios.</li>
+</ul>
+<p>A dimensão municipal será uma fotografia do recorte, sem histórico SCD tipo 2 neste MVP. Mudanças futuras de RISP ou nomes deverão ser avaliadas antes de incluir outros anos. Conflitos de atributos por código bloqueiam a geração da dimensão até uma regra documentada ser definida.</p>
+<h2 id="regra-municipal-comprovada-na-inspecao">Regra municipal comprovada na inspeção</h2>
+<p>O código <code>315990</code> aparece como <code>SANTO ANTONIO DO AMPARO</code> na base de feminicídios e <code>SANTO ANT DO AMPARO</code> na base de violência doméstica. Para apresentação, usar <code>SANTO ANTONIO DO AMPARO</code>, nome completo presente na própria fonte. Trata-se de uma padronização interna, sem alegar validação externa de nome oficial. O diagnóstico remoto e a releitura local de 24/09 não identificaram espaço externo; a anotação anterior sobre esse espaço foi corrigida.</p>
+<p>Remover espaços externos e aplicar essa correspondência explícita. Bronze e campos brutos da Silver preservam os valores originais. Não escolher nomes arbitrariamente com first/max. Não foram encontrados conflitos de RISP ou recorte metropolitano por código nas duas cópias locais.</p>
+<h2 id="fluxo-e-linhagem-propostos">Fluxo e linhagem propostos</h2>
+<ol>
+<li><strong>Bronze:</strong> preservar os dois CSVs e criar duas tabelas com campos originais como texto, arquivo de origem, SHA-256 e instante de ingestão UTC. Cada ingestão identifica um snapshot, não novos eventos para acumular indefinidamente.</li>
+<li><strong>Silver:</strong> duas tabelas separadas. Converter datas com formato AAAA-MM-DD, validar ano/mês, converter quantidades para inteiro, tratar espaços externos e manter classificações originais. Preservar nome municipal bruto junto do padronizado e rastreabilidade até arquivo/snapshot. Linhas inválidas devem ser registradas com motivo; a aprovação da carga exige reconciliação de entradas, rejeições e saídas.</li>
+<li><strong>Gold:</strong> construir dimensões por união das Silver, resolver chaves por junções muitos-para-um e carregar as duas fatos sem alterar sua granularidade. Reconciliar linhas e soma de vítimas antes/depois de cada junção.</li>
+</ol>
+<p>Ordem: Bronze → Silver validada → dimensões → fatos → consultas. Para este recorte fechado, a implementação valida candidatos completos de 2025 e cria tabelas ausentes. Tabelas existentes devem corresponder aos candidatos; divergências bloqueiam a execução sem sobrescrita. Não há append de snapshots nas fatos. Histórico de arquivos fica na Bronze. A repetição mantém os mesmos totais de negócio. Cada tabela é publicada individualmente, sem transação conjunta entre objetos; revisões da fonte exigem procedimento específico antes de substituir a versão publicada.</p>
+<h2 id="consultas-e-medidas">Consultas e medidas</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Pergunta</th>
+<th>Caminho no modelo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Distribuição mensal por fonte</td>
+<td>Cada fato → dim_tempo; SUM(qtde_vitimas), por ano/mês</td>
+</tr>
+<tr>
+<td>Concentração municipal e regional</td>
+<td>Cada fato → dim_municipio; soma e participação no total da mesma fonte/recorte</td>
+</tr>
+<tr>
+<td>Naturezas de violência doméstica</td>
+<td>fato_violencia_domestica → dim_natureza_delito</td>
+</tr>
+<tr>
+<td>Feminicídio por situação, região e mês</td>
+<td>fato_feminicidio → dim_tempo e dim_municipio; agrupar também por situacao</td>
+</tr>
+</tbody>
+</table></div>
+<p>Não fazer junção direta entre fatos. Se houver uma tabela comparativa, agregar cada fonte por município e mês, verificar uma linha por chave em cada lado e então fazer FULL OUTER JOIN. Manter colunas de medidas separadas e indicadores de presença. Uma ausência permanece nula, salvo regra de cobertura explicitamente validada. Não calcular total combinado nem “taxa de conversão para feminicídio”.</p>
+<p>SUM(qtde_vitimas) é soma de quantitativos publicados no recorte, não contagem distinta de mulheres. COUNT(*) mede linhas do dataset. Participações usam o denominador da própria fonte e recorte; denominador zero produz resultado não calculável. Comparações territoriais sem população não medem risco por habitante. Associações não estabelecem causalidade.</p>
+<h2 id="controles-de-aceitacao">Controles de aceitação</h2>
+<ul>
+<li>Unicidade e não nulidade das chaves de dimensão e chaves compostas das fatos.</li>
+<li>Nenhuma FK sem correspondência; nenhuma multiplicação de linhas ou medidas nas junções.</li>
+<li>Data válida de 2025; coerência com mês e ano; calendário completo.</li>
+<li>qtde_vitimas inteiro positivo nas cópias atuais. Zero/negativos em versões futuras exigem revisão, não descarte silencioso.</li>
+<li>Domínios atuais: S/N para doméstica; TENTADO/CONSUMADO para feminicídio; categorias novas exigem revisão.</li>
+<li>Baseline: 117.169 linhas e soma 162.032 na doméstica; 381 linhas e soma 391 no feminicídio (178 consumado e 213 tentado).</li>
+<li>Dimensões esperadas para os snapshots atuais: 365 dias, 853 municípios, 174 naturezas.</li>
+<li>Baselines vinculados aos hashes: revisões da fonte não devem ser confundidas com falhas de transformação.</li>
+</ul>
+<h2 id="evidencia-e-proximos-passos">Evidência e próximos passos</h2>
+<p>A simulação local confirmou as chaves compostas, a dimensão municipal após a regra 315990, as 174 chaves de natureza e a preservação das contagens na junção municipal. Resultados em <a href="https://fmariane.github.io/MVP_DW/docs/verificacao_modelagem.html">verificacao_modelagem.json</a>. Isso não valida execução Spark/Databricks nem constitui o catálogo completo das futuras tabelas Bronze e Silver.</p>
+<p>Ambiente, Bronze, <a href="https://fmariane.github.io/MVP_DW/docs/qualidade_bronze.html">diagnóstico de qualidade</a>, <a href="https://fmariane.github.io/MVP_DW/docs/reconciliacao_silver.html">Silver reconciliada</a>, <a href="https://fmariane.github.io/MVP_DW/docs/validacao_gold.html">Gold validada</a>, <a href="https://fmariane.github.io/MVP_DW/docs/catalogo_dados.html">catálogo completo com linhagem</a> e <a href="https://fmariane.github.io/MVP_DW/docs/resultados_analiticos.html">análises com gráficos</a> concluídos: <a href="https://fmariane.github.io/MVP_DW/docs/execucao_databricks.html">guia de execução</a>. Próximo passo: screenshots das evidências no Databricks. Catálogo Gold em <a href="https://fmariane.github.io/MVP_DW/docs/catalogo_gold.html">catalogo_gold.md</a>.</p></main><footer>Documentação do MVP de Minas Gerais, 2025. Foram preservados os arquivos fonte no repositório.</footer><script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.esm.min.mjs';
+mermaid.initialize({startOnLoad:true,securityLevel:'strict',theme:'neutral'});
+</script></body></html>

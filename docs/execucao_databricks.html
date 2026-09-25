@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Execução no Databricks Free Edition | MVP DW</title><style>
+:root{color-scheme:light;--ink:#203244;--accent:#086a80;--line:#d9e3ec}
+*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:var(--ink);font:17px/1.7 system-ui,sans-serif}
+header{border-bottom:1px solid var(--line);background:#fff;padding:18px max(24px,calc((100vw - 1180px)/2))}
+nav{display:flex;gap:22px;flex-wrap:wrap}a{color:var(--accent);text-underline-offset:3px}
+main{max-width:1180px;margin:32px auto;padding:32px;background:#fff;border:1px solid var(--line);border-radius:12px}
+h1,h2,h3{line-height:1.3;color:#183044}h1{font-size:2rem}h2{margin-top:2em}h3{margin-top:1.6em}
+img{display:block;max-width:100%;height:auto;margin:24px auto}pre{padding:18px;background:#f0f4f8;overflow:auto;border-radius:8px}
+code{font-family:ui-monospace,monospace;font-size:.88em;overflow-wrap:anywhere}pre code{overflow-wrap:normal}
+.tablewrap{overflow-x:auto;margin:24px 0}table{width:100%;border-collapse:collapse;font-size:.94em}
+th,td{text-align:left;padding:11px 14px;border:1px solid var(--line);vertical-align:top}th{background:#eef5f7}
+tbody tr:nth-child(even){background:#fafcfd}.toc{padding:12px 24px;background:#f4f8fa;border-radius:8px}
+.mermaid{overflow-x:auto;margin:24px 0}.mermaid svg{height:auto}summary{cursor:pointer;font-weight:600}
+.note,footer{color:#526779;font-size:.9em}footer{max-width:1180px;margin:24px auto;padding:0 24px}
+@media(max-width:720px){main{margin:12px;padding:18px}h1{font-size:1.65rem}header{padding:16px}}
+@media print{header,.toc{display:none}main{border:0;margin:0;max-width:none;padding:0}pre{white-space:pre-wrap}}
+</style></head>
+<body><header><nav><a href="https://fmariane.github.io/MVP_DW/">Início</a><a href="https://fmariane.github.io/MVP_DW/docs/index.html">Documentação</a>
+<a href="https://github.com/fmariane/MVP_DW#readme">Relatório completo</a><a href="https://github.com/fmariane/MVP_DW/blob/main/docs/execucao_databricks.md">Arquivo original</a></nav></header>
+<main><details><summary>Navegação nesta página</summary><div class="toc">
+<ul>
+<li><a href="#execucao-no-databricks-free-edition">Execução no Databricks Free Edition</a><ul>
+<li><a href="#ambiente-confirmado">Ambiente confirmado</a></li>
+<li><a href="#executar-pelo-zsh-no-wsl">Executar pelo zsh no WSL</a></li>
+<li><a href="#contrato-da-bronze">Contrato da Bronze</a></li>
+<li><a href="#evidencias">Evidências</a></li>
+<li><a href="#diagnostico-de-qualidade">Diagnóstico de qualidade</a></li>
+<li><a href="#executar-a-silver">Executar a Silver</a></li>
+<li><a href="#executar-a-gold">Executar a Gold</a></li>
+<li><a href="#atualizar-o-catalogo-e-a-linhagem">Atualizar o catálogo e a linhagem</a></li>
+<li><a href="#consultas-e-graficos">Consultas e gráficos</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</details><h1 id="execucao-no-databricks-free-edition">Execução no Databricks Free Edition</h1>
+<h2 id="ambiente-confirmado">Ambiente confirmado</h2>
+<ul>
+<li>CLI executada no WSL Ubuntu-20.04, perfil OAuth <code>MVP_DW</code>.</li>
+<li>Catálogo <code>workspace</code>; schemas <code>mvp_bronze</code>, <code>mvp_silver</code> e <code>mvp_gold</code>.</li>
+<li>CSVs originais no volume <code>/Volumes/workspace/mvp_bronze/arquivos</code>.</li>
+<li>Notebook remoto: <code>/Workspace/Users/f_mariane@hotmail.com/MVP_DW/01_bronze</code>.</li>
+<li>Código versionável: <a href="https://github.com/fmariane/MVP_DW/blob/main/notebooks/01_bronze.py">01_bronze.py</a>.</li>
+<li>Configuração do job: <a href="https://fmariane.github.io/MVP_DW/databricks/bronze_job.json">bronze_job.json</a>.</li>
+<li>Job serverless criado: <code>699928499146328</code>. Sem agendamento.</li>
+</ul>
+<h2 id="executar-pelo-zsh-no-wsl">Executar pelo zsh no WSL</h2>
+<p>Os comandos pressupõem o diretório raiz deste repositório e a CLI autenticada.</p>
+<pre><code class="language-zsh">databricks auth profiles
+databricks jobs run-now 699928499146328 --no-wait --profile MVP_DW --output json
+</code></pre>
+<p>Copie o <code>run_id</code> retornado e consulte:</p>
+<pre><code class="language-zsh">databricks jobs get-run ID_DA_EXECUCAO --profile MVP_DW --output json
+</code></pre>
+<p>O resultado contém <code>tasks[].run_id</code>. Use o ID da tarefa para obter o relatório:</p>
+<pre><code class="language-zsh">databricks jobs get-run-output ID_DA_TAREFA --profile MVP_DW --output json
+</code></pre>
+<p>Para enviar uma edição do notebook de código deste projeto:</p>
+<pre><code class="language-zsh">databricks workspace import /Workspace/Users/f_mariane@hotmail.com/MVP_DW/01_bronze \
+  --file notebooks/01_bronze.py --format SOURCE --language PYTHON \
+  --overwrite --profile MVP_DW
+</code></pre>
+<p>Use <code>jobs create --json @databricks/bronze_job.json --profile MVP_DW</code> apenas se precisar
+criar outro job. Para o job existente, use <code>run-now</code>.</p>
+<h2 id="contrato-da-bronze">Contrato da Bronze</h2>
+<ol>
+<li>Confere cabeçalho e SHA-256 dos dois arquivos contra as cópias inspecionadas.</li>
+<li>Preserva cópias binárias em <code>arquivos/snapshots/&lt;sha256&gt;/&lt;arquivo&gt;.csv</code>.</li>
+<li>Lê os CSVs com separador <code>;</code>, UTF-8 e todos os campos originais como texto.</li>
+<li>Confere as linhas e somas de cada fonte antes da publicação.</li>
+<li>Cria tabelas Delta <code>workspace.mvp_bronze.violencia_domestica_2025</code> e
+   <code>workspace.mvp_bronze.feminicidio_2025</code>, adicionando <code>arquivo_origem</code>
+   (caminho da cópia preservada), <code>arquivo_sha256</code> e <code>ingerido_em</code> em UTC.</li>
+<li>Relê cada tabela, confere totais e metadados e compara os campos originais
+   nos dois sentidos com <code>exceptAll</code>, preservando também multiplicidades.</li>
+<li>Retorna relatório JSON no resultado do notebook.</li>
+</ol>
+<p>A repetição valida o snapshot existente sem inserir ou sobrescrever linhas.
+Um arquivo revisado, uma tabela com outro hash ou qualquer divergência bloqueia
+a execução e exige análise. As duas tabelas são gravadas individualmente:
+não há transação conjunta. Se uma falhar depois da outra, a reexecução valida
+a existente e pode completar a ausente.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Fonte</th>
+<th style="text-align: right;">Linhas esperadas</th>
+<th style="text-align: right;">Soma de qtde_vitimas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Violência doméstica</td>
+<td style="text-align: right;">117169</td>
+<td style="text-align: right;">162032</td>
+</tr>
+<tr>
+<td>Feminicídio</td>
+<td style="text-align: right;">381</td>
+<td style="text-align: right;">391</td>
+</tr>
+</tbody>
+</table></div>
+<p>As somas são quantitativos publicados, não pessoas distintas. S/N continua
+preservado sem interpretação. Esta etapa não substitui o diagnóstico completo
+de qualidade, a Silver, a Gold nem a reexecução integral do pipeline.</p>
+<h2 id="evidencias">Evidências</h2>
+<p>Resultados remotos e relatórios são guardados em <a href="https://fmariane.github.io/MVP_DW/evidencias">evidencias</a>.
+Screenshots do catálogo e dos resultados ainda devem ser capturados para a entrega.</p>
+<ul>
+<li><a href="https://fmariane.github.io/MVP_DW/evidencias/bronze_207087315322185.json">Carga aprovada</a>: ambas as tabelas criadas e validadas.</li>
+<li><a href="https://fmariane.github.io/MVP_DW/evidencias/bronze_1001589874049096.json">Reexecução aprovada</a>: mesmos IDs Delta, linhas e somas; ambos os snapshots existentes validados sem nova inserção.</li>
+<li>A primeira tentativa (<code>195278572575128</code>) falhou antes da criação das tabelas porque o Spark Connect deste runtime não aceitou o alias <code>errorifexists</code>. O notebook foi corrigido para <code>error</code>; as duas execuções acima usam a versão corrigida.</li>
+</ul>
+<p>Para guardar a evidência de uma execução concluída com sucesso:</p>
+<pre><code class="language-zsh">python3 scripts/capturar_evidencia_bronze.py ID_DA_EXECUCAO
+</code></pre>
+<p>O script salva o estado remoto e o relatório do notebook, sem copiar credenciais.</p>
+<h2 id="diagnostico-de-qualidade">Diagnóstico de qualidade</h2>
+<p>Notebook <code>02_qualidade</code>, job serverless <code>1005669937621880</code>, sem agendamento.
+O diagnóstico lê versões Delta fixadas no início da análise e não altera as
+tabelas. Testes sintéticos são executados antes dos controles das fontes.</p>
+<pre><code class="language-zsh">databricks jobs run-now 1005669937621880 --no-wait --profile MVP_DW --output json
+databricks jobs get-run ID_DA_EXECUCAO --profile MVP_DW --output json
+python3 scripts/capturar_evidencia_bronze.py ID_DA_EXECUCAO --etapa qualidade
+</code></pre>
+<p>O nome histórico do coletor foi mantido, mas a opção <code>--etapa qualidade</code> salva
+o diagnóstico em <code>evidencias/qualidade_&lt;run_id&gt;.json</code>. <code>status=CONCLUIDO</code> significa
+que a análise terminou; consulte também <code>bloqueios_estruturais</code> e as ressalvas
+para decidir a continuidade. Não confundir sucesso do job com aprovação dos dados.</p>
+<p>Execução comprovada: <a href="https://fmariane.github.io/MVP_DW/docs/qualidade_bronze.html">relatório</a>. Contrato para a próxima
+etapa: <a href="https://fmariane.github.io/MVP_DW/docs/regras_silver.html">regras Silver</a>.</p>
+<h2 id="executar-a-silver">Executar a Silver</h2>
+<p>Notebook <code>03_silver</code>, job serverless <code>1075813885223029</code>, sem agendamento.
+Código em <a href="https://github.com/fmariane/MVP_DW/blob/main/notebooks/03_silver.py">03_silver.py</a> e configuração em
+<a href="https://fmariane.github.io/MVP_DW/databricks/silver_job.json">silver_job.json</a>.</p>
+<pre><code class="language-zsh">databricks jobs run-now 1075813885223029 --no-wait --profile MVP_DW --output json
+databricks jobs get-run ID_DA_EXECUCAO --profile MVP_DW --output json
+python3 scripts/capturar_evidencia_bronze.py ID_DA_EXECUCAO --etapa silver
+</code></pre>
+<p>O notebook testa os tratamentos, lê versões Delta fixas da Bronze, prepara
+candidatos e registra rejeições antes de publicar. Cada tabela de rejeições
+possui <code>execucao_id</code>; uma execução sem rejeições mantém essas tabelas vazias.
+Falhas de qualidade bloqueiam a publicação, sem apagar uma versão anterior.</p>
+<p>Uma Silver já existente é comparada com o candidato em todos os campos, exceto
+o timestamp técnico <code>tratado_em</code>. Se houver diferença, o job falha; não há
+sobrescrita automática. Se corresponder, a tabela é preservada sem novas linhas.
+As duas tabelas não formam uma transação única; se houver falha de infraestrutura
+entre as gravações, a reexecução valida a existente e cria a ausente.</p>
+<h2 id="executar-a-gold">Executar a Gold</h2>
+<p>Notebook <code>04_gold</code>, job serverless <code>465875515640680</code>, sem agendamento.
+Código em <a href="https://github.com/fmariane/MVP_DW/blob/main/notebooks/04_gold.py">04_gold.py</a> e configuração em
+<a href="https://fmariane.github.io/MVP_DW/databricks/gold_job.json">gold_job.json</a>.</p>
+<pre><code class="language-zsh">databricks jobs run-now 465875515640680 --no-wait --profile MVP_DW --output json
+databricks jobs get-run ID_DA_EXECUCAO --profile MVP_DW --output json
+python3 scripts/capturar_evidencia_bronze.py ID_DA_EXECUCAO --etapa gold
+</code></pre>
+<p>A Gold lê versões Delta fixas das Silver, gera três dimensões e duas fatos e
+valida chaves, campos obrigatórios e totais. Cada junção exige uma dimensão
+única pela chave, nenhuma FK órfã e preservação de linhas e soma. Os controles
+são repetidos após a gravação. PK/FK são garantidas pelos controles da execução,
+não por constraints declaradas no catálogo.</p>
+<p>A view <code>workspace.mvp_gold.comparativo_municipio_mes</code> agrega cada fonte antes
+do FULL OUTER JOIN. Mantém medidas separadas, indicadores de presença e nulos
+nas ausências. Não representa total combinado ou taxa de conversão entre fontes.</p>
+<p>Todas as tabelas existentes devem corresponder aos candidatos antes de qualquer
+nova gravação. O job cria objetos ausentes; não sobrescreve tabelas divergentes.
+Não há transação conjunta entre as cinco tabelas e a view. Falhas intermediárias
+exigem reexecução e estado final aprovado antes do consumo analítico.</p>
+<h2 id="atualizar-o-catalogo-e-a-linhagem">Atualizar o catálogo e a linhagem</h2>
+<pre><code class="language-zsh">python3 scripts/catalogar_databricks.py
+</code></pre>
+<p>Consulta somente metadados do Unity Catalog pela CLI. Grava
+<code>evidencias/catalogo_databricks.json</code>, gera <code>docs/esquema_fisico.md</code> e
+<code>docs/dominios_observados.md</code>. O último usa os inventários da evidência de qualidade
+já aprovada, sem executar novamente consultas de perfil dos dados.
+Descrições e transformações são mantidas em <a href="https://fmariane.github.io/MVP_DW/docs/catalogo_dados.html">catalogo_dados.md</a>
+e <a href="https://fmariane.github.io/MVP_DW/docs/linhagem_dados.html">linhagem_dados.md</a>. A extração confirmou 12 objetos,
+136 colunas de primeiro nível e um volume. Não modifica as tabelas remotas.</p>
+<h2 id="consultas-e-graficos">Consultas e gráficos</h2>
+<p>Notebook <code>05_analises</code>, job <code>252723981011762</code>, sem agendamento. Sete consultas
+cobrem as quatro perguntas originais, com versões Gold fixadas, percentuais
+por fonte/grupo e reconciliação dos totais. Resultados são exibidos no notebook
+e retornados em JSON; nenhuma nova tabela de negócio é criada.</p>
+<pre><code class="language-zsh">databricks jobs run-now 252723981011762 --no-wait --profile MVP_DW --output json
+databricks jobs get-run ID_DA_EXECUCAO --profile MVP_DW --output json
+python3 scripts/capturar_evidencia_bronze.py ID_DA_EXECUCAO --etapa analises
+</code></pre>
+<p>Renderização local, com Python 3.12 disponível e as dependências instaladas:</p>
+<pre><code class="language-zsh">python3.12 -m pip install -r requirements-graficos.txt
+python3.12 scripts/gerar_graficos.py evidencias/analises_ID_DA_EXECUCAO.json
+</code></pre>
+<p>O builder gera sete PNG, sete SVG, sete resultados JSON completos, SQL reproduzível
+e relatório interpretativo. A extração pela CLI funciona no Python 3.8 do WSL;
+a renderização foi validada no Python 3.12 local. <a href="https://fmariane.github.io/MVP_DW/docs/resultados_analiticos.html">Resultado aprovado</a>.</p></main><footer>Documentação do MVP de Minas Gerais, 2025. Foram preservados os arquivos fonte no repositório.</footer></body></html>

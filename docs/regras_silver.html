@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Regras de tratamento — Silver PCMG 2025 | MVP DW</title><style>
+:root{color-scheme:light;--ink:#203244;--accent:#086a80;--line:#d9e3ec}
+*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:var(--ink);font:17px/1.7 system-ui,sans-serif}
+header{border-bottom:1px solid var(--line);background:#fff;padding:18px max(24px,calc((100vw - 1180px)/2))}
+nav{display:flex;gap:22px;flex-wrap:wrap}a{color:var(--accent);text-underline-offset:3px}
+main{max-width:1180px;margin:32px auto;padding:32px;background:#fff;border:1px solid var(--line);border-radius:12px}
+h1,h2,h3{line-height:1.3;color:#183044}h1{font-size:2rem}h2{margin-top:2em}h3{margin-top:1.6em}
+img{display:block;max-width:100%;height:auto;margin:24px auto}pre{padding:18px;background:#f0f4f8;overflow:auto;border-radius:8px}
+code{font-family:ui-monospace,monospace;font-size:.88em;overflow-wrap:anywhere}pre code{overflow-wrap:normal}
+.tablewrap{overflow-x:auto;margin:24px 0}table{width:100%;border-collapse:collapse;font-size:.94em}
+th,td{text-align:left;padding:11px 14px;border:1px solid var(--line);vertical-align:top}th{background:#eef5f7}
+tbody tr:nth-child(even){background:#fafcfd}.toc{padding:12px 24px;background:#f4f8fa;border-radius:8px}
+.mermaid{overflow-x:auto;margin:24px 0}.mermaid svg{height:auto}summary{cursor:pointer;font-weight:600}
+.note,footer{color:#526779;font-size:.9em}footer{max-width:1180px;margin:24px auto;padding:0 24px}
+@media(max-width:720px){main{margin:12px;padding:18px}h1{font-size:1.65rem}header{padding:16px}}
+@media print{header,.toc{display:none}main{border:0;margin:0;max-width:none;padding:0}pre{white-space:pre-wrap}}
+</style></head>
+<body><header><nav><a href="https://fmariane.github.io/MVP_DW/">Início</a><a href="https://fmariane.github.io/MVP_DW/docs/index.html">Documentação</a>
+<a href="https://github.com/fmariane/MVP_DW#readme">Relatório completo</a><a href="https://github.com/fmariane/MVP_DW/blob/main/docs/regras_silver.md">Arquivo original</a></nav></header>
+<main><details><summary>Navegação nesta página</summary><div class="toc">
+<ul>
+<li><a href="#regras-de-tratamento-silver-pcmg-2025">Regras de tratamento — Silver PCMG 2025</a><ul>
+<li><a href="#destinos-e-rastreabilidade">Destinos e rastreabilidade</a></li>
+<li><a href="#regras-por-campo">Regras por campo</a></li>
+<li><a href="#padronizacao-municipal-explicita">Padronização municipal explícita</a></li>
+<li><a href="#duplicidades-e-normalizacao">Duplicidades e normalização</a></li>
+<li><a href="#rejeicoes-e-reconciliacao">Rejeições e reconciliação</a></li>
+<li><a href="#limites">Limites</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</details><h1 id="regras-de-tratamento-silver-pcmg-2025">Regras de tratamento — Silver PCMG 2025</h1>
+<p>Contrato <code>silver_v1</code>, definido após os controles do item 10 e implementado no
+<a href="https://github.com/fmariane/MVP_DW/blob/main/notebooks/03_silver.py">notebook Silver</a>. Execução e reconciliação dos itens
+14–15 comprovadas no <a href="https://fmariane.github.io/MVP_DW/docs/reconciliacao_silver.html">relatório Silver</a>.</p>
+<h2 id="destinos-e-rastreabilidade">Destinos e rastreabilidade</h2>
+<p>Manter duas tabelas independentes: <code>workspace.mvp_silver.violencia_domestica_2025</code>
+e <code>workspace.mvp_silver.feminicidio_2025</code>. Uma linha conserva a granularidade
+publicada; não se afirma que represente uma ocorrência ou pessoa distinta.</p>
+<p>Preservar todos os campos originais em uma coluna <code>dados_brutos</code> do tipo STRUCT,
+com os valores de texto da Bronze, além de <code>arquivo_origem</code>, <code>arquivo_sha256</code>,
+<code>ingerido_em</code>, nome da tabela Bronze e <code>versao_bronze</code>. Registrar também
+<code>tratado_em</code> em UTC e a versão das regras. Os campos tratados ficam em colunas
+próprias, permitindo comparação com <code>dados_brutos</code>.</p>
+<h2 id="regras-por-campo">Regras por campo</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo e tratamento</th>
+<th>Controle e decisão</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>municipio_cod</td>
+<td>STRING; remover espaços externos</td>
+<td>Exigir seis dígitos, prefixo 31 no recorte de MG. Não acrescentar dígito, converter em número ou alegar validação contra cadastro externo.</td>
+</tr>
+<tr>
+<td>municipio_fato</td>
+<td>STRING; remover espaços externos</td>
+<td>Nome não vazio. Aplicar somente a correspondência explícita do código 315990 descrita abaixo.</td>
+</tr>
+<tr>
+<td>data_fato</td>
+<td>DATE após remoção de espaços externos</td>
+<td>Exigir formato AAAA-MM-DD, data válida e ano 2025. Não inferir nem corrigir datas impossíveis.</td>
+</tr>
+<tr>
+<td>mes</td>
+<td>INT</td>
+<td>Exigir texto com dígitos, valor 1–12 e correspondência com data_fato. Não substituir silenciosamente o mês informado pelo derivado.</td>
+</tr>
+<tr>
+<td>ano</td>
+<td>INT</td>
+<td>Exigir texto com dígitos, valor 2025 e correspondência com data_fato.</td>
+</tr>
+<tr>
+<td>risp</td>
+<td>STRING; remover espaços externos</td>
+<td>Validar representação inteira e domínio 1–19. Não atribuir nomes às regiões sem fonte.</td>
+</tr>
+<tr>
+<td>rmbh</td>
+<td>STRING; remover espaços externos</td>
+<td>Domínio: <code>Interior de MG</code>, <code>Belo Horizonte</code>, <code>RMBH (Sem BH)</code>.</td>
+</tr>
+<tr>
+<td>natureza_delito</td>
+<td>STRING; remover espaços externos e converter para maiúsculas</td>
+<td>Exclusiva da violência doméstica; manter acentos e espaços internos. Exigir valor não vazio, inventariar categorias e verificar colisões após normalização.</td>
+</tr>
+<tr>
+<td>tentado_consumado</td>
+<td>STRING; remover espaços externos e converter para maiúsculas</td>
+<td>Doméstica: S/N, sem tradução. Feminicídio: TENTADO/CONSUMADO. Não harmonizar os dois domínios.</td>
+</tr>
+<tr>
+<td>qtde_vitimas</td>
+<td>BIGINT</td>
+<td>Exigir texto composto de dígitos e inteiro positivo dentro da capacidade do tipo. Rejeitar frações, overflow, nulos, zero e negativos para revisão; não arredondar.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Todos os campos originais são obrigatórios para estes snapshots. <code>NULL</code>, texto
+vazio e texto apenas com espaços são ausências. Não preencher com zero,
+"desconhecido", média ou valor da linha anterior. Valores ausentes recebem motivo
+explícito de rejeição. Códigos fora do domínio também exigem revisão.</p>
+<h2 id="padronizacao-municipal-explicita">Padronização municipal explícita</h2>
+<p>Somente para <code>municipio_cod = '315990'</code>, após trim, transformar
+<code>SANTO ANT DO AMPARO</code> em <code>SANTO ANTONIO DO AMPARO</code>; manter a forma completa
+quando já presente. O nome completo vem da própria publicação, não de uma
+validação externa. Outros nomes para esse código não são sobrescritos
+automaticamente. Guardar o nome original em <code>dados_brutos.municipio_fato</code>.</p>
+<p>Validar por código os atributos nome, RISP e RMBH dentro e entre as duas fontes,
+após essa regra. Conflitos remanescentes bloqueiam a publicação até investigação;
+não selecionar <code>first</code>, <code>max</code> ou um nome arbitrário para escondê-los.</p>
+<h2 id="duplicidades-e-normalizacao">Duplicidades e normalização</h2>
+<p>Verificar linhas integrais e estas chaves operacionais, antes e depois do tratamento:</p>
+<ul>
+<li>Doméstica: municipio_cod + data_fato + natureza_delito + tentado_consumado.</li>
+<li>Feminicídio: municipio_cod + data_fato + tentado_consumado.</li>
+</ul>
+<p>Não executar <code>dropDuplicates</code>, somar grupos repetidos ou escolher uma linha.
+Se uma chave aparecer mais de uma vez, registrar todas as linhas do grupo para
+investigação e bloquear a publicação. A mesma regra vale para colisões criadas
+por trim, maiúsculas ou conversão de data. A quantidade de linhas excedentes
+é apenas um indicador diagnóstico, não uma instrução de exclusão.</p>
+<p>Categorias novas devem ser comparadas com o inventário e a versão da fonte.
+O total de 174 naturezas é referência destes snapshots, não limite universal.
+Quantidades elevadas não são removidas como outliers: valores fora da faixa
+observada requerem revisão da publicação, não truncamento automático.</p>
+<h2 id="rejeicoes-e-reconciliacao">Rejeições e reconciliação</h2>
+<p>Na implementação, construir candidatos e rejeições antes de publicar a Silver.
+Cada rejeição deve preservar <code>dados_brutos</code>, rastreabilidade e uma lista de
+<code>motivos_rejeicao</code>. Uma linha com vários motivos é contada uma vez no total
+de rejeitados, embora figure em vários contadores de regra. Persistir os
+registros rejeitados em tabela de auditoria identificada pela execução.</p>
+<p>Critérios de aceitação:</p>
+<ol>
+<li>Linhas de entrada = linhas candidatas válidas + linhas rejeitadas.</li>
+<li>Para valores numéricos válidos, soma de entrada = soma candidata + soma das
+   rejeições com quantidade válida. Contabilizar separadamente quantidades
+   inválidas; não convertê-las em zero para fechar a reconciliação.</li>
+<li>Para os snapshots atuais, publicar somente com zero rejeições, sem conflitos
+   geográficos e sem chaves duplicadas após todos os tratamentos.</li>
+<li>Totais esperados: doméstica 117169 linhas / soma 162032; feminicídio
+   381 linhas / soma 391, vinculados aos hashes da Bronze.</li>
+<li>Manter as fontes separadas. Nunca calcular um total combinado de vítimas.</li>
+<li>Validar candidatos antes da gravação e reler as tabelas persistidas para
+   repetir os controles. Uma falha não deve substituir uma versão aprovada.</li>
+<li>Reexecução do mesmo snapshot não pode acumular linhas. Versão nova da fonte
+   exige reconciliação e aprovação das novas referências antes da publicação.</li>
+</ol>
+<p>O código S/N desconhecido não é uma ausência: é um valor publicado válido
+cuja interpretação está pendente. Ele deve permanecer disponível na Silver,
+com essa ressalva documentada, sem impedir as perguntas atuais do MVP.</p>
+<h2 id="limites">Limites</h2>
+<p>A consistência estrutural não comprova completude epidemiológica, ausência de
+subnotificação ou unicidade de pessoas. Ter registros em todos os meses não
+transforma automaticamente uma ausência municipal em zero. Uma revisão futura
+da fonte pode exigir novas regras e novas referências.</p></main><footer>Documentação do MVP de Minas Gerais, 2025. Foram preservados os arquivos fonte no repositório.</footer></body></html>

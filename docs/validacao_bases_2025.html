@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Validação inicial das bases de 2025 | MVP DW</title><style>
+:root{color-scheme:light;--ink:#203244;--accent:#086a80;--line:#d9e3ec}
+*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:var(--ink);font:17px/1.7 system-ui,sans-serif}
+header{border-bottom:1px solid var(--line);background:#fff;padding:18px max(24px,calc((100vw - 1180px)/2))}
+nav{display:flex;gap:22px;flex-wrap:wrap}a{color:var(--accent);text-underline-offset:3px}
+main{max-width:1180px;margin:32px auto;padding:32px;background:#fff;border:1px solid var(--line);border-radius:12px}
+h1,h2,h3{line-height:1.3;color:#183044}h1{font-size:2rem}h2{margin-top:2em}h3{margin-top:1.6em}
+img{display:block;max-width:100%;height:auto;margin:24px auto}pre{padding:18px;background:#f0f4f8;overflow:auto;border-radius:8px}
+code{font-family:ui-monospace,monospace;font-size:.88em;overflow-wrap:anywhere}pre code{overflow-wrap:normal}
+.tablewrap{overflow-x:auto;margin:24px 0}table{width:100%;border-collapse:collapse;font-size:.94em}
+th,td{text-align:left;padding:11px 14px;border:1px solid var(--line);vertical-align:top}th{background:#eef5f7}
+tbody tr:nth-child(even){background:#fafcfd}.toc{padding:12px 24px;background:#f4f8fa;border-radius:8px}
+.mermaid{overflow-x:auto;margin:24px 0}.mermaid svg{height:auto}summary{cursor:pointer;font-weight:600}
+.note,footer{color:#526779;font-size:.9em}footer{max-width:1180px;margin:24px auto;padding:0 24px}
+@media(max-width:720px){main{margin:12px;padding:18px}h1{font-size:1.65rem}header{padding:16px}}
+@media print{header,.toc{display:none}main{border:0;margin:0;max-width:none;padding:0}pre{white-space:pre-wrap}}
+</style></head>
+<body><header><nav><a href="https://fmariane.github.io/MVP_DW/">Início</a><a href="https://fmariane.github.io/MVP_DW/docs/index.html">Documentação</a>
+<a href="https://github.com/fmariane/MVP_DW#readme">Relatório completo</a><a href="https://github.com/fmariane/MVP_DW/blob/main/docs/validacao_bases_2025.md">Arquivo original</a></nav></header>
+<main><details><summary>Navegação nesta página</summary><div class="toc">
+<ul>
+<li><a href="#validacao-inicial-das-bases-de-2025">Validação inicial das bases de 2025</a><ul>
+<li><a href="#proveniencia">Proveniência</a></li>
+<li><a href="#resultados-locais">Resultados locais</a></li>
+<li><a href="#granularidade-o-que-foi-comprovado-e-o-que-permanece-limitado">Granularidade: o que foi comprovado e o que permanece limitado</a></li>
+<li><a href="#codigos-validacao-semantica">Códigos: validação semântica</a></li>
+<li><a href="#comparabilidade-e-sobreposicao">Comparabilidade e sobreposição</a></li>
+<li><a href="#proximas-verificacoes">Próximas verificações</a></li>
+<li><a href="#identificacao-das-copias-locais-sha-256">Identificação das cópias locais (SHA-256)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</details><h1 id="validacao-inicial-das-bases-de-2025">Validação inicial das bases de 2025</h1>
+<p>Inspeção local realizada em 22/09/2026. Fontes preservadas sem alterações. Esta verificação não substitui os controles e evidências da execução no Databricks.</p>
+<h2 id="proveniencia">Proveniência</h2>
+<ul>
+<li><a href="https://dados.mg.gov.br/pt_PT/dataset/violencia-contra-mulher">Conjunto PCMG</a>.</li>
+<li><a href="https://dados.mg.gov.br/pt_PT/dataset/violencia-contra-mulher/resource/1afc4e40-3e53-49ce-96a1-f0df6a625459">Recurso feminicídios 2025</a>.</li>
+<li><a href="https://dados.mg.gov.br/pt_PT/dataset/violencia-contra-mulher/resource/b339e530-586f-4128-81d0-7a327ff20b7e">Recurso violência doméstica 2025</a>.</li>
+<li>Dicionário consultado: <code>datapackage.json</code>, recursos <code>feminicidio-2025</code> e <code>violencia-contra-mulher-2025</code>.</li>
+<li>Licença declarada dos dados: CC BY 4.0. Não confundir com a licença do código do projeto.</li>
+<li>Arquivos disponibilizados localmente pelo usuário. Data de download informada pelo usuário na checklist: 22/09/2026. A inspeção também ocorreu em 22/09/2026.</li>
+<li>A correspondência binária entre os arquivos locais e os downloads atuais do portal não foi verificada. Os hashes abaixo identificam as cópias inspecionadas.</li>
+</ul>
+<h2 id="resultados-locais">Resultados locais</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Verificação</th>
+<th style="text-align: right;">Feminicídios</th>
+<th style="text-align: right;">Violência doméstica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linhas</td>
+<td style="text-align: right;">381</td>
+<td style="text-align: right;">117.169</td>
+</tr>
+<tr>
+<td>Colunas</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr>
+<td>Municípios presentes</td>
+<td style="text-align: right;">183</td>
+<td style="text-align: right;">853</td>
+</tr>
+<tr>
+<td>Soma de qtde_vitimas</td>
+<td style="text-align: right;">391</td>
+<td style="text-align: right;">162.032</td>
+</tr>
+<tr>
+<td>Mínimo e máximo de qtde_vitimas</td>
+<td style="text-align: right;">1 a 2</td>
+<td style="text-align: right;">1 a 31</td>
+</tr>
+<tr>
+<td>Período observado</td>
+<td style="text-align: right;">01/01/2025 a 31/12/2025</td>
+<td style="text-align: right;">01/01/2025 a 31/12/2025</td>
+</tr>
+<tr>
+<td>Meses presentes</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr>
+<td>Campos nulos ou vazios</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Linhas integralmente duplicadas</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Datas inválidas em AAAA-MM-DD</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Divergências entre data e mês/ano</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ambos são CSVs delimitados por ponto e vírgula, lidos como UTF-8 com suporte a BOM. A presença dos 12 meses não prova que todos os eventos reais foram registrados ou que a fonte não sofrerá revisões.</p>
+<h2 id="granularidade-o-que-foi-comprovado-e-o-que-permanece-limitado">Granularidade: o que foi comprovado e o que permanece limitado</h2>
+<p>Não há identificador de pessoa ou ocorrência nos campos publicados. O dicionário define <code>qtde_vitimas</code> como quantidade de vítimas, mas não declara uma chave primária nem garante pessoas únicas.</p>
+<p>As seguintes combinações são únicas nas cópias locais, com zero repetições:</p>
+<ul>
+<li>Feminicídios: município + data do fato + tentado/consumado.</li>
+<li>Violência doméstica: município + data do fato + natureza do delito + código S/N.</li>
+</ul>
+<p>Essas combinações serão a granularidade operacional observada para o modelo. A estrutura é compatível com quantitativos agrupados nessas dimensões; a unicidade observada não prova a regra de agregação da fonte nem que uma linha represente uma ocorrência. Revalidar as chaves a cada carga e não eliminar repetições futuras automaticamente.</p>
+<h2 id="codigos-validacao-semantica">Códigos: validação semântica</h2>
+<p>Na base de feminicídios, o campo contém rótulos explícitos TENTADO e CONSUMADO, coerentes com a descrição do dicionário. As somas são 213 e 178, respectivamente.</p>
+<p>Na base de violência doméstica, há S e N. O dicionário informa somente “Tentado ou consumado”, sem explicitar a correspondência. A soma associada a S é 161.004 e a N é 1.028. Frequências não comprovam significado: NÃO converter S/N para consumado/tentado por inferência.</p>
+<p><strong>Pendência:</strong> localizar um dicionário oficial ou confirmação do publicador que documente S/N. Até lá, preservar o valor bruto; se houver campo descritivo na Silver, usar “Significado não confirmado”. As perguntas do MVP não dependem da resolução dessa pendência.</p>
+<h2 id="comparabilidade-e-sobreposicao">Comparabilidade e sobreposição</h2>
+<p>Há campos comuns de município, data, mês, ano, RISP e RMBH. São duas medidas publicadas em conjuntos com definições e metodologias próprias. Não há chave de ligação entre eventos ou pessoas; portanto, não é possível verificar sobreposição nem construir uma trajetória individual entre as bases.</p>
+<p>Manter duas fatos e comparar agregados territoriais e temporais, sem somar fontes ou calcular uma suposta proporção de violência que se converteu em feminicídio. Preservar códigos municipais como identificadores de texto; não pressupor equivalência com códigos de outras fontes sem tabela de correspondência.</p>
+<h2 id="proximas-verificacoes">Próximas verificações</h2>
+<ul>
+<li>Confirmar o significado oficial de S/N, sem bloquear as perguntas atuais.</li>
+<li>Relações municipais verificadas na modelagem: uma divergência de nome no código 315990, sem conflitos de RISP/RMBH. Regra de padronização documentada em modelagem_dimensional.md.</li>
+<li>Implementar os controles no pipeline e reconciliar linhas e somas em cada camada.</li>
+<li>Documentar as versões e possíveis revisões da fonte.</li>
+</ul>
+<h2 id="identificacao-das-copias-locais-sha-256">Identificação das cópias locais (SHA-256)</h2>
+<ul>
+<li><code>feminicidio_2025.csv</code>: <code>364dec0197c1d9c40a050883573ce22efd280a43114680fc1491e40db6e89630</code></li>
+<li><code>violencia_domestica_2025.csv</code>: <code>0d6e677ab65e7d04834904080ec0296eccf8dabd6013fe45910c9d754f94b4fe</code></li>
+<li><code>datapackage.json</code>: <code>9eb2f45753289ea8367a39754c12928da881e19249f2ab557e74887256ec33fa</code></li>
+</ul></main><footer>Documentação do MVP de Minas Gerais, 2025. Foram preservados os arquivos fonte no repositório.</footer></body></html>

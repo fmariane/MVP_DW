@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Linhagem — fontes → Bronze → Silver → Gold | MVP DW</title><style>
+:root{color-scheme:light;--ink:#203244;--accent:#086a80;--line:#d9e3ec}
+*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:var(--ink);font:17px/1.7 system-ui,sans-serif}
+header{border-bottom:1px solid var(--line);background:#fff;padding:18px max(24px,calc((100vw - 1180px)/2))}
+nav{display:flex;gap:22px;flex-wrap:wrap}a{color:var(--accent);text-underline-offset:3px}
+main{max-width:1180px;margin:32px auto;padding:32px;background:#fff;border:1px solid var(--line);border-radius:12px}
+h1,h2,h3{line-height:1.3;color:#183044}h1{font-size:2rem}h2{margin-top:2em}h3{margin-top:1.6em}
+img{display:block;max-width:100%;height:auto;margin:24px auto}pre{padding:18px;background:#f0f4f8;overflow:auto;border-radius:8px}
+code{font-family:ui-monospace,monospace;font-size:.88em;overflow-wrap:anywhere}pre code{overflow-wrap:normal}
+.tablewrap{overflow-x:auto;margin:24px 0}table{width:100%;border-collapse:collapse;font-size:.94em}
+th,td{text-align:left;padding:11px 14px;border:1px solid var(--line);vertical-align:top}th{background:#eef5f7}
+tbody tr:nth-child(even){background:#fafcfd}.toc{padding:12px 24px;background:#f4f8fa;border-radius:8px}
+.mermaid{overflow-x:auto;margin:24px 0}.mermaid svg{height:auto}summary{cursor:pointer;font-weight:600}
+.note,footer{color:#526779;font-size:.9em}footer{max-width:1180px;margin:24px auto;padding:0 24px}
+@media(max-width:720px){main{margin:12px;padding:18px}h1{font-size:1.65rem}header{padding:16px}}
+@media print{header,.toc{display:none}main{border:0;margin:0;max-width:none;padding:0}pre{white-space:pre-wrap}}
+</style></head>
+<body><header><nav><a href="https://fmariane.github.io/MVP_DW/">Início</a><a href="https://fmariane.github.io/MVP_DW/docs/index.html">Documentação</a>
+<a href="https://github.com/fmariane/MVP_DW#readme">Relatório completo</a><a href="https://github.com/fmariane/MVP_DW/blob/main/docs/linhagem_dados.md">Arquivo original</a></nav></header>
+<main><details><summary>Navegação nesta página</summary><div class="toc">
+<ul>
+<li><a href="#linhagem-fontes-bronze-silver-gold">Linhagem — fontes → Bronze → Silver → Gold</a><ul>
+<li><a href="#fluxo-de-objetos">Fluxo de objetos</a></li>
+<li><a href="#fontes-e-identidade-dos-arquivos">Fontes e identidade dos arquivos</a></li>
+<li><a href="#transformacoes-por-coluna">Transformações por coluna</a></li>
+<li><a href="#execucoes-e-versoes-comprovadas">Execuções e versões comprovadas</a></li>
+<li><a href="#barreiras-de-qualidade-e-limites">Barreiras de qualidade e limites</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</details><h1 id="linhagem-fontes-bronze-silver-gold">Linhagem — fontes → Bronze → Silver → Gold</h1>
+<p>Linhagem documentada a partir dos notebooks versionáveis, metadados extraídos
+do Unity Catalog e resultados reais dos jobs. Não é uma exportação da visualização
+automática de linhagem do Databricks. <a href="https://fmariane.github.io/MVP_DW/docs/catalogo_dados.html">Catálogo completo</a>.</p>
+<h2 id="fluxo-de-objetos">Fluxo de objetos</h2>
+<div class="mermaid">flowchart TD
+    D[CSV violência doméstica 2025] --&gt; V[Volume arquivos: originais e snapshots SHA-256]
+    F[CSV feminicídio 2025] --&gt; V
+    V --&gt; BD[Bronze violencia_domestica_2025]
+    V --&gt; BF[Bronze feminicidio_2025]
+    BD --&gt; Q[02_qualidade: diagnóstico e evidência JSON]
+    BF --&gt; Q
+    BD --&gt; SD[Silver violencia_domestica_2025]
+    BF --&gt; SF[Silver feminicidio_2025]
+    BD --&gt; RD[Silver rejeicoes_violencia_domestica_2025]
+    BF --&gt; RF[Silver rejeicoes_feminicidio_2025]
+    SD --&gt; M[Gold dim_municipio]
+    SF --&gt; M
+    SD --&gt; N[Gold dim_natureza_delito]
+    C[Calendário completo 2025] --&gt; T[Gold dim_tempo]
+    SD --&gt; FD[Gold fato_violencia_domestica]
+    SF --&gt; FF[Gold fato_feminicidio]
+    M --&gt; FD
+    M --&gt; FF
+    N --&gt; FD
+    T --&gt; FD
+    T --&gt; FF
+    FD --&gt; AD[Agregação doméstica município/ano/mês]
+    FF --&gt; AF[Agregação feminicídio município/ano/mês]
+    T --&gt; AD
+    T --&gt; AF
+    AD --&gt; CMP[View comparativo_municipio_mes: FULL OUTER JOIN]
+    AF --&gt; CMP
+</div><details><summary>Definição textual do diagrama</summary><pre>flowchart TD
+    D[CSV violência doméstica 2025] --&gt; V[Volume arquivos: originais e snapshots SHA-256]
+    F[CSV feminicídio 2025] --&gt; V
+    V --&gt; BD[Bronze violencia_domestica_2025]
+    V --&gt; BF[Bronze feminicidio_2025]
+    BD --&gt; Q[02_qualidade: diagnóstico e evidência JSON]
+    BF --&gt; Q
+    BD --&gt; SD[Silver violencia_domestica_2025]
+    BF --&gt; SF[Silver feminicidio_2025]
+    BD --&gt; RD[Silver rejeicoes_violencia_domestica_2025]
+    BF --&gt; RF[Silver rejeicoes_feminicidio_2025]
+    SD --&gt; M[Gold dim_municipio]
+    SF --&gt; M
+    SD --&gt; N[Gold dim_natureza_delito]
+    C[Calendário completo 2025] --&gt; T[Gold dim_tempo]
+    SD --&gt; FD[Gold fato_violencia_domestica]
+    SF --&gt; FF[Gold fato_feminicidio]
+    M --&gt; FD
+    M --&gt; FF
+    N --&gt; FD
+    T --&gt; FD
+    T --&gt; FF
+    FD --&gt; AD[Agregação doméstica município/ano/mês]
+    FF --&gt; AF[Agregação feminicídio município/ano/mês]
+    T --&gt; AD
+    T --&gt; AF
+    AD --&gt; CMP[View comparativo_municipio_mes: FULL OUTER JOIN]
+    AF --&gt; CMP
+</pre></details>
+
+<p>Bronze, Silver e Gold usam respectivamente <code>workspace.mvp_bronze</code>,
+<code>workspace.mvp_silver</code> e <code>workspace.mvp_gold</code>. Rejeições ficam fora do caminho
+de publicação; qualquer rejeição bloqueia a Silver de negócio deste snapshot.</p>
+<h2 id="fontes-e-identidade-dos-arquivos">Fontes e identidade dos arquivos</h2>
+<p>Publicador: PCMG, conjunto de violência contra a mulher em Minas Gerais,
+recorte 2025. URLs, licença e data de obtenção estão na <a href="https://fmariane.github.io/MVP_DW/docs/validacao_bases_2025.html">proveniência</a>.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Arquivo</th>
+<th>SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>violencia_domestica_2025.csv</td>
+<td>0d6e677ab65e7d04834904080ec0296eccf8dabd6013fe45910c9d754f94b4fe</td>
+</tr>
+<tr>
+<td>feminicidio_2025.csv</td>
+<td>364dec0197c1d9c40a050883573ce22efd280a43114680fc1491e40db6e89630</td>
+</tr>
+</tbody>
+</table></div>
+<p>Cópias preservadas em <code>/Volumes/workspace/mvp_bronze/arquivos/snapshots/&lt;sha256&gt;/&lt;arquivo&gt;</code>.
+O hash representa bytes do arquivo, não identidade de uma ocorrência. O original
+no volume é conferido contra a referência antes da leitura. Uma revisão não é
+tratada como conjunto de novos eventos a acrescentar indiscriminadamente.</p>
+<h2 id="transformacoes-por-coluna">Transformações por coluna</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Origem</th>
+<th>Destino</th>
+<th>Transformação / validação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Campos CSV</td>
+<td>Bronze campos homônimos</td>
+<td>Leitura <code>;</code>, UTF-8, campos STRING, preservação dos textos</td>
+</tr>
+<tr>
+<td>Bytes e caminho do arquivo; relógio UTC</td>
+<td>Bronze arquivo_sha256, arquivo_origem, ingerido_em</td>
+<td>SHA-256; caminho do snapshot; timestamp de ingestão</td>
+</tr>
+<tr>
+<td>Bronze campos originais</td>
+<td>Silver dados_brutos.*</td>
+<td>Cópia fiel em STRUCT; igualdade por exceptAll nos dois sentidos</td>
+</tr>
+<tr>
+<td>Bronze municipio_cod, risp, rmbh</td>
+<td>Silver homônimos</td>
+<td>Trim e validação de formato/domínio; códigos como texto</td>
+</tr>
+<tr>
+<td>Bronze municipio_fato</td>
+<td>Silver municipio_fato</td>
+<td>Trim; correspondência explícita no código 315990</td>
+</tr>
+<tr>
+<td>Bronze data_fato, mes, ano, qtde_vitimas</td>
+<td>Silver homônimos</td>
+<td>Conversão DATE/INT/INT/BIGINT; rejeição de erro, sem arredondar ou imputar</td>
+</tr>
+<tr>
+<td>Bronze natureza_delito, tentado_consumado</td>
+<td>Silver homônimos</td>
+<td>Upper/trim; acentos e espaços internos mantidos; S/N não traduzido</td>
+</tr>
+<tr>
+<td>Metadados Bronze</td>
+<td>Metadados Silver e fatos Gold</td>
+<td>Propagação do caminho, hash e instante original</td>
+</tr>
+<tr>
+<td>Tabela/versão Delta de entrada, contrato, relógio UTC</td>
+<td>Silver tabela_bronze, versao_bronze, versao_regras, tratado_em</td>
+<td>Rastreabilidade técnica da transformação</td>
+</tr>
+<tr>
+<td>Resultado de validações Silver</td>
+<td>Tabelas de rejeições</td>
+<td>Dados brutos e tratados, motivos, flag da quantidade e UUID da execução</td>
+</tr>
+<tr>
+<td>Calendário gerado 2025</td>
+<td>dim_tempo</td>
+<td>Uma linha/dia; chave INT AAAAMMDD; ano, mês, dia, trimestre derivados</td>
+</tr>
+<tr>
+<td>Silver de ambas as fontes: município/nome/RISP/RMBH</td>
+<td>dim_municipio</td>
+<td>União de tuplas distintas; exigir unicidade por código; UF constante MG</td>
+</tr>
+<tr>
+<td>Silver doméstica natureza_delito</td>
+<td>dim_natureza_delito</td>
+<td>Nomes distintos normalizados; SHA-256 UTF-8 determinístico</td>
+</tr>
+<tr>
+<td>Silver data_fato</td>
+<td>Fatos data_key</td>
+<td>Lookup em dim_tempo, sem perder ou multiplicar linhas</td>
+</tr>
+<tr>
+<td>Silver municipio_cod</td>
+<td>Fatos municipio_cod</td>
+<td>Chave mantida e existência verificada em dim_municipio</td>
+</tr>
+<tr>
+<td>Silver doméstica natureza_delito</td>
+<td>Fato doméstica natureza_key</td>
+<td>Lookup em dim_natureza_delito</td>
+</tr>
+<tr>
+<td>Silver doméstica tentado_consumado</td>
+<td>Fato doméstica codigo_tentado_consumado</td>
+<td>Renomeação; S/N preservado</td>
+</tr>
+<tr>
+<td>Silver feminicídio tentado_consumado</td>
+<td>Fato feminicídio situacao</td>
+<td>Renomeação; TENTADO/CONSUMADO preservados</td>
+</tr>
+<tr>
+<td>Silver qtde_vitimas</td>
+<td>Fatos qtde_vitimas</td>
+<td>Sem nova agregação; conservação por linha e de totais</td>
+</tr>
+<tr>
+<td>Cada fato + dim_tempo</td>
+<td>View comparativo_municipio_mes</td>
+<td>SUM separado por município/ano/mês; depois FULL OUTER JOIN, flags de presença e NULL nas ausências</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="execucoes-e-versoes-comprovadas">Execuções e versões comprovadas</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Etapa</th>
+<th>Notebook</th>
+<th>Job</th>
+<th>Execução aprovada</th>
+<th>Evidência</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bronze</td>
+<td>01_bronze.py</td>
+<td>699928499146328</td>
+<td>207087315322185</td>
+<td><a href="https://fmariane.github.io/MVP_DW/evidencias/bronze_207087315322185.json">Carga</a></td>
+</tr>
+<tr>
+<td>Qualidade</td>
+<td>02_qualidade.py</td>
+<td>1005669937621880</td>
+<td>183810729128831</td>
+<td><a href="https://fmariane.github.io/MVP_DW/evidencias/qualidade_183810729128831.json">Diagnóstico</a></td>
+</tr>
+<tr>
+<td>Silver</td>
+<td>03_silver.py</td>
+<td>1075813885223029</td>
+<td>169682925174743</td>
+<td><a href="https://fmariane.github.io/MVP_DW/evidencias/silver_169682925174743.json">Reconciliação</a></td>
+</tr>
+<tr>
+<td>Gold</td>
+<td>04_gold.py</td>
+<td>465875515640680</td>
+<td>700142655207447</td>
+<td><a href="https://fmariane.github.io/MVP_DW/evidencias/gold_700142655207447.json">Validação</a></td>
+</tr>
+<tr>
+<td>Análises</td>
+<td>05_analises.py</td>
+<td>252723981011762</td>
+<td>931355409551552</td>
+<td><a href="https://fmariane.github.io/MVP_DW/evidencias/analises_931355409551552.json">Consultas</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Qualidade e Silver leram versão Delta 0 de cada Bronze; a Gold leu versão Delta 0
+de cada Silver. <code>versao_bronze</code> fica por linha na Silver. Versões Silver usadas
+pela Gold ficam no relatório <code>fontes_silver</code>, não como coluna das fatos.
+Os IDs Delta dos relatórios e os IDs dos objetos Unity Catalog do inventário
+identificam recursos diferentes e não devem ser confundidos.</p>
+<p>Reexecuções aprovadas, sem duplicação: <a href="https://fmariane.github.io/MVP_DW/evidencias/bronze_1001589874049096.json">Bronze</a>,
+<a href="https://fmariane.github.io/MVP_DW/evidencias/silver_572585419270618.json">Silver</a>, <a href="https://fmariane.github.io/MVP_DW/evidencias/gold_483524129599626.json">Gold</a>.
+Essas execuções individuais não equivalem ao teste integrado final do item 23.</p>
+<p>As análises leem as cinco tabelas Gold na versão 0 e agregam as medidas conforme
+as quatro perguntas. O resultado remoto alimenta <code>scripts/gerar_graficos.py</code>,
+que exporta figuras PNG/SVG e o relatório local. Não há releitura dos CSVs para
+calcular os gráficos. SQL e versões de entrada são preservados na evidência.</p>
+<h2 id="barreiras-de-qualidade-e-limites">Barreiras de qualidade e limites</h2>
+<p>Antes da Silver: validar campos obrigatórios, datas e coerência temporal,
+domínios, quantidades e duplicidades; registrar rejeições e reconciliar
+entrada = candidatos + rejeições. Antes e depois das junções Gold: validar
+unicidade dimensional, referências e conservação de linhas/somas.</p>
+<p>Tabelas candidatas são comparadas com tabelas existentes; divergências falham
+sem sobrescrita. Publicação é individual por objeto, sem transação conjunta.
+Consumir somente após execução aprovada. A view é dinâmica sobre as tabelas
+Gold atuais; não é uma fotografia materializada independente.</p>
+<p>Os dados publicados não têm identificadores de pessoas. Não existe vínculo
+individual entre as fontes nem evidência de trajetória doméstica → feminicídio.
+Totais não são somados entre fontes e ausências não são inferidas como zero.</p></main><footer>Documentação do MVP de Minas Gerais, 2025. Foram preservados os arquivos fonte no repositório.</footer><script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.esm.min.mjs';
+mermaid.initialize({startOnLoad:true,securityLevel:'strict',theme:'neutral'});
+</script></body></html>

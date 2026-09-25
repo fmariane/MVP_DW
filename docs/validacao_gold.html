@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gold: implantação e validação | MVP DW</title><style>
+:root{color-scheme:light;--ink:#203244;--accent:#086a80;--line:#d9e3ec}
+*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:var(--ink);font:17px/1.7 system-ui,sans-serif}
+header{border-bottom:1px solid var(--line);background:#fff;padding:18px max(24px,calc((100vw - 1180px)/2))}
+nav{display:flex;gap:22px;flex-wrap:wrap}a{color:var(--accent);text-underline-offset:3px}
+main{max-width:1180px;margin:32px auto;padding:32px;background:#fff;border:1px solid var(--line);border-radius:12px}
+h1,h2,h3{line-height:1.3;color:#183044}h1{font-size:2rem}h2{margin-top:2em}h3{margin-top:1.6em}
+img{display:block;max-width:100%;height:auto;margin:24px auto}pre{padding:18px;background:#f0f4f8;overflow:auto;border-radius:8px}
+code{font-family:ui-monospace,monospace;font-size:.88em;overflow-wrap:anywhere}pre code{overflow-wrap:normal}
+.tablewrap{overflow-x:auto;margin:24px 0}table{width:100%;border-collapse:collapse;font-size:.94em}
+th,td{text-align:left;padding:11px 14px;border:1px solid var(--line);vertical-align:top}th{background:#eef5f7}
+tbody tr:nth-child(even){background:#fafcfd}.toc{padding:12px 24px;background:#f4f8fa;border-radius:8px}
+.mermaid{overflow-x:auto;margin:24px 0}.mermaid svg{height:auto}summary{cursor:pointer;font-weight:600}
+.note,footer{color:#526779;font-size:.9em}footer{max-width:1180px;margin:24px auto;padding:0 24px}
+@media(max-width:720px){main{margin:12px;padding:18px}h1{font-size:1.65rem}header{padding:16px}}
+@media print{header,.toc{display:none}main{border:0;margin:0;max-width:none;padding:0}pre{white-space:pre-wrap}}
+</style></head>
+<body><header><nav><a href="https://fmariane.github.io/MVP_DW/">Início</a><a href="https://fmariane.github.io/MVP_DW/docs/index.html">Documentação</a>
+<a href="https://github.com/fmariane/MVP_DW#readme">Relatório completo</a><a href="https://github.com/fmariane/MVP_DW/blob/main/docs/validacao_gold.md">Arquivo original</a></nav></header>
+<main><details><summary>Navegação nesta página</summary><div class="toc">
+<ul>
+<li><a href="#gold-implantacao-e-validacao">Gold: implantação e validação</a><ul>
+<li><a href="#objetos-criados-em-workspacemvp_gold">Objetos criados em workspace.mvp_gold</a></li>
+<li><a href="#integridade-e-reconciliacao">Integridade e reconciliação</a></li>
+<li><a href="#comparacao-entre-fontes">Comparação entre fontes</a></li>
+<li><a href="#testes-e-publicacao">Testes e publicação</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</details><h1 id="gold-implantacao-e-validacao">Gold: implantação e validação</h1>
+<p>Job <code>465875515640680</code>, notebook <a href="https://github.com/fmariane/MVP_DW/blob/main/notebooks/04_gold.py">04_gold.py</a>, executado
+com sucesso em 24/09/2026 às 22:55 de São Paulo (25/09 às 01:55 UTC).
+As duas Silver foram lidas na versão Delta 0, com hashes registrados na evidência.</p>
+<ul>
+<li><a href="https://fmariane.github.io/MVP_DW/evidencias/gold_700142655207447.json">Evidência da carga</a></li>
+<li><a href="https://fmariane.github.io/MVP_DW/evidencias/gold_483524129599626.json">Evidência da reexecução</a></li>
+<li><a href="https://dbc-0a2b6ff1-9976.cloud.databricks.com/?o=7474657037018547#job/465875515640680/run/700142655207447">Execução no Databricks</a></li>
+<li><a href="https://fmariane.github.io/MVP_DW/docs/catalogo_gold.html">Catálogo Gold</a></li>
+<li><a href="https://fmariane.github.io/MVP_DW/docs/execucao_databricks.html">Guia de execução</a></li>
+</ul>
+<h2 id="objetos-criados-em-workspacemvp_gold">Objetos criados em workspace.mvp_gold</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Tabela Delta</th>
+<th style="text-align: right;">Linhas</th>
+<th style="text-align: right;">Soma de qtde_vitimas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dim_tempo</td>
+<td style="text-align: right;">365</td>
+<td style="text-align: right;">Não se aplica</td>
+</tr>
+<tr>
+<td>dim_municipio</td>
+<td style="text-align: right;">853</td>
+<td style="text-align: right;">Não se aplica</td>
+</tr>
+<tr>
+<td>dim_natureza_delito</td>
+<td style="text-align: right;">174</td>
+<td style="text-align: right;">Não se aplica</td>
+</tr>
+<tr>
+<td>fato_violencia_domestica</td>
+<td style="text-align: right;">117169</td>
+<td style="text-align: right;">162032</td>
+</tr>
+<tr>
+<td>fato_feminicidio</td>
+<td style="text-align: right;">381</td>
+<td style="text-align: right;">391</td>
+</tr>
+</tbody>
+</table></div>
+<p>A view <code>comparativo_municipio_mes</code> possui 9296 combinações observadas de
+município, ano e mês, com uma linha por chave. É uma comparação de fontes,
+não uma tabela de vítimas somadas nem um calendário municipal completo.</p>
+<h2 id="integridade-e-reconciliacao">Integridade e reconciliação</h2>
+<ul>
+<li>Campos obrigatórios sem nulos ou texto vazio.</li>
+<li>Chaves de dimensão e chaves compostas das fatos únicas e não nulas.</li>
+<li>Calendário completo de 2025; uma chave determinística AAAAMMDD por dia.</li>
+<li>Nomes e atributos municipais consistentes por código após o tratamento Silver.</li>
+<li>Naturezas únicas e identificadas por SHA-256 do nome normalizado em UTF-8.</li>
+<li>Zero referências sem correspondência nas cinco relações fato–dimensão.</li>
+<li>Contagens e somas iguais antes/depois de cada junção, na construção e na releitura das tabelas persistidas.</li>
+<li>Tipos e conteúdo persistidos iguais aos candidatos, verificados com comparação nos dois sentidos e multiplicidades preservadas.</li>
+<li>Metadados de origem, hash e ingestão propagados às fatos; valores S/N não traduzidos.</li>
+</ul>
+<p>As chaves são regras lógicas verificadas pelo pipeline. Não foram declaradas
+constraints PK/FK no catálogo; não se atribui a elas enforcement automático.</p>
+<h2 id="comparacao-entre-fontes">Comparação entre fontes</h2>
+<p>Cada fato é agregada por município, ano e mês antes de um FULL OUTER JOIN.
+As medidas <code>vitimas_violencia_domestica</code> e <code>vitimas_feminicidio</code> permanecem
+separadas. Indicadores de presença distinguem registros encontrados em cada
+fonte; ausência conserva NULL, sem preenchimento automático por zero.
+Cada lado da view foi comparado com sua agregação independente.</p>
+<h2 id="testes-e-publicacao">Testes e publicação</h2>
+<p>Testes sintéticos no mesmo runtime confirmaram o bloqueio de chaves dimensionais
+duplicadas e FKs órfãs, a preservação de totais numa junção válida, a codificação
+SHA-256 de texto acentuado e a manutenção de municípios exclusivos e valores
+nulos na comparação das fontes.</p>
+<p>O job valida todos os candidatos e objetos existentes antes de criar tabelas.
+Reexecuções validam objetos existentes; não sobrescrevem divergências nem
+acrescentam linhas. Não há transação única entre as cinco tabelas e a view;
+uma execução final aprovada é condição para o consumo analítico.</p>
+<p>A reexecução <code>483524129599626</code> concluiu com <code>SUCCESS</code>. As cinco tabelas foram
+validadas como snapshots existentes, mantendo IDs Delta, linhas e medidas.
+A view continuou com 9296 chaves, e os controles de integridade passaram
+novamente. Nenhuma linha foi acrescentada às tabelas Gold.</p>
+<p>Itens 16 e 17 concluídos. O <a href="https://fmariane.github.io/MVP_DW/docs/catalogo_dados.html">catálogo completo</a> e a
+<a href="https://fmariane.github.io/MVP_DW/docs/linhagem_dados.html">linhagem</a>, item 18, também foram concluídos. Consultas,
+gráficos e interpretação (19–20) concluídos no <a href="https://fmariane.github.io/MVP_DW/docs/resultados_analiticos.html">relatório analítico</a>.
+Screenshots (21) e reexecução integral da entrega (23) permanecem pendentes.</p></main><footer>Documentação do MVP de Minas Gerais, 2025. Foram preservados os arquivos fonte no repositório.</footer></body></html>

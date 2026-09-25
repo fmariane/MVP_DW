@@ -1,0 +1,22 @@
+{
+  "feminicidio_2025.csv": {
+    "sha256": "364dec0197c1d9c40a050883573ce22efd280a43114680fc1491e40db6e89630",
+    "linhas": 381,
+    "soma_qtde_vitimas": 391,
+    "chave_composta_duplicadas": 0,
+    "linhas_apos_join_municipio": 381
+  },
+  "violencia_domestica_2025.csv": {
+    "sha256": "0d6e677ab65e7d04834904080ec0296eccf8dabd6013fe45910c9d754f94b4fe",
+    "linhas": 117169,
+    "soma_qtde_vitimas": 162032,
+    "chave_composta_duplicadas": 0,
+    "linhas_apos_join_municipio": 117169
+  },
+  "dimensoes": {
+    "municipios": 853,
+    "naturezas": 174,
+    "datas": 365,
+    "conflitos_geograficos_apos_regra_315990": 0
+  }
+}

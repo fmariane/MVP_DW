@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catálogo de dados — MVP PCMG, MG, 2025 | MVP DW</title><style>
+:root{color-scheme:light;--ink:#203244;--accent:#086a80;--line:#d9e3ec}
+*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:var(--ink);font:17px/1.7 system-ui,sans-serif}
+header{border-bottom:1px solid var(--line);background:#fff;padding:18px max(24px,calc((100vw - 1180px)/2))}
+nav{display:flex;gap:22px;flex-wrap:wrap}a{color:var(--accent);text-underline-offset:3px}
+main{max-width:1180px;margin:32px auto;padding:32px;background:#fff;border:1px solid var(--line);border-radius:12px}
+h1,h2,h3{line-height:1.3;color:#183044}h1{font-size:2rem}h2{margin-top:2em}h3{margin-top:1.6em}
+img{display:block;max-width:100%;height:auto;margin:24px auto}pre{padding:18px;background:#f0f4f8;overflow:auto;border-radius:8px}
+code{font-family:ui-monospace,monospace;font-size:.88em;overflow-wrap:anywhere}pre code{overflow-wrap:normal}
+.tablewrap{overflow-x:auto;margin:24px 0}table{width:100%;border-collapse:collapse;font-size:.94em}
+th,td{text-align:left;padding:11px 14px;border:1px solid var(--line);vertical-align:top}th{background:#eef5f7}
+tbody tr:nth-child(even){background:#fafcfd}.toc{padding:12px 24px;background:#f4f8fa;border-radius:8px}
+.mermaid{overflow-x:auto;margin:24px 0}.mermaid svg{height:auto}summary{cursor:pointer;font-weight:600}
+.note,footer{color:#526779;font-size:.9em}footer{max-width:1180px;margin:24px auto;padding:0 24px}
+@media(max-width:720px){main{margin:12px;padding:18px}h1{font-size:1.65rem}header{padding:16px}}
+@media print{header,.toc{display:none}main{border:0;margin:0;max-width:none;padding:0}pre{white-space:pre-wrap}}
+</style></head>
+<body><header><nav><a href="https://fmariane.github.io/MVP_DW/">Início</a><a href="https://fmariane.github.io/MVP_DW/docs/index.html">Documentação</a>
+<a href="https://github.com/fmariane/MVP_DW#readme">Relatório completo</a><a href="https://github.com/fmariane/MVP_DW/blob/main/docs/catalogo_dados.md">Arquivo original</a></nav></header>
+<main><details><summary>Navegação nesta página</summary><div class="toc">
+<ul>
+<li><a href="#catalogo-de-dados-mvp-pcmg-mg-2025">Catálogo de dados — MVP PCMG, MG, 2025</a><ul>
+<li><a href="#inventario-e-granularidade">Inventário e granularidade</a></li>
+<li><a href="#campos-publicados-bronze-e-silver">Campos publicados: Bronze e Silver</a></li>
+<li><a href="#metadados-bronze-e-sua-propagacao">Metadados Bronze e sua propagação</a></li>
+<li><a href="#campos-adicionais-da-silver">Campos adicionais da Silver</a></li>
+<li><a href="#tabelas-de-rejeicoes">Tabelas de rejeições</a></li>
+<li><a href="#gold-e-relacoes">Gold e relações</a></li>
+<li><a href="#obrigatoriedade-qualidade-e-limitacoes">Obrigatoriedade, qualidade e limitações</a></li>
+<li><a href="#manutencao-e-escopo">Manutenção e escopo</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</details><h1 id="catalogo-de-dados-mvp-pcmg-mg-2025">Catálogo de dados — MVP PCMG, MG, 2025</h1>
+<p>Catálogo completo dos objetos implementados em <code>workspace</code>, com descrições,
+tipos, domínios, granularidade e origem. O <a href="https://fmariane.github.io/MVP_DW/docs/esquema_fisico.html">esquema físico</a>
+foi extraído do Unity Catalog pela CLI; a <a href="https://fmariane.github.io/MVP_DW/evidencias/catalogo_databricks.json">evidência JSON</a>
+preserva tipos, posições, anulabilidade física e definição da view.
+A <a href="https://fmariane.github.io/MVP_DW/docs/linhagem_dados.html">linhagem</a> conecta arquivos, notebooks, versões e campos.</p>
+<h2 id="inventario-e-granularidade">Inventário e granularidade</h2>
+<p>As quantidades abaixo correspondem às execuções aprovadas referenciadas na
+linhagem. A extração de metadados não recalcula contagens de linhas.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Objeto</th>
+<th>Tipo</th>
+<th>Granularidade</th>
+<th style="text-align: right;">Linhas aprovadas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>workspace.mvp_bronze.violencia_domestica_2025</td>
+<td>Tabela Delta</td>
+<td>Uma linha do CSV doméstico, sem reagrupamento</td>
+<td style="text-align: right;">117169</td>
+</tr>
+<tr>
+<td>workspace.mvp_bronze.feminicidio_2025</td>
+<td>Tabela Delta</td>
+<td>Uma linha do CSV de feminicídio</td>
+<td style="text-align: right;">381</td>
+</tr>
+<tr>
+<td>workspace.mvp_silver.violencia_domestica_2025</td>
+<td>Tabela Delta</td>
+<td>Município + dia + natureza + código S/N</td>
+<td style="text-align: right;">117169</td>
+</tr>
+<tr>
+<td>workspace.mvp_silver.feminicidio_2025</td>
+<td>Tabela Delta</td>
+<td>Município + dia + situação</td>
+<td style="text-align: right;">381</td>
+</tr>
+<tr>
+<td>workspace.mvp_silver.rejeicoes_violencia_domestica_2025</td>
+<td>Tabela Delta</td>
+<td>Uma linha rejeitada por execução, com todos os motivos</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>workspace.mvp_silver.rejeicoes_feminicidio_2025</td>
+<td>Tabela Delta</td>
+<td>Uma linha rejeitada por execução, com todos os motivos</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>workspace.mvp_gold.dim_tempo</td>
+<td>Tabela Delta</td>
+<td>Um dia do calendário completo de 2025</td>
+<td style="text-align: right;">365</td>
+</tr>
+<tr>
+<td>workspace.mvp_gold.dim_municipio</td>
+<td>Tabela Delta</td>
+<td>Um código municipal publicado</td>
+<td style="text-align: right;">853</td>
+</tr>
+<tr>
+<td>workspace.mvp_gold.dim_natureza_delito</td>
+<td>Tabela Delta</td>
+<td>Uma natureza normalizada da base doméstica</td>
+<td style="text-align: right;">174</td>
+</tr>
+<tr>
+<td>workspace.mvp_gold.fato_violencia_domestica</td>
+<td>Tabela Delta</td>
+<td>Município + dia + natureza + código S/N</td>
+<td style="text-align: right;">117169</td>
+</tr>
+<tr>
+<td>workspace.mvp_gold.fato_feminicidio</td>
+<td>Tabela Delta</td>
+<td>Município + dia + situação</td>
+<td style="text-align: right;">381</td>
+</tr>
+<tr>
+<td>workspace.mvp_gold.comparativo_municipio_mes</td>
+<td>View</td>
+<td>Município + ano + mês observado em ao menos uma fonte</td>
+<td style="text-align: right;">9296</td>
+</tr>
+</tbody>
+</table></div>
+<p>Além desses 12 objetos, o volume <code>workspace.mvp_bronze.arquivos</code> armazena os CSVs
+originais e as cópias por SHA-256. Caminho: <code>/Volumes/workspace/mvp_bronze/arquivos</code>.
+Não é uma tabela. Os nomes reais, tipos físicos e identificação do volume constam
+na evidência de extração.</p>
+<p>Uma linha das fontes não equivale necessariamente a uma ocorrência ou mulher
+única. Os campos identificam grupos publicados, sem identificador de pessoa.
+Não se presume independência entre os conjuntos para somar vítimas das fontes.</p>
+<h2 id="campos-publicados-bronze-e-silver">Campos publicados: Bronze e Silver</h2>
+<p>Os campos de negócio da Bronze são STRING e preservam o texto lido do CSV.
+Os nomes abaixo existem nas duas fontes, exceto <code>natureza_delito</code>, exclusiva
+da violência doméstica. A Silver mantém o nome do campo e aplica o tratamento
+descrito, conservando também o original em <code>dados_brutos</code>.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo Bronze → Silver</th>
+<th>Descrição e domínio</th>
+<th>Origem / tratamento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>municipio_cod</td>
+<td>STRING → STRING</td>
+<td>Código publicado de seis dígitos, prefixo 31 no recorte MG</td>
+<td>CSV homônimo; trim, sem completar dígito nem converter para número</td>
+</tr>
+<tr>
+<td>municipio_fato</td>
+<td>STRING → STRING</td>
+<td>Nome municipal não vazio</td>
+<td>CSV; trim e regra explícita 315990 para SANTO ANTONIO DO AMPARO</td>
+</tr>
+<tr>
+<td>data_fato</td>
+<td>STRING → DATE</td>
+<td>Data publicada válida, 2025-01-01 a 2025-12-31</td>
+<td>CSV em AAAA-MM-DD; conversão sem imputação</td>
+</tr>
+<tr>
+<td>mes</td>
+<td>STRING → INT</td>
+<td>1–12, consistente com data_fato</td>
+<td>CSV; conversão validada, sem substituir divergências</td>
+</tr>
+<tr>
+<td>ano</td>
+<td>STRING → INT</td>
+<td>2025, consistente com data_fato</td>
+<td>CSV; conversão validada</td>
+</tr>
+<tr>
+<td>risp</td>
+<td>STRING → STRING</td>
+<td>Código RISP 1–19; nomes regionais não fornecidos</td>
+<td>CSV; trim e validação de inteiro, preservando código textual</td>
+</tr>
+<tr>
+<td>rmbh</td>
+<td>STRING → STRING</td>
+<td>Belo Horizonte; RMBH (Sem BH); Interior de MG</td>
+<td>CSV; trim; recorte categórico, não booleano</td>
+</tr>
+<tr>
+<td>natureza_delito</td>
+<td>STRING → STRING</td>
+<td>174 naturezas observadas na doméstica</td>
+<td>CSV doméstico; upper(trim), preservando acentos e espaços internos</td>
+</tr>
+<tr>
+<td>tentado_consumado</td>
+<td>STRING → STRING</td>
+<td>Doméstica: S/N, sem tradução oficial. Feminicídio: TENTADO/CONSUMADO</td>
+<td>CSV de cada fonte; trim e maiúsculas, sem harmonizar domínios</td>
+</tr>
+<tr>
+<td>qtde_vitimas</td>
+<td>STRING → BIGINT</td>
+<td>Quantitativo publicado positivo; observado 1–31 na doméstica e 1–2 no feminicídio</td>
+<td>CSV; exigir dígitos, conversão sem fração/overflow, zero ou negativo</td>
+</tr>
+</tbody>
+</table></div>
+<p>Inventários completos de natureza, RISP, RMBH e situação, com contagens e somas:
+<a href="https://fmariane.github.io/MVP_DW/docs/dominios_observados.html">domínios observados</a>. Os limites observados são referências
+destes hashes, não tetos permanentes. Novos domínios ou revisões exigem avaliação.</p>
+<h2 id="metadados-bronze-e-sua-propagacao">Metadados Bronze e sua propagação</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Significado / origem</th>
+<th>Domínio lógico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>arquivo_origem</td>
+<td>STRING</td>
+<td>Caminho absoluto da cópia preservada no volume, <code>snapshots/&lt;sha256&gt;/&lt;arquivo&gt;.csv</code></td>
+<td>Não vazio; propagado Bronze → Silver → fato Gold</td>
+</tr>
+<tr>
+<td>arquivo_sha256</td>
+<td>STRING</td>
+<td>SHA-256 calculado dos bytes originais</td>
+<td>64 caracteres hexadecimais; hash esperado por fonte</td>
+</tr>
+<tr>
+<td>ingerido_em</td>
+<td>TIMESTAMP</td>
+<td>Instante de gravação da Bronze, sessão em UTC</td>
+<td>Obrigatório; propagado, sem trocar pela data de transformação</td>
+</tr>
+</tbody>
+</table></div>
+<p>Cada uma das duas Bronze contém seus campos publicados mais esses três metadados.
+O snapshot atual não recebe append em reexecuções; conteúdo diferente bloqueia
+a carga, exigindo tratamento explícito de revisão da fonte.</p>
+<h2 id="campos-adicionais-da-silver">Campos adicionais da Silver</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Descrição / origem</th>
+<th>Regra</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dados_brutos</td>
+<td>STRUCT</td>
+<td>Todos os campos publicados da respectiva Bronze, como STRING</td>
+<td>Mesmo nome e valor de cada campo original; estrutura exata no esquema físico</td>
+</tr>
+<tr>
+<td>tabela_bronze</td>
+<td>STRING</td>
+<td>Nome completo da tabela que originou a linha</td>
+<td>workspace.mvp_bronze + nome da fonte</td>
+</tr>
+<tr>
+<td>versao_bronze</td>
+<td>BIGINT</td>
+<td>Versão Delta fixada na leitura</td>
+<td>0 nas execuções aprovadas; não é ano nem versão do arquivo</td>
+</tr>
+<tr>
+<td>versao_regras</td>
+<td>STRING</td>
+<td>Identificador do contrato de transformação</td>
+<td>silver_v1</td>
+</tr>
+<tr>
+<td>tratado_em</td>
+<td>TIMESTAMP</td>
+<td>Instante do tratamento em UTC</td>
+<td>Obrigatório; a reexecução validada preserva a tabela existente</td>
+</tr>
+</tbody>
+</table></div>
+<p>Cada tabela de negócio Silver contém: campos publicados tratados + <code>dados_brutos</code>
++ os três metadados Bronze + os quatro campos técnicos de origem/versão/tempo
+acima. A estrutura <code>dados_brutos</code> tem dez subcampos na doméstica e nove no
+feminicídio, com as descrições do dicionário de campos publicados. Nenhum valor
+bruto é usado como identificação de pessoa.</p>
+<h2 id="tabelas-de-rejeicoes">Tabelas de rejeições</h2>
+<p>Cada tabela de rejeições possui os mesmos campos da respectiva Silver, acrescidos
+dos três campos abaixo. Como contém candidatos inválidos, datas ou números tratados
+podem estar nulos; o texto original permanece no STRUCT. Não deve alimentar fatos.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Descrição / origem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_quantidade_valida</td>
+<td>BOOLEAN</td>
+<td>Resultado da validação lexical, capacidade BIGINT e valor positivo da quantidade; permite reconciliar separadamente valores inválidos</td>
+</tr>
+<tr>
+<td>motivos_rejeicao</td>
+<td>ARRAY<STRING></td>
+<td>Todos os motivos detectados na mesma linha; sem criar uma linha por motivo</td>
+</tr>
+<tr>
+<td>execucao_id</td>
+<td>STRING</td>
+<td>UUID da execução Silver que registrou a rejeição</td>
+</tr>
+</tbody>
+</table></div>
+<p>Domínio implementado de motivos:</p>
+<ul>
+<li><code>ausente__&lt;campo&gt;</code> para qualquer campo publicado obrigatório.</li>
+<li><code>data_invalida</code>, <code>data_fora_2025</code>, <code>mes_invalido</code>, <code>ano_invalido</code>, <code>data_mes_ano_incoerentes</code>.</li>
+<li><code>municipio_invalido</code>, <code>risp_invalida</code>, <code>rmbh_invalida</code>, <code>categoria_invalida</code>.</li>
+<li><code>quantidade_invalida</code>, <code>metadados_invalidos</code>.</li>
+<li><code>duplicata_integral_bruta</code>, <code>chave_operacional_duplicada</code>, <code>conflito_geografico</code>.</li>
+</ul>
+<p>Todas as linhas de um grupo duplicado são registradas e bloqueiam a publicação.
+Reexecuções com rejeições podem registrar novamente o mesmo conteúdo sob outro
+UUID: isso é histórico de tentativas, não nova violência. Sem rejeições não há
+linhas para a execução; a evidência JSON registra o zero e o UUID.</p>
+<h2 id="gold-e-relacoes">Gold e relações</h2>
+<p>O <a href="https://fmariane.github.io/MVP_DW/docs/catalogo_gold.html">dicionário Gold</a> descreve todos os campos das três dimensões,
+duas fatos e view. Tipos foram confrontados com a extração física. Relacionamentos:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Origem</th>
+<th>Destino</th>
+<th>Cardinalidade esperada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fato_violencia_domestica.data_key</td>
+<td>dim_tempo.data_key</td>
+<td>Muitos para um</td>
+</tr>
+<tr>
+<td>fato_feminicidio.data_key</td>
+<td>dim_tempo.data_key</td>
+<td>Muitos para um</td>
+</tr>
+<tr>
+<td>fato_violencia_domestica.municipio_cod</td>
+<td>dim_municipio.municipio_cod</td>
+<td>Muitos para um</td>
+</tr>
+<tr>
+<td>fato_feminicidio.municipio_cod</td>
+<td>dim_municipio.municipio_cod</td>
+<td>Muitos para um</td>
+</tr>
+<tr>
+<td>fato_violencia_domestica.natureza_key</td>
+<td>dim_natureza_delito.natureza_key</td>
+<td>Muitos para um</td>
+</tr>
+</tbody>
+</table></div>
+<p>Na view comparativa, medidas são anuláveis quando a fonte não possui registros
+na chave; flags de presença distinguem esse caso. Os dois lados são agregados
+antes da junção, sem soma entre as fontes.</p>
+<h2 id="obrigatoriedade-qualidade-e-limitacoes">Obrigatoriedade, qualidade e limitações</h2>
+<p><code>nullable</code> no <a href="https://fmariane.github.io/MVP_DW/docs/esquema_fisico.html">esquema físico</a> é permissão de armazenamento,
+não medida de qualidade. Os contratos exigem campos presentes nas Silver de
+negócio e tabelas Gold, embora campos físicos permitam NULL. As validações
+Spark verificam presença, tipos, domínios e integridade; PK/FK não foram declaradas
+como constraints do Unity Catalog. Não há garantia automática contra alterações
+externas feitas sem executar o pipeline.</p>
+<p>COUNT(*) mede linhas; SUM(qtde_vitimas) mede quantitativos publicados, não pessoas
+distintas. Ausência não é automaticamente zero. S/N continua sem interpretação
+oficial. Código municipal foi validado estruturalmente, sem certificação contra
+cadastro externo. Dados não permitem inferir causalidade ou risco populacional.</p>
+<p>Proveniência, licença CC BY 4.0, URLs e hashes: <a href="https://fmariane.github.io/MVP_DW/docs/validacao_bases_2025.html">validação das bases</a>.
+As evidências de execução são vinculadas aos snapshots, não uma confirmação
+de que a publicação externa nunca foi revisada.</p>
+<h2 id="manutencao-e-escopo">Manutenção e escopo</h2>
+<p>Para atualizar esquema físico e inventários no zsh/WSL:</p>
+<pre><code class="language-zsh">python3 scripts/catalogar_databricks.py
+</code></pre>
+<p>O script lê os 12 objetos e o volume, grava a evidência e gera anexos. Falha se
+o inventário de objetos divergir; mudanças semânticas exigem revisão manual
+deste dicionário e da linhagem. Os domínios são extraídos da evidência de qualidade
+identificada no script, não consultados novamente nas tabelas.</p>
+<p>Item 18 cobre esta documentação, os anexos e a linhagem. Screenshots do catálogo
+e dos resultados continuam no item 21; não são substituídos por estes arquivos.</p></main><footer>Documentação do MVP de Minas Gerais, 2025. Foram preservados os arquivos fonte no repositório.</footer></body></html>

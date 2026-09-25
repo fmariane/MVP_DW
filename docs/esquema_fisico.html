@@ -1,0 +1,1030 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Esquema físico extraído do Databricks | MVP DW</title><style>
+:root{color-scheme:light;--ink:#203244;--accent:#086a80;--line:#d9e3ec}
+*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:var(--ink);font:17px/1.7 system-ui,sans-serif}
+header{border-bottom:1px solid var(--line);background:#fff;padding:18px max(24px,calc((100vw - 1180px)/2))}
+nav{display:flex;gap:22px;flex-wrap:wrap}a{color:var(--accent);text-underline-offset:3px}
+main{max-width:1180px;margin:32px auto;padding:32px;background:#fff;border:1px solid var(--line);border-radius:12px}
+h1,h2,h3{line-height:1.3;color:#183044}h1{font-size:2rem}h2{margin-top:2em}h3{margin-top:1.6em}
+img{display:block;max-width:100%;height:auto;margin:24px auto}pre{padding:18px;background:#f0f4f8;overflow:auto;border-radius:8px}
+code{font-family:ui-monospace,monospace;font-size:.88em;overflow-wrap:anywhere}pre code{overflow-wrap:normal}
+.tablewrap{overflow-x:auto;margin:24px 0}table{width:100%;border-collapse:collapse;font-size:.94em}
+th,td{text-align:left;padding:11px 14px;border:1px solid var(--line);vertical-align:top}th{background:#eef5f7}
+tbody tr:nth-child(even){background:#fafcfd}.toc{padding:12px 24px;background:#f4f8fa;border-radius:8px}
+.mermaid{overflow-x:auto;margin:24px 0}.mermaid svg{height:auto}summary{cursor:pointer;font-weight:600}
+.note,footer{color:#526779;font-size:.9em}footer{max-width:1180px;margin:24px auto;padding:0 24px}
+@media(max-width:720px){main{margin:12px;padding:18px}h1{font-size:1.65rem}header{padding:16px}}
+@media print{header,.toc{display:none}main{border:0;margin:0;max-width:none;padding:0}pre{white-space:pre-wrap}}
+</style></head>
+<body><header><nav><a href="https://fmariane.github.io/MVP_DW/">Início</a><a href="https://fmariane.github.io/MVP_DW/docs/index.html">Documentação</a>
+<a href="https://github.com/fmariane/MVP_DW#readme">Relatório completo</a><a href="https://github.com/fmariane/MVP_DW/blob/main/docs/esquema_fisico.md">Arquivo original</a></nav></header>
+<main><details><summary>Navegação nesta página</summary><div class="toc">
+<ul>
+<li><a href="#esquema-fisico-extraido-do-databricks">Esquema físico extraído do Databricks</a><ul>
+<li><a href="#workspacemvp_bronzefeminicidio_2025">workspace.mvp_bronze.feminicidio_2025</a></li>
+<li><a href="#workspacemvp_bronzeviolencia_domestica_2025">workspace.mvp_bronze.violencia_domestica_2025</a></li>
+<li><a href="#workspacemvp_silverfeminicidio_2025">workspace.mvp_silver.feminicidio_2025</a></li>
+<li><a href="#workspacemvp_silverrejeicoes_feminicidio_2025">workspace.mvp_silver.rejeicoes_feminicidio_2025</a></li>
+<li><a href="#workspacemvp_silverrejeicoes_violencia_domestica_2025">workspace.mvp_silver.rejeicoes_violencia_domestica_2025</a></li>
+<li><a href="#workspacemvp_silverviolencia_domestica_2025">workspace.mvp_silver.violencia_domestica_2025</a></li>
+<li><a href="#workspacemvp_goldcomparativo_municipio_mes">workspace.mvp_gold.comparativo_municipio_mes</a></li>
+<li><a href="#workspacemvp_golddim_municipio">workspace.mvp_gold.dim_municipio</a></li>
+<li><a href="#workspacemvp_golddim_natureza_delito">workspace.mvp_gold.dim_natureza_delito</a></li>
+<li><a href="#workspacemvp_golddim_tempo">workspace.mvp_gold.dim_tempo</a></li>
+<li><a href="#workspacemvp_goldfato_feminicidio">workspace.mvp_gold.fato_feminicidio</a></li>
+<li><a href="#workspacemvp_goldfato_violencia_domestica">workspace.mvp_gold.fato_violencia_domestica</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</details><h1 id="esquema-fisico-extraido-do-databricks">Esquema físico extraído do Databricks</h1>
+<p>Extração UTC: 2026-09-25T02:03:20.361847+00:00.</p>
+<p>Gerado por <code>scripts/catalogar_databricks.py</code>. Tipos e anulabilidade são metadados reais do Unity Catalog.
+<code>nullable=true</code> indica permissão física para NULL; não significa que o campo está vazio ou que o contrato lógico aceite ausência.
+Regras e descrições: <a href="https://fmariane.github.io/MVP_DW/docs/catalogo_dados.html">catálogo completo</a>. Linhagem: <a href="https://fmariane.github.io/MVP_DW/docs/linhagem_dados.html">documento de linhagem</a>.</p>
+<h2 id="workspacemvp_bronzefeminicidio_2025">workspace.mvp_bronze.feminicidio_2025</h2>
+<p>Objeto: MANAGED; formato: DELTA.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Posição (base 0)</th>
+<th>Campo</th>
+<th>Tipo físico</th>
+<th>Permite NULL fisicamente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>municipio_cod</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>1</td>
+<td>municipio_fato</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>2</td>
+<td>data_fato</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>3</td>
+<td>mes</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ano</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>5</td>
+<td>risp</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>6</td>
+<td>rmbh</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>7</td>
+<td>tentado_consumado</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>8</td>
+<td>qtde_vitimas</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>9</td>
+<td>arquivo_origem</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>10</td>
+<td>arquivo_sha256</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>11</td>
+<td>ingerido_em</td>
+<td><code>timestamp</code></td>
+<td>Sim</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="workspacemvp_bronzeviolencia_domestica_2025">workspace.mvp_bronze.violencia_domestica_2025</h2>
+<p>Objeto: MANAGED; formato: DELTA.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Posição (base 0)</th>
+<th>Campo</th>
+<th>Tipo físico</th>
+<th>Permite NULL fisicamente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>municipio_cod</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>1</td>
+<td>municipio_fato</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>2</td>
+<td>data_fato</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>3</td>
+<td>mes</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ano</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>5</td>
+<td>risp</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>6</td>
+<td>rmbh</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>7</td>
+<td>natureza_delito</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>8</td>
+<td>tentado_consumado</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>9</td>
+<td>qtde_vitimas</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>10</td>
+<td>arquivo_origem</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>11</td>
+<td>arquivo_sha256</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>12</td>
+<td>ingerido_em</td>
+<td><code>timestamp</code></td>
+<td>Sim</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="workspacemvp_silverfeminicidio_2025">workspace.mvp_silver.feminicidio_2025</h2>
+<p>Objeto: MANAGED; formato: DELTA.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Posição (base 0)</th>
+<th>Campo</th>
+<th>Tipo físico</th>
+<th>Permite NULL fisicamente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>municipio_cod</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>1</td>
+<td>municipio_fato</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>2</td>
+<td>data_fato</td>
+<td><code>date</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>3</td>
+<td>mes</td>
+<td><code>int</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ano</td>
+<td><code>int</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>5</td>
+<td>risp</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>6</td>
+<td>rmbh</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>7</td>
+<td>tentado_consumado</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>8</td>
+<td>qtde_vitimas</td>
+<td><code>bigint</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>9</td>
+<td>dados_brutos</td>
+<td><code>struct&lt;municipio_cod:string,municipio_fato:string,data_fato:string,mes:string,ano:string,risp:string,rmbh:string,tentado_consumado:string,qtde_vitimas:string&gt;</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>10</td>
+<td>arquivo_origem</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>11</td>
+<td>arquivo_sha256</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>12</td>
+<td>ingerido_em</td>
+<td><code>timestamp</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>13</td>
+<td>tabela_bronze</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>14</td>
+<td>versao_bronze</td>
+<td><code>bigint</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>15</td>
+<td>versao_regras</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>16</td>
+<td>tratado_em</td>
+<td><code>timestamp</code></td>
+<td>Sim</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="workspacemvp_silverrejeicoes_feminicidio_2025">workspace.mvp_silver.rejeicoes_feminicidio_2025</h2>
+<p>Objeto: MANAGED; formato: DELTA.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Posição (base 0)</th>
+<th>Campo</th>
+<th>Tipo físico</th>
+<th>Permite NULL fisicamente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>municipio_cod</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>1</td>
+<td>municipio_fato</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>2</td>
+<td>data_fato</td>
+<td><code>date</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>3</td>
+<td>mes</td>
+<td><code>int</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ano</td>
+<td><code>int</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>5</td>
+<td>risp</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>6</td>
+<td>rmbh</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>7</td>
+<td>tentado_consumado</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>8</td>
+<td>qtde_vitimas</td>
+<td><code>bigint</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>9</td>
+<td>dados_brutos</td>
+<td><code>struct&lt;municipio_cod:string,municipio_fato:string,data_fato:string,mes:string,ano:string,risp:string,rmbh:string,tentado_consumado:string,qtde_vitimas:string&gt;</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>10</td>
+<td>arquivo_origem</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>11</td>
+<td>arquivo_sha256</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>12</td>
+<td>ingerido_em</td>
+<td><code>timestamp</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>13</td>
+<td>tabela_bronze</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>14</td>
+<td>versao_bronze</td>
+<td><code>bigint</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>15</td>
+<td>versao_regras</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>16</td>
+<td>tratado_em</td>
+<td><code>timestamp</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>17</td>
+<td>_quantidade_valida</td>
+<td><code>boolean</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>18</td>
+<td>motivos_rejeicao</td>
+<td><code>array&lt;string&gt;</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>19</td>
+<td>execucao_id</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="workspacemvp_silverrejeicoes_violencia_domestica_2025">workspace.mvp_silver.rejeicoes_violencia_domestica_2025</h2>
+<p>Objeto: MANAGED; formato: DELTA.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Posição (base 0)</th>
+<th>Campo</th>
+<th>Tipo físico</th>
+<th>Permite NULL fisicamente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>municipio_cod</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>1</td>
+<td>municipio_fato</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>2</td>
+<td>data_fato</td>
+<td><code>date</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>3</td>
+<td>mes</td>
+<td><code>int</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ano</td>
+<td><code>int</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>5</td>
+<td>risp</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>6</td>
+<td>rmbh</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>7</td>
+<td>natureza_delito</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>8</td>
+<td>tentado_consumado</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>9</td>
+<td>qtde_vitimas</td>
+<td><code>bigint</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>10</td>
+<td>dados_brutos</td>
+<td><code>struct&lt;municipio_cod:string,municipio_fato:string,data_fato:string,mes:string,ano:string,risp:string,rmbh:string,natureza_delito:string,tentado_consumado:string,qtde_vitimas:string&gt;</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>11</td>
+<td>arquivo_origem</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>12</td>
+<td>arquivo_sha256</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>13</td>
+<td>ingerido_em</td>
+<td><code>timestamp</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>14</td>
+<td>tabela_bronze</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>15</td>
+<td>versao_bronze</td>
+<td><code>bigint</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>16</td>
+<td>versao_regras</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>17</td>
+<td>tratado_em</td>
+<td><code>timestamp</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>18</td>
+<td>_quantidade_valida</td>
+<td><code>boolean</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>19</td>
+<td>motivos_rejeicao</td>
+<td><code>array&lt;string&gt;</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>20</td>
+<td>execucao_id</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="workspacemvp_silverviolencia_domestica_2025">workspace.mvp_silver.violencia_domestica_2025</h2>
+<p>Objeto: MANAGED; formato: DELTA.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Posição (base 0)</th>
+<th>Campo</th>
+<th>Tipo físico</th>
+<th>Permite NULL fisicamente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>municipio_cod</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>1</td>
+<td>municipio_fato</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>2</td>
+<td>data_fato</td>
+<td><code>date</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>3</td>
+<td>mes</td>
+<td><code>int</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ano</td>
+<td><code>int</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>5</td>
+<td>risp</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>6</td>
+<td>rmbh</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>7</td>
+<td>natureza_delito</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>8</td>
+<td>tentado_consumado</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>9</td>
+<td>qtde_vitimas</td>
+<td><code>bigint</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>10</td>
+<td>dados_brutos</td>
+<td><code>struct&lt;municipio_cod:string,municipio_fato:string,data_fato:string,mes:string,ano:string,risp:string,rmbh:string,natureza_delito:string,tentado_consumado:string,qtde_vitimas:string&gt;</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>11</td>
+<td>arquivo_origem</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>12</td>
+<td>arquivo_sha256</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>13</td>
+<td>ingerido_em</td>
+<td><code>timestamp</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>14</td>
+<td>tabela_bronze</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>15</td>
+<td>versao_bronze</td>
+<td><code>bigint</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>16</td>
+<td>versao_regras</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>17</td>
+<td>tratado_em</td>
+<td><code>timestamp</code></td>
+<td>Sim</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="workspacemvp_goldcomparativo_municipio_mes">workspace.mvp_gold.comparativo_municipio_mes</h2>
+<p>Objeto: VIEW; formato: não se aplica.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Posição (base 0)</th>
+<th>Campo</th>
+<th>Tipo físico</th>
+<th>Permite NULL fisicamente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>municipio_cod</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ano</td>
+<td><code>int</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>2</td>
+<td>mes</td>
+<td><code>int</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>3</td>
+<td>vitimas_violencia_domestica</td>
+<td><code>bigint</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>4</td>
+<td>presente_vitimas_violencia_domestica</td>
+<td><code>boolean</code></td>
+<td>Não</td>
+</tr>
+<tr>
+<td>5</td>
+<td>vitimas_feminicidio</td>
+<td><code>bigint</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>6</td>
+<td>presente_vitimas_feminicidio</td>
+<td><code>boolean</code></td>
+<td>Não</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="workspacemvp_golddim_municipio">workspace.mvp_gold.dim_municipio</h2>
+<p>Objeto: MANAGED; formato: DELTA.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Posição (base 0)</th>
+<th>Campo</th>
+<th>Tipo físico</th>
+<th>Permite NULL fisicamente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>municipio_cod</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>1</td>
+<td>municipio_nome</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>2</td>
+<td>uf</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>3</td>
+<td>risp_cod</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>4</td>
+<td>recorte_metropolitano</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="workspacemvp_golddim_natureza_delito">workspace.mvp_gold.dim_natureza_delito</h2>
+<p>Objeto: MANAGED; formato: DELTA.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Posição (base 0)</th>
+<th>Campo</th>
+<th>Tipo físico</th>
+<th>Permite NULL fisicamente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>natureza_key</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>1</td>
+<td>natureza_nome</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="workspacemvp_golddim_tempo">workspace.mvp_gold.dim_tempo</h2>
+<p>Objeto: MANAGED; formato: DELTA.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Posição (base 0)</th>
+<th>Campo</th>
+<th>Tipo físico</th>
+<th>Permite NULL fisicamente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>data_key</td>
+<td><code>int</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>1</td>
+<td>data</td>
+<td><code>date</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ano</td>
+<td><code>int</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>3</td>
+<td>mes</td>
+<td><code>int</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>4</td>
+<td>dia</td>
+<td><code>int</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>5</td>
+<td>trimestre</td>
+<td><code>int</code></td>
+<td>Sim</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="workspacemvp_goldfato_feminicidio">workspace.mvp_gold.fato_feminicidio</h2>
+<p>Objeto: MANAGED; formato: DELTA.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Posição (base 0)</th>
+<th>Campo</th>
+<th>Tipo físico</th>
+<th>Permite NULL fisicamente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>data_key</td>
+<td><code>int</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>1</td>
+<td>municipio_cod</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>2</td>
+<td>situacao</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>3</td>
+<td>qtde_vitimas</td>
+<td><code>bigint</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>4</td>
+<td>arquivo_origem</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>5</td>
+<td>arquivo_sha256</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>6</td>
+<td>ingerido_em</td>
+<td><code>timestamp</code></td>
+<td>Sim</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="workspacemvp_goldfato_violencia_domestica">workspace.mvp_gold.fato_violencia_domestica</h2>
+<p>Objeto: MANAGED; formato: DELTA.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Posição (base 0)</th>
+<th>Campo</th>
+<th>Tipo físico</th>
+<th>Permite NULL fisicamente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>data_key</td>
+<td><code>int</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>1</td>
+<td>municipio_cod</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>2</td>
+<td>natureza_key</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>3</td>
+<td>codigo_tentado_consumado</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>4</td>
+<td>qtde_vitimas</td>
+<td><code>bigint</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>5</td>
+<td>arquivo_origem</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>6</td>
+<td>arquivo_sha256</td>
+<td><code>string</code></td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>7</td>
+<td>ingerido_em</td>
+<td><code>timestamp</code></td>
+<td>Sim</td>
+</tr>
+</tbody>
+</table></div></main><footer>Documentação do MVP de Minas Gerais, 2025. Foram preservados os arquivos fonte no repositório.</footer></body></html>

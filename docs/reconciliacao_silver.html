@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Silver: implementação e reconciliação | MVP DW</title><style>
+:root{color-scheme:light;--ink:#203244;--accent:#086a80;--line:#d9e3ec}
+*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:var(--ink);font:17px/1.7 system-ui,sans-serif}
+header{border-bottom:1px solid var(--line);background:#fff;padding:18px max(24px,calc((100vw - 1180px)/2))}
+nav{display:flex;gap:22px;flex-wrap:wrap}a{color:var(--accent);text-underline-offset:3px}
+main{max-width:1180px;margin:32px auto;padding:32px;background:#fff;border:1px solid var(--line);border-radius:12px}
+h1,h2,h3{line-height:1.3;color:#183044}h1{font-size:2rem}h2{margin-top:2em}h3{margin-top:1.6em}
+img{display:block;max-width:100%;height:auto;margin:24px auto}pre{padding:18px;background:#f0f4f8;overflow:auto;border-radius:8px}
+code{font-family:ui-monospace,monospace;font-size:.88em;overflow-wrap:anywhere}pre code{overflow-wrap:normal}
+.tablewrap{overflow-x:auto;margin:24px 0}table{width:100%;border-collapse:collapse;font-size:.94em}
+th,td{text-align:left;padding:11px 14px;border:1px solid var(--line);vertical-align:top}th{background:#eef5f7}
+tbody tr:nth-child(even){background:#fafcfd}.toc{padding:12px 24px;background:#f4f8fa;border-radius:8px}
+.mermaid{overflow-x:auto;margin:24px 0}.mermaid svg{height:auto}summary{cursor:pointer;font-weight:600}
+.note,footer{color:#526779;font-size:.9em}footer{max-width:1180px;margin:24px auto;padding:0 24px}
+@media(max-width:720px){main{margin:12px;padding:18px}h1{font-size:1.65rem}header{padding:16px}}
+@media print{header,.toc{display:none}main{border:0;margin:0;max-width:none;padding:0}pre{white-space:pre-wrap}}
+</style></head>
+<body><header><nav><a href="https://fmariane.github.io/MVP_DW/">Início</a><a href="https://fmariane.github.io/MVP_DW/docs/index.html">Documentação</a>
+<a href="https://github.com/fmariane/MVP_DW#readme">Relatório completo</a><a href="https://github.com/fmariane/MVP_DW/blob/main/docs/reconciliacao_silver.md">Arquivo original</a></nav></header>
+<main><details><summary>Navegação nesta página</summary><div class="toc">
+<ul>
+<li><a href="#silver-implementacao-e-reconciliacao">Silver: implementação e reconciliação</a><ul>
+<li><a href="#reconciliacao-comprovada">Reconciliação comprovada</a></li>
+<li><a href="#transformacoes-e-preservacao">Transformações e preservação</a></li>
+<li><a href="#testes-e-publicacao">Testes e publicação</a></li>
+<li><a href="#proxima-etapa">Próxima etapa</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</details><h1 id="silver-implementacao-e-reconciliacao">Silver: implementação e reconciliação</h1>
+<p>Implementada no Databricks Free Edition pelo notebook <a href="https://github.com/fmariane/MVP_DW/blob/main/notebooks/03_silver.py">03_silver.py</a>,
+com regras <code>silver_v1</code>. Job serverless <code>1075813885223029</code>, sem agendamento.
+Primeira carga aprovada em 24/09/2026 às 22:34 de São Paulo (25/09 às 01:34 UTC).</p>
+<ul>
+<li><a href="https://fmariane.github.io/MVP_DW/evidencias/silver_169682925174743.json">Evidência da carga</a></li>
+<li><a href="https://fmariane.github.io/MVP_DW/evidencias/silver_572585419270618.json">Evidência da reexecução</a></li>
+<li><a href="https://dbc-0a2b6ff1-9976.cloud.databricks.com/?o=7474657037018547#job/1075813885223029/run/169682925174743">Execução no Databricks</a></li>
+<li><a href="https://fmariane.github.io/MVP_DW/docs/regras_silver.html">Regras de tratamento</a></li>
+<li><a href="https://fmariane.github.io/MVP_DW/docs/execucao_databricks.html">Comandos de execução pelo WSL</a></li>
+</ul>
+<h2 id="reconciliacao-comprovada">Reconciliação comprovada</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Fonte</th>
+<th style="text-align: right;">Linhas Bronze</th>
+<th style="text-align: right;">Linhas rejeitadas</th>
+<th style="text-align: right;">Linhas Silver</th>
+<th style="text-align: right;">Soma Bronze</th>
+<th style="text-align: right;">Soma Silver</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Violência doméstica</td>
+<td style="text-align: right;">117169</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">117169</td>
+<td style="text-align: right;">162032</td>
+<td style="text-align: right;">162032</td>
+</tr>
+<tr>
+<td>Feminicídio</td>
+<td style="text-align: right;">381</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">381</td>
+<td style="text-align: right;">391</td>
+<td style="text-align: right;">391</td>
+</tr>
+</tbody>
+</table></div>
+<p>Leituras fixadas na versão Delta 0 de cada Bronze. Zero quantidades inválidas,
+zero conflitos geográficos após a regra municipal e zero chaves operacionais
+duplicadas nas tabelas publicadas. Nenhuma linha descartada, deduplicada ou
+agregada. Os quantitativos permanecem separados por fonte.</p>
+<p>Tabelas de negócio criadas:</p>
+<ul>
+<li><code>workspace.mvp_silver.violencia_domestica_2025</code></li>
+<li><code>workspace.mvp_silver.feminicidio_2025</code></li>
+</ul>
+<p>Tabelas de auditoria criadas, vazias nesta execução:</p>
+<ul>
+<li><code>workspace.mvp_silver.rejeicoes_violencia_domestica_2025</code></li>
+<li><code>workspace.mvp_silver.rejeicoes_feminicidio_2025</code></li>
+</ul>
+<p>Rejeições futuras conservam o registro, os motivos e o <code>execucao_id</code>. Uma linha
+com vários motivos é contabilizada uma vez na reconciliação. Todas as linhas
+de grupos duplicados são rejeitadas; não se escolhe uma para manter.</p>
+<h2 id="transformacoes-e-preservacao">Transformações e preservação</h2>
+<p><code>data_fato</code> foi convertido para DATE, <code>mes</code> e <code>ano</code> para INT e <code>qtde_vitimas</code>
+para BIGINT. Códigos municipais e RISP permanecem STRING. Tipos persistidos
+foram confrontados com o contrato após a gravação.</p>
+<p>O nome <code>SANTO ANT DO AMPARO</code>, código <code>315990</code>, foi convertido para
+<code>SANTO ANTONIO DO AMPARO</code> em 109 registros de violência doméstica. Nenhum outro
+campo apresentou diferença textual ao comparar sua representação tratada com
+o original. As categorias S/N e TENTADO/CONSUMADO foram mantidas separadas.</p>
+<p>Todos os campos de origem estão preservados no STRUCT <code>dados_brutos</code>. A comparação
+nos dois sentidos por <code>exceptAll</code> comprovou igualdade com a Bronze, incluindo
+multiplicidades. SHA-256, caminho do arquivo, timestamp de ingestão, tabela e
+versão Bronze, versão das regras e timestamp do tratamento compõem a linhagem.</p>
+<h2 id="testes-e-publicacao">Testes e publicação</h2>
+<p>Os testes sintéticos passaram no mesmo runtime. Cobriram correção municipal,
+preservação do valor bruto, maiúsculas, tipagem, data impossível, código nulo,
+quantidade fracionada, overflow e colisão de chave após trim. A reconciliação
+sintética demonstrou a separação de cinco entradas em uma candidata e quatro
+rejeitadas, distinguindo quantidades válidas e inválidas.</p>
+<p>Os controles de ambas as fontes são avaliados antes de criar tabelas de negócio.
+A publicação é individual por tabela Delta, sem transação entre as duas. Se houver
+falha de infraestrutura entre as gravações, a reexecução pode completar a ausente.
+Uma tabela existente deve corresponder integralmente ao candidato, exceto pelo
+instante técnico de tratamento; divergências bloqueiam o job, sem sobrescrita.</p>
+<p>A reexecução <code>572585419270618</code> também terminou com <code>SUCCESS</code>: ambas as tabelas
+registraram <code>snapshot_existente_validado</code>, conservaram os mesmos IDs Delta,
+linhas e somas, com zero rejeições e zero duplicatas. Nenhuma nova linha foi
+inserida nas tabelas de negócio.</p>
+<h2 id="proxima-etapa">Próxima etapa</h2>
+<p>Itens 14 e 15 concluídos. Faltam implementar dimensões e fatos Gold e validar
+chaves, relacionamentos e totais (16–17). A reexecução integral de Bronze até
+análises (23) depende dessas etapas. S/N continua sem tradução oficial.</p></main><footer>Documentação do MVP de Minas Gerais, 2025. Foram preservados os arquivos fonte no repositório.</footer></body></html>

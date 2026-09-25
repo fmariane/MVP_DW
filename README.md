@@ -36,7 +36,7 @@ Foram formuladas as seguintes perguntas:
 3. Quais naturezas de delito concentram os maiores quantitativos na base de violência doméstica?
 4. Como os quantitativos de vítimas de feminicídio tentado e consumado se distribuem por região e mês?
 
-As quatro perguntas foram mantidas e respondidas. Nenhuma foi descartada. Foram preservados o [planejamento original](docs/contexto_objetivos.md) e a [validação das fontes, licença e hashes](docs/validacao_bases_2025.md).
+As quatro perguntas foram mantidas e respondidas. Nenhuma foi descartada. Foram preservados o [planejamento original](https://fmariane.github.io/MVP_DW/docs/contexto_objetivos.html) e a [validação das fontes, licença e hashes](https://fmariane.github.io/MVP_DW/docs/validacao_bases_2025.html).
 
 <a id="carga"></a>
 
@@ -73,7 +73,7 @@ Na Gold, foram utilizadas duas fatos e três dimensões. A separação das fatos
 
 As chaves foram verificadas logicamente no pipeline, sem declaração de restrições PK/FK no catálogo. Foram confirmadas unicidade, ausência de referências órfãs e preservação dos totais nas junções.
 
-Foram documentados contexto, campos, tipos, domínios e origem no [catálogo completo](docs/catalogo_dados.md), no [dicionário Gold](docs/catalogo_gold.md), no [esquema físico](docs/esquema_fisico.md) e nos [domínios observados](docs/dominios_observados.md). Foram disponibilizados o [modelo dimensional](docs/modelagem_dimensional.md) e a [linhagem](docs/linhagem_dados.md). A linhagem foi documentada a partir do código e das evidências, sem ser apresentada como captura automática do Unity Catalog.
+Foram documentados contexto, campos, tipos, domínios e origem no [catálogo completo](https://fmariane.github.io/MVP_DW/docs/catalogo_dados.html), no [dicionário Gold](https://fmariane.github.io/MVP_DW/docs/catalogo_gold.html), no [esquema físico](https://fmariane.github.io/MVP_DW/docs/esquema_fisico.html) e nos [domínios observados](https://fmariane.github.io/MVP_DW/docs/dominios_observados.html). Foram disponibilizados o [modelo dimensional](https://fmariane.github.io/MVP_DW/docs/modelagem_dimensional.html) e a [linhagem](https://fmariane.github.io/MVP_DW/docs/linhagem_dados.html). A linhagem foi documentada a partir do código e das evidências, sem ser apresentada como captura automática do Unity Catalog.
 
 ![Catálogo e objetos Gold](evidencias/screenshots/01_catalogo.png)
 
@@ -115,7 +115,7 @@ Na fonte doméstica, foram preservados os códigos S/N. Não foi encontrada conf
 
 Na Silver, foram obtidas zero rejeições e preservados os totais de cada fonte. Na Gold, foram novamente preservadas 117.169 linhas e soma de 162.032 na doméstica, além de 381 linhas e soma de 391 no feminicídio. Não foi identificada multiplicação das medidas nas junções. Foram aprovados testes sintéticos para datas impossíveis, códigos ausentes, quantidades fracionadas, estouro de BIGINT e colisões de chaves, entre outras situações.
 
-Foram disponibilizados o [diagnóstico](docs/qualidade_bronze.md), as [regras Silver](docs/regras_silver.md), a [reconciliação](docs/reconciliacao_silver.md) e a [validação Gold](docs/validacao_gold.md). As saídas foram preservadas no [HTML de qualidade](https://fmariane.github.io/MVP_DW/evidencias/05_qualidade.html), no [JSON de qualidade](evidencias/qualidade_183810729128831.json), no [HTML Gold](https://fmariane.github.io/MVP_DW/evidencias/06_gold.html) e no [JSON da reexecução Gold](evidencias/gold_483524129599626.json).
+Foram disponibilizados o [diagnóstico](https://fmariane.github.io/MVP_DW/docs/qualidade_bronze.html), as [regras Silver](https://fmariane.github.io/MVP_DW/docs/regras_silver.html), a [reconciliação](https://fmariane.github.io/MVP_DW/docs/reconciliacao_silver.html) e a [validação Gold](https://fmariane.github.io/MVP_DW/docs/validacao_gold.html). As saídas foram preservadas no [HTML de qualidade](https://fmariane.github.io/MVP_DW/evidencias/05_qualidade.html), no [JSON de qualidade](evidencias/qualidade_183810729128831.json), no [HTML Gold](https://fmariane.github.io/MVP_DW/evidencias/06_gold.html) e no [JSON da reexecução Gold](evidencias/gold_483524129599626.json).
 
 <a id="analise"></a>
 
@@ -216,13 +216,13 @@ Foi preparada a publicação pelo GitHub Pages para abertura das evidências com
 3. Silver: [carga reconciliada](evidencias/silver_169682925174743.json) e [reexecução](evidencias/silver_572585419270618.json).
 4. Gold: [carga validada](evidencias/gold_700142655207447.json) e [reexecução](evidencias/gold_483524129599626.json).
 5. Análises: [execução](evidencias/analises_931355409551552.json), [SQL](sql/consultas_analiticas.sql) e [resultados completos](resultados/).
-6. Catálogo: [metadados extraídos](evidencias/catalogo_databricks.json) e [documentação técnica](docs/).
+6. Catálogo: [metadados extraídos](evidencias/catalogo_databricks.json) e [documentação técnica](https://fmariane.github.io/MVP_DW/docs/index.html).
 7. Implementação: [notebooks](notebooks/), [scripts](scripts/) e [configurações dos jobs](databricks/).
 8. Imagens: [capturas manuais](evidencias/screenshots/) e [gráficos PNG e SVG](graficos/).
 
 ### Reprodução
 
-Foi documentada a execução pelo WSL com zsh no [guia do Databricks](docs/execucao_databricks.md). Para reprodução, deverão ser disponibilizados os CSVs no volume indicado e ajustados os caminhos do workspace nas configurações dos jobs. Deverão ser executados os cinco notebooks na ordem descrita e conferidos os totais. Deverão ser utilizadas credenciais próprias, sem inclusão de segredos no repositório.
+Foi documentada a execução pelo WSL com zsh no [guia do Databricks](https://fmariane.github.io/MVP_DW/docs/execucao_databricks.html). Para reprodução, deverão ser disponibilizados os CSVs no volume indicado e ajustados os caminhos do workspace nas configurações dos jobs. Deverão ser executados os cinco notebooks na ordem descrita e conferidos os totais. Deverão ser utilizadas credenciais próprias, sem inclusão de segredos no repositório.
 
 Para os gráficos, foi utilizado Python 3.12 com Matplotlib 3.11.2 e NumPy 2.5.3. As versões foram registradas no [arquivo de dependências](requirements%2Dgraficos.txt). Após a preparação dessas dependências, a renderização poderá ser repetida a partir da raiz do projeto:
 
@@ -231,3 +231,8 @@ python3.12 scripts/gerar_graficos.py evidencias/analises_931355409551552.json
 ```
 
 A ausência de duplicação deverá ser conferida após nova execução. A publicação final, o acesso público sem autenticação e a submissão do link no fórum deverão ser verificados separadamente; não são comprovados pela presença deste relatório.
+
+
+### Documentação em HTML
+
+Foram convertidos os 15 documentos Markdown e o arquivo JSON da pasta docs em 16 páginas HTML. Foi disponibilizado um [índice da documentação](https://fmariane.github.io/MVP_DW/docs/index.html), com navegação entre as páginas, tabelas, imagens e diagramas. Foram preservados os arquivos originais. A conversão pode ser repetida pelo [gerador de HTML](scripts/gerar_docs_html.py), com as versões registradas no [arquivo de dependências da documentação](requirements%2Ddocs.txt).

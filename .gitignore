@@ -24,7 +24,7 @@ TestResults.xml
 #documentation files
 checklist.md
 especificacao-mvp-dw.pdf
-docs/
+docs/*.md
 modelar_dw.py
 requirements-graficos.txt
 /scripts
