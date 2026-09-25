@@ -115,13 +115,13 @@ Na fonte doméstica, foram preservados os códigos S/N. Não foi encontrada conf
 
 Na Silver, foram obtidas zero rejeições e preservados os totais de cada fonte. Na Gold, foram novamente preservadas 117.169 linhas e soma de 162.032 na doméstica, além de 381 linhas e soma de 391 no feminicídio. Não foi identificada multiplicação das medidas nas junções. Foram aprovados testes sintéticos para datas impossíveis, códigos ausentes, quantidades fracionadas, estouro de BIGINT e colisões de chaves, entre outras situações.
 
-Foram disponibilizados o [diagnóstico](docs/qualidade_bronze.md), as [regras Silver](docs/regras_silver.md), a [reconciliação](docs/reconciliacao_silver.md) e a [validação Gold](docs/validacao_gold.md). As saídas foram preservadas no [HTML de qualidade](evidencias/05_qualidade.html), no [JSON de qualidade](evidencias/qualidade_183810729128831.json), no [HTML Gold](evidencias/06_gold.html) e no [JSON da reexecução Gold](evidencias/gold_483524129599626.json).
+Foram disponibilizados o [diagnóstico](docs/qualidade_bronze.md), as [regras Silver](docs/regras_silver.md), a [reconciliação](docs/reconciliacao_silver.md) e a [validação Gold](docs/validacao_gold.md). As saídas foram preservadas no [HTML de qualidade](https://fmariane.github.io/MVP_DW/evidencias/05_qualidade.html), no [JSON de qualidade](evidencias/qualidade_183810729128831.json), no [HTML Gold](https://fmariane.github.io/MVP_DW/evidencias/06_gold.html) e no [JSON da reexecução Gold](evidencias/gold_483524129599626.json).
 
 <a id="analise"></a>
 
 ## 6. Análise de Dados
 
-Foi utilizada `SUM(qtde_vitimas)` como medida. Para cada percentual, foi adotado o total da própria fonte ou do recorte indicado. Os resultados foram preservados no [JSON analítico](evidencias/analises_931355409551552.json) e no [HTML das consultas](evidencias/07_consultas%20analiticas.html).
+Foi utilizada `SUM(qtde_vitimas)` como medida. Para cada percentual, foi adotado o total da própria fonte ou do recorte indicado. Os resultados foram preservados no [JSON analítico](evidencias/analises_931355409551552.json) e no [HTML das consultas](https://fmariane.github.io/MVP_DW/evidencias/07_consultas%20analiticas.html).
 
 ### Pergunta 1. Como os quantitativos se distribuem pelos meses?
 
@@ -203,11 +203,11 @@ Como trabalhos futuros, são propostas a confirmação semântica junto ao publi
 
 Foram preservados os arquivos fornecidos pelo autor com código e saídas exportadas do Databricks:
 
-1. [Execução de qualidade em HTML](evidencias/05_qualidade.html).
-2. [Execução Gold em HTML](evidencias/06_gold.html).
-3. [Consultas analíticas em HTML](evidencias/07_consultas%20analiticas.html).
+1. [Execução de qualidade em HTML](https://fmariane.github.io/MVP_DW/evidencias/05_qualidade.html).
+2. [Execução Gold em HTML](https://fmariane.github.io/MVP_DW/evidencias/06_gold.html).
+3. [Consultas analíticas em HTML](https://fmariane.github.io/MVP_DW/evidencias/07_consultas%20analiticas.html).
 
-Quando o arquivo for apresentado como código pelo visualizador do repositório, sua visualização completa poderá ser obtida por download e abertura no navegador. Não foi configurada hospedagem pública dos HTML. As exportações foram distinguidas das capturas do console, e os gráficos foram identificados como renderizações locais dos resultados remotos.
+Foi preparada a publicação pelo GitHub Pages para abertura das evidências como páginas no navegador. A ativação deverá ser realizada em Settings → Pages, com publicação pela branch main e pasta raiz. Até a conclusão da primeira publicação, os endereços do site poderão retornar página não encontrada. As exportações originais foram preservadas na pasta evidencias. As exportações foram distinguidas das capturas do console, e os gráficos foram identificados como renderizações locais dos resultados remotos.
 
 ### Índice de evidências e implementação
 
