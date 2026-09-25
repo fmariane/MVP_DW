@@ -2,19 +2,17 @@
 
 Foi construído um pipeline no Databricks Free Edition para análise de duas bases da Polícia Civil de Minas Gerais. Foram realizadas ingestão, verificação de qualidade, transformação e modelagem dimensional. Foram respondidas quatro perguntas por meio de sete consultas SQL e sete gráficos. Neste README, foram reunidos o relatório, a correspondência com os critérios de avaliação e os links para verificação dos arquivos. Atualização: 25/09/2026.
 
-## Rubrica e índice de navegação
+## Índice de navegação
 
-Os pesos da especificação são apresentados para orientar a conferência. Não foi atribuída nota ao trabalho.
-
-1. [Contexto de Negócios e Perguntas](#contexto): objetivo, 1,0 ponto; fontes e coleta, 0,5 ponto.
-2. [Carga dos Dados](#carga): componente do critério Carga e Pipeline, 1,0 ponto.
-3. [Modelagem e Catálogo de Dados](#modelagem): modelagem, 1,0 ponto; catálogo, 1,0 ponto.
-4. [Pipeline de Dados](#pipeline): organização e código, considerados no mesmo critério Carga e Pipeline.
-5. [Qualidade de Dados](#qualidade): diagnóstico e tratamentos, 1,0 ponto.
-6. [Análise de Dados](#analise): correção das respostas, 1,0 ponto; discussão, 1,0 ponto.
-7. [Autoavaliação](#autoavaliacao): objetivos, dificuldades e continuidade, 0,5 ponto.
-8. [Evidências e reprodução](#evidencias): arquivos para conferência. A clareza e a organização são avaliadas transversalmente no critério Capricho, 2,0 pontos.
-
+Ordem apresentada foi sugerida na especificação da construção do MVP. Índice adicionado para praticidade na avaliação
+1. [Contexto de Negócios e Perguntas](#contexto)
+2. [Carga dos Dados](#carga)
+3. [Modelagem e Catálogo de Dados](#modelagem)
+4. [Pipeline de Dados](#pipeline)
+5. [Qualidade de Dados](#qualidade)
+6. [Análise de Dados](#analise)
+7. [Autoavaliação](#autoavaliacao)
+8. [Evidências e reprodução](#evidencias)
 <a id="contexto"></a>
 
 ## 1. Contexto de Negócios e Perguntas
